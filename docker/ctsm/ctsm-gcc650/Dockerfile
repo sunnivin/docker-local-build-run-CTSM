@@ -3,10 +3,11 @@
 # --------------------------------------------------------------------------------------------
 
 FROM ngeetropics/hlmbase-gcc650:v.0.0.0
-LABEL maintainer.name="Gregory Lemieux" \
-      maintainer.email="glemieux@lbl.gov" \
-      author.name="Gregory Lemieux" \
-      author.email="glemieux@lbl.gov" \
+LABEL maintainer.name="Sunniva Indrehus" \
+      maintainer.email="sunniva.indrehus@gmail.com" \
+      author.name="Sunniva Indrehus" \
+      author.email="sunniva.indrehus@gmail.com" \
+      author.name="Sunniva Indrehus" \
       description="CTSM host land model on GCC-base OS" \
       version.fates="sci.1.43.2_api.14.2.0" \
       version.hlm="ctsm5.1.dev022" \
@@ -26,24 +27,25 @@ RUN mkdir -p inputdata \
     && mkdir -p output \
     && mkdir -p scripts \
     && mkdir -p baselines \
-    && mkdir -p .cime 
+    && mkdir -p .cime \
+    && mkdir -p CTSM  
 
-## TODO: merge above into single large RUN command?
-## Clone CTSM model and grab the docker-specific cime config directory from github
-RUN git -c http.sslVerify=false clone https://github.com/ESCOMP/CTSM.git \
-    && cd CTSM \
-    && git describe \
-    && git checkout ctsm5.1.dev022 \
-    && ./manage_externals/checkout_externals \
-    && git describe \
-    && cd src/fates/ \
-    && git describe \
-    && cd /.cime \
+# ## Set local path to the code folder of CTSM
+# ENV CTSM_PATH /home/sunnivin/Documents/UiO/code/ESCMOP/ctsm-ozone-luna/CTSM
+# RUN echo $CTSM_PATH ${CTSM_PATH}
+ 
+# ### Copy in the local version of CTSM
+# ADD /home/sunnivin/Documents/UiO/code/ESCMOP/ctsm-ozone-luna/CTSM /CTSM/   
+
+# ## Do manage externals to get the different model components
+# RUN cd CTSM \
+#     && ./manage_externals/checkout_externals \
+#     && git branch
+
+## Set-up the docker-specific configurations for the machine config files. 
+RUN cd /.cime \
     && wget https://raw.githubusercontent.com/NGEET/docker-fates-tutorial/master/docker/ctsm/cime_config/config \ 
     && wget https://raw.githubusercontent.com/NGEET/docker-fates-tutorial/master/docker/ctsm/cime_config/config_compilers.xml \
     && wget https://raw.githubusercontent.com/NGEET/docker-fates-tutorial/master/docker/ctsm/cime_config/config_machines.xml
 
-## Should the above wgets be changed to COPY?  We would have to then include the cime directory with every dockerfile.
-## The problem with wget is that it has no knowledge of whether or not the files changed state so a `docker build .` won't
-## really build a new image if nothing else is changed in the Dockerfile.
-### EOF
+## EOF
