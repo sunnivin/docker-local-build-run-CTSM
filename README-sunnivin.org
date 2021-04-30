@@ -20,13 +20,16 @@ $ chmod 755 sunnivin-my-name.sh
 $ cd ..
 
 #### Run the containe, mount in local  CTSM code, and compile
-$ docker run --rm -ti --hostname=docker -u $(id -u):$(id -g) \
+
+´$ docker run --rm -ti --hostname=docker -u $(id -u):$(id -g) \
 -v /home/sunnivin/Data/cesm_input_datasets:/inputdata \
 -v /home/sunnivin/Documents/UiO/code/ESCMOP/ctsm-ozone-luna/docker/output:/output \
 -v /home/sunnivin/Documents/UiO/code/ESCMOP/ctsm-ozone-luna/CTSM:/CTSM \
 -v /home/sunnivin/Documents/UiO/code/ESCMOP/ctsm-ozone-luna/docker/scripts:/scripts \
 sunnivin/ctsm-ozone-luna:latest \
 /scripts/restructure-ctsm-ozone-luna.sh
+´
+
 
 # Build my docker image
 $ docker build -t restructure-ctsm-ozone-luna-sunnivin .
