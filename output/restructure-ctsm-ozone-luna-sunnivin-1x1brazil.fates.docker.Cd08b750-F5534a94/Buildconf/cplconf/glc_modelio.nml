@@ -1,0 +1,13 @@
+&modelio
+  diri = "/output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94/bld/glc"
+  diro = "/output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94/run"
+  logfile = "glc.log.210407-151800"
+/
+&pio_inparm
+  pio_netcdf_format = "64bit_offset"
+  pio_numiotasks = -99
+  pio_rearranger = 1
+  pio_root = 1
+  pio_stride = 1
+  pio_typename = "netcdf"
+/

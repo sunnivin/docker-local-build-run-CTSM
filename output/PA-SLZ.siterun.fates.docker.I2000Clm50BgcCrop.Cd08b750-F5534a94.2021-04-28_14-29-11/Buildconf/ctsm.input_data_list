@@ -1,0 +1,12 @@
+fsurdat = /inputdata/single_site/PA-SLZ/surfdata_1x1_brazil_16pfts_Irrig_CMIP6_simyr2000_c170824.nc
+finidat =  
+fatmlndfrc = /inputdata/single_site/PA-SLZ/domain.lnd.1x1pt-brazil_navy.090715.nc
+paramfile = /inputdata/lnd/clm2/paramdata/clm50_params.c210208.nc
+fsnowaging = /inputdata/lnd/clm2/snicardata/snicar_drdt_bst_fit_60_c070416.nc
+fsnowoptics = /inputdata/lnd/clm2/snicardata/snicar_optics_5bnd_c090915.nc
+stream_fldfilename_popdens = /inputdata/lnd/clm2/firedata/clmforc.Li_2017_HYDEv3.2_CMIP6_hdm_0.5x0.5_AVHRR_simyr1850-2016_c180202.nc
+stream_fldfilename_ndep = /inputdata/lnd/clm2/ndepdata/fndep_clm_hist_b.e21.BWHIST.f09_g17.CMIP6-historical-WACCM.ensmean_1849-2015_monthly_0.9x1.25_c180926.nc
+stream_fldfilename_ch4finundated = /inputdata/lnd/clm2/paramdata/finundated_inversiondata_0.9x1.25_c170706.nc
+stream_fldfilename_lightng = /inputdata/atm/datm7/NASA_LIS/clmforc.Li_2012_climo1995-2011.T62.lnfm_Total_c140423.nc
+megan_factors_file = /inputdata/atm/cam/chem/trop_mozart/emis/megan21_emis_factors_78pft_c20161108.nc
+stream_fldfilename_urbantv = /inputdata/lnd/clm2/urbandata/CLM50_tbuildmax_Oleson_2016_0.9x1.25_simyr1849-2106_c160923.nc

@@ -1,0 +1,28 @@
+make -f /CTSM/cime/src/share/timing/Makefile install -C /output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94/bld/gnu/openmpi/nodebug/nothreads/mct/gptl MACFILE=/output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94/Macros.make MODEL=gptl COMP_NAME=gptl GPTL_DIR=/CTSM/cime/src/share/timing GPTL_LIBDIR=/output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94/bld/gnu/openmpi/nodebug/nothreads/mct/gptl SHAREDPATH=/output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94/bld/gnu/openmpi/nodebug/nothreads/mct CIME_MODEL=cesm  SMP=FALSE CASEROOT="/output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94" CASETOOLS="/output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94/Tools" CIMEROOT="/CTSM/cime" COMP_INTERFACE="mct" COMPILER="gnu" DEBUG="FALSE" EXEROOT="/output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94/bld" INCROOT="/output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94/bld/lib/include" LIBROOT="/output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94/bld/lib" MACH="docker" MPILIB="openmpi" NINST_VALUE="c1a1l1i1o1r1g1w1i1e1" OS="linux" PIO_VERSION="1" SHAREDLIBROOT="/output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94/bld" SMP_PRESENT="FALSE" USE_ESMF_LIB="FALSE" USE_MOAB="FALSE" COMP_LND="clm" COMPARE_TO_NUOPC="FALSE" USE_TRILINOS="FALSE" USE_ALBANY="FALSE" USE_PETSC="FALSE"  
+make: Entering directory '/output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94/bld/gnu/openmpi/nodebug/nothreads/mct/gptl'
+mpicc   -c -I/CTSM/cime/src/share/timing  -std=gnu99   -O    -DCESMCOUPLED   -DFORTRANUNDERSCORE -DNO_R16 -DCPRGNU  -DHAVE_VPRINTF -DHAVE_GETTIMEOFDAY -DHAVE_BACKTRACE  -DMCT_INTERFACE -DHAVE_MPI /CTSM/cime/src/share/timing/gptl.c
+mpicc   -c -I/CTSM/cime/src/share/timing  -std=gnu99   -O    -DCESMCOUPLED   -DFORTRANUNDERSCORE -DNO_R16 -DCPRGNU  -DHAVE_VPRINTF -DHAVE_GETTIMEOFDAY -DHAVE_BACKTRACE  -DMCT_INTERFACE -DHAVE_MPI /CTSM/cime/src/share/timing/GPTLutil.c
+mpicc   -c -I/CTSM/cime/src/share/timing  -std=gnu99   -O    -DCESMCOUPLED   -DFORTRANUNDERSCORE -DNO_R16 -DCPRGNU  -DHAVE_VPRINTF -DHAVE_GETTIMEOFDAY -DHAVE_BACKTRACE  -DMCT_INTERFACE -DHAVE_MPI /CTSM/cime/src/share/timing/GPTLget_memusage.c
+mpicc   -c -I/CTSM/cime/src/share/timing  -std=gnu99   -O    -DCESMCOUPLED   -DFORTRANUNDERSCORE -DNO_R16 -DCPRGNU  -DHAVE_VPRINTF -DHAVE_GETTIMEOFDAY -DHAVE_BACKTRACE  -DMCT_INTERFACE -DHAVE_MPI /CTSM/cime/src/share/timing/GPTLprint_memusage.c
+mpicc   -c -I/CTSM/cime/src/share/timing  -std=gnu99   -O    -DCESMCOUPLED   -DFORTRANUNDERSCORE -DNO_R16 -DCPRGNU  -DHAVE_VPRINTF -DHAVE_GETTIMEOFDAY -DHAVE_BACKTRACE  -DMCT_INTERFACE -DHAVE_MPI /CTSM/cime/src/share/timing/gptl_papi.c
+mpicc   -c -I/CTSM/cime/src/share/timing  -std=gnu99   -O    -DCESMCOUPLED   -DFORTRANUNDERSCORE -DNO_R16 -DCPRGNU  -DHAVE_VPRINTF -DHAVE_GETTIMEOFDAY -DHAVE_BACKTRACE  -DMCT_INTERFACE -DHAVE_MPI /CTSM/cime/src/share/timing/f_wrappers.c
+mpif90  -c -I/CTSM/cime/src/share/timing  -fconvert=big-endian -ffree-line-length-none -ffixed-line-length-none   -O      -DCESMCOUPLED   -DFORTRANUNDERSCORE -DNO_R16 -DCPRGNU  -DHAVE_VPRINTF -DHAVE_GETTIMEOFDAY -DHAVE_BACKTRACE  -DMCT_INTERFACE -DHAVE_MPI -ffree-form   /CTSM/cime/src/share/timing/perf_utils.F90
+mpif90  -c -I/CTSM/cime/src/share/timing  -fconvert=big-endian -ffree-line-length-none -ffixed-line-length-none   -O      -DCESMCOUPLED   -DFORTRANUNDERSCORE -DNO_R16 -DCPRGNU  -DHAVE_VPRINTF -DHAVE_GETTIMEOFDAY -DHAVE_BACKTRACE  -DMCT_INTERFACE -DHAVE_MPI -ffree-form   /CTSM/cime/src/share/timing/perf_mod.F90
+ar rv libgptl.a gptl.o GPTLutil.o GPTLget_memusage.o GPTLprint_memusage.o gptl_papi.o f_wrappers.o perf_mod.o perf_utils.o
+a - gptl.o
+a - GPTLutil.o
+a - GPTLget_memusage.o
+a - GPTLprint_memusage.o
+a - gptl_papi.o
+a - f_wrappers.o
+a - perf_mod.o
+a - perf_utils.o
+cp -p /CTSM/cime/src/share/timing/gptl.h /output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94/bld/gnu/openmpi/nodebug/nothreads/mct/include
+cp -p *.mod /output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94/bld/gnu/openmpi/nodebug/nothreads/mct/include
+cp -p libgptl.a /output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94/bld/gnu/openmpi/nodebug/nothreads/mct/lib
+make: Leaving directory '/output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94/bld/gnu/openmpi/nodebug/nothreads/mct/gptl'
+/CTSM/cime/src/share/timing/gptl.c: In function ‘GPTLpr_summary_file’:
+/CTSM/cime/src/share/timing/gptl.c:3444:8: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+   if (((int) comm) == 0)
+        ^
+ar: creating libgptl.a

@@ -1,0 +1,300 @@
+(lnd_init_mct) :CLM land model initialization
+ dtime =         1800
+ ctsm5.1.dev025-24-gd08b750
+
+ Attempting to initialize the land model .....
+
+ Attempting to initialize run control settings .....
+ Read in clm_inparm namelist from: lnd_in
+  
+ rooting_profile settings:
+   rooting_profile_method_water  =            1
+   (rooting_profile_varindex_water  =            1 )
+   rooting_profile_method_carbon =            1
+   (rooting_profile_varindex_carbon  =            2 )
+  
+ soilwater_movement settings:
+   soilwater_movement_method  =            1
+   upper_boundary_condition   =            1
+   lower_boundary_condition   =            2
+   use_bedrock                =  T
+   dtmin                      =    60.000000000000000     
+   verySmall                  =    1.0000000000000000E-008
+   xTolerUpper                =   0.10000000000000001     
+   xTolerLower                =    1.0000000000000000E-002
+   expensive                  =           42
+   inexpensive                =            1
+   flux_calculation           =            1
+  
+ soil_resis settings:
+   soil_resis_method  =            1
+ Read in canopyfluxes_inparm  namelist
+ (OPNFIL): Successfully opened file lnd_in on unit=           96
+  
+ canopyfluxes_inparm settings:
+&CANOPYFLUXES_INPARM
+ USE_UNDERCANOPY_STABILITY=F,
+ USE_BIOMASS_HEAT_STORAGE=F,
+ ITMAX_CANOPY_FLUXES=         40,
+ /
+  
+ Read in clm_CanopyHydrology_inparm  namelist
+ (OPNFIL): Successfully opened file lnd_in on unit=           96
+  
+ canopyhydrology settings:
+   interception_fraction        =    1.0000000000000000     
+   maximum_leaf_wetted_fraction =    5.0000000000000003E-002
+   use_clm5_fpi                 =  T
+ Read in surfacealbedo_inparm  namelist
+ (OPNFIL): Successfully opened file lnd_in on unit=           96
+
+ surfacealbedo_inparm settings
+&SURFACEALBEDO_INPARM
+ SNOWVEG_AFFECTS_RADIATION=T,
+ /
+
+ Read in clm_SnowHydrology_inparm  namelist
+ (OPNFIL): Successfully opened file lnd_in on unit=           96
+  
+ SnowHydrology settings:
+&CLM_SNOWHYDROLOGY_INPARM
+ WIND_DEPENDENT_SNOW_DENSITY=T,
+ SNOW_OVERBURDEN_COMPACTION_METHOD="Vionnet2012                                                     ",
+ LOTMP_SNOWDENSITY_METHOD="Slater2017               ",
+ UPPLIM_DESTRUCT_METAMORPH=  175.00000000000000     ,
+ OVERBURDEN_COMPRESS_TFACTOR=  8.0000000000000002E-002,
+ MIN_WIND_SNOWCOMPACT=  5.0000000000000000     ,
+ RESET_SNOW=F,
+ RESET_SNOW_GLC=F,
+ RESET_SNOW_GLC_ELA=  1000000000.0000000     ,
+ SNOW_DZMIN_1=  1.0000000000000000E-002,
+ SNOW_DZMAX_L_1=  2.9999999999999999E-002,
+ SNOW_DZMAX_U_1=  2.0000000000000000E-002,
+ SNOW_DZMIN_2=  1.4999999999999999E-002,
+ SNOW_DZMAX_L_2=  7.0000000000000007E-002,
+ SNOW_DZMAX_U_2=  5.0000000000000003E-002,
+ /
+  
+ Read in clmu_inparm  namelist
+ (OPNFIL): Successfully opened file lnd_in on unit=           96
+    urban air conditioning/heating and wasteheat   = ON_WASTEHEAT    
+    urban traffic flux   =  F
+ Read in clm_humanindex_inparm  namelist
+ (OPNFIL): Successfully opened file lnd_in on unit=           96
+ Read in luna  namelist
+ (OPNFIL): Successfully opened file lnd_in on unit=           96
+  
+ luna settings:
+&LUNA
+ JMAXB1= 0.17000000000000001     ,
+ /
+  
+ Read in cnmresp_inparm  namelist
+ (OPNFIL): Successfully opened file lnd_in on unit=           96
+  
+ cnmresp_inparm settings:
+&CNMRESP_INPARM
+ BR_ROOT=  8.2999999999999999E-007,
+ /
+  
+ Read in soilhydrology_inparm  namelist
+ (OPNFIL): Successfully opened file lnd_in on unit=           96
+  
+ soilhydrology_inparm settings:
+&SOILHYDROLOGY_INPARM
+ BASEFLOW_SCALAR=  1.0000000000000000E-003,
+ /
+  
+ Read in cnfire_inparm  namelist
+ (OPNFIL): Successfully opened file lnd_in on unit=           96
+  
+ cnfire_inparm settings:
+&CNFIRE_INPARM
+ FIRE_METHOD="li2016crufrc                                                                    ",
+ /
+  
+ Read in cnprecision_inparm  namelist
+ (OPNFIL): Successfully opened file lnd_in on unit=           96
+  
+ cnprecision_inparm settings:
+&CNPRECISION_INPARM
+ NCRIT=  1.0000000000000001E-009,
+ CCRIT=  1.0000000000000000E-008,
+ CNEGCRIT= -60.000000000000000     ,
+ NNEGCRIT= -6.0000000000000000     ,
+ /
+  
+ Read in mineral_nitrogen_dynamics  namelist
+ (OPNFIL): Successfully opened file lnd_in on unit=           96
+  
+ mineral_nitrogen_dynamics settings:
+&MINERAL_NITROGEN_DYNAMICS
+ FREELIVFIX_SLOPE_WET=  5.9999999999999995E-004,
+ FREELIVFIX_INTERCEPT=  1.1700000000000000E-002,
+ /
+  
+ Read in cnphenology  namelist
+ (OPNFIL): Successfully opened file lnd_in on unit=           96
+  
+ cnphenology settings:
+&CNPHENOLOGY
+ INITIAL_SEED_AT_PLANTING=  3.0000000000000000     ,
+ /
+  
+ Read in CENTURY_soilBGCDecompCascade  namelist
+ (OPNFIL): Successfully opened file lnd_in on unit=           96
+  
+ CENTURY_soilBGCDecompCascade settings:
+&CENTURY_SOILBGCDECOMPCASCADE
+ INITIAL_CSTOCKS= 3*200.00000000000000       ,
+ INITIAL_CSTOCKS_DEPTH=  1.5000000000000000     ,
+ /
+  
+ Successfully initialized run control settings
+
+ Attempting to read maxsoil_patches and numcft from the surface data .....
+ (GETFIL): attempting to find local file surfdata_1x1_brazil_16pfts_Irrig_CMIP6_simyr2000_c170824.nc
+ (GETFIL): using /inputdata/single_site/PA-SLZ/surfdata_1x1_brazil_16pfts_Irrig_CMIP6_simyr2000_c170824.nc
+ Opened existing file /inputdata/single_site/PA-SLZ/surfdata_1x1_brazil_16pfts_Irrig_CMIP6_simyr2000_c170824.nc      393216
+ Successfully read maxsoil_patches and numcft from the surface data
+
+ soil_layerstruct_predefined varpar 20SL_8.5m       
+ soil_layerstruct_userdefined varpar   -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000     
+ nlevsoi, nlevgrnd varpar           20          25
+ CLM varpar subsurface discretization levels 
+    nlevsoi =  20
+    nlevgrnd =  25
+    nlevdecomp =  20
+    nlevdecomp_full =  25
+    nlevlak =  10
+
+ define run:
+    source                = Community Terrestrial Systems Model
+    model_version         = ctsm5.1.dev025-24-gd08b750
+    run type              = initial
+    case title            = UNSET
+    username              = fatesuser
+    hostname              = docker
+ process control parameters:
+     use_lch4 =  T
+     use_nitrif_denitrif =  T
+     use_vertsoilc =  T
+     use_extralakelayers =  F
+     use_vichydro =  F
+     use_century_decomp =  T
+     use_cn =  T
+     use_cndv =  F
+     use_crop =  T
+     use_fertilizer =  T
+     use_grainproduct =  T
+     ozone_method = unset                                                           
+     use_snicar_frc =  F
+     use_vancouver =  F
+     use_mexicocity =  F
+     use_noio =  F
+     use_SSRE =  F
+ input data files:
+    PFT physiology and parameters file = /inputdata/lnd/clm2/paramdata/clm50_params.c210208.nc
+    surface data   = /inputdata/single_site/PA-SLZ/surfdata_1x1_brazil_16pfts_Irrig_CMIP6_simyr2000_c170824.nc
+    land frac data = /inputdata/single_site/PA-SLZ/domain.lnd.1x1pt-brazil_navy.090715.nc
+    Number of ACTIVE PFTS (0 means input pft data NOT collapsed to n_dom_pfts) =           0
+    Number of ACTIVE LANDUNITS (0 means input landunit data NOT collapsed to n_dom_landunits) =           0
+    Collapse urban landunits; done before collapsing all landunits to n_dom_landunits; .false. means do nothing i.e. keep all the urban landunits, though n_dom_landunits may still remove them = F
+    Threshold above which the model keeps the soil landunit =   0.0000000000000000     
+    Threshold above which the model keeps the crop landunit =   0.0000000000000000     
+    Threshold above which the model keeps the glacier landunit =   0.0000000000000000     
+    Threshold above which the model keeps the lake landunit =   0.0000000000000000     
+    Threshold above which the model keeps the wetland landunit =   0.0000000000000000     
+    Threshold above which the model keeps the urban landunits =   0.0000000000000000     
+    nfix_timeconst, timescale for smoothing npp in N fixation term:    10.000000000000000     
+    spinup_state, (0 = normal mode; 1 = AD spinup; 2 AAD)         :            0
+    model is currently NOT in AD spinup mode.
+    Fixation and Uptake of Nitrogen Model Version 2 (FUN2) is turned on for Nitrogen Competition
+    override_bgc_restart_mismatch_dump                     :  F
+    som_adv_flux, the advection term in soil mixing (m/s) :    0.0000000000000000     
+    max_depth_cryoturb (m)                                :    3.0000000000000000     
+    surfprof_exp                                          :    10.000000000000000     
+   use_c13                                                :  F
+   use_c13_timeseries                                     :  F
+   atm_c13_filename                                       :                                                                                                                                                                                                                                                                 
+   use_c14                                                :  F
+   use_c14_bombspike                                      :  F
+   atm_c14_filename                                       :                                                                                                                                                                                                                                                                 
+   for_testing_allow_interp_non_ciso_to_ciso              :  F
+    snow optical properties file = /inputdata/lnd/clm2/snicardata/snicar_optics_5bnd_c090915.nc
+    snow aging parameters file = /inputdata/lnd/clm2/snicardata/snicar_drdt_bst_fit_60_c070416.nc
+    Number of snow layers =          12
+    Max snow depth (mm) =   10000.000000000000     
+    glc number of elevation classes =          10
+    glc CLM glacier areas and topography will NOT evolve dynamically
+    glc snow persistence max days =            0
+    initial data created by model (cold start)
+    atmospheric forcing data is from cesm atm model
+ Restart parameters:
+    restart pointer file directory     = .
+    restart pointer file name          = rpointer.lnd
+ model physics parameters:
+    CO2 volume mixing ratio   (umol/mol)   =    367.00000000000000     
+    land-ice albedos      (unitless 0-1)   =   0.50000000000000000       0.29999999999999999     
+    pre-defined soil layer structure = 20SL_8.5m       
+    user-defined soil layer structure =   -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000       -9999999.0000000000     
+    user-defined number of soil layers =     -9999999
+    plant hydraulic stress =  T
+    dynamic roots          =  F
+    nsegspc              =           35
+  perchroot (plant water stress based on unfrozen layers only) =  F
+  perchroot (plant water stress based on time-integrated active layer only) =  F
+  anoxia (applied to soil decomposition)             =  T
+
+ Lake Model Namelists:
+ Increased mixing relative to Hostetler wind-driven eddy expression will be used for deep lakes exceeding depth    25.000000000000000       by a factor of    10.000000000000000      .
+ Albedo over melting lakes will approach values (visible, NIR):  0.10000000000000001       0.10000000000000001      as compared with 0.60, 0.40 for cold frozen lakes with no snow.
+ plant nitrogen model namelists:
+   use_flexibleCN =  T
+     MM_Nuptake_opt =  T
+     downreg_opt =  F
+     plant_ndemand_opt =            3
+     substrate_term_opt =  T
+     nscalar_opt =  T
+     temp_scalar_opt =  T
+     CNratio_floating =  T
+     lnc_opt =  T
+     reduce_dayl_factor =  F
+     vcmax_opt =            3
+     CN_residual_opt =            1
+     CN_partition_opt =            1
+     CN_evergreen_phenology_opt =            1
+     carbon_resp_opt =            0
+   use_luna =  T
+   ED/FATES: 
+     use_fates =  F
+  
+ dynamic_subgrid settings:
+&DYNAMIC_SUBGRID
+ FLANDUSE_TIMESERIES="                                                                                                                                                                                                                                                                ",
+ DO_TRANSIENT_PFTS=F,
+ DO_TRANSIENT_CROPS=F,
+ DO_TRANSIENT_LAKES=F,
+ DO_HARVEST=F,
+ RESET_DYNBAL_BASELINES=F,
+ FOR_TESTING_ALLOW_NON_ANNUAL_CHANGES=F,
+ FOR_TESTING_ZERO_DYNBAL_FLUXES=F,
+ /
+  
+ Attempting to read global land mask from /inputdata/single_site/PA-SLZ/domain.lnd.1x1pt-brazil_navy.090715.nc
+ (GETFIL): attempting to find local file domain.lnd.1x1pt-brazil_navy.090715.nc
+ (GETFIL): using /inputdata/single_site/PA-SLZ/domain.lnd.1x1pt-brazil_navy.090715.nc
+ Opened existing file /inputdata/single_site/PA-SLZ/domain.lnd.1x1pt-brazil_navy.090715.nc      458752
+ lat/lon grid flag (isgrid2d) is  F
+ ncd_inqvid: variable LANDMASK is not on dataset
+  decomp precompute numg,nclumps,seglen1,avg_seglen,nsegspc=           1           1 T   1.00000000       1.00000000    
+  Surface Grid Characteristics
+    longitude points               =            1
+    latitude points                =            1
+    total number of land gridcells =            1
+  Decomposition Characteristics
+    clumps per process             =            1
+  gsMap Characteristics
+   lnd gsmap glo num of segs      =            1
+
+ Attempting to read ldomain from /inputdata/single_site/PA-SLZ/domain.lnd.1x1pt-brazil_navy.090715.nc

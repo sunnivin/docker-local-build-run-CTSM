@@ -1,0 +1,652 @@
+# Declare all module files used to build each object.
+ActiveLayerMod.o : ActiveLayerMod.F90 ncdio_pio.mod clm_time_manager.mod clm_varctl.mod clm_varpar.mod gridcelltype.mod columntype.mod restutilmod.mod histfilemod.mod decompmod.mod clm_varcon.mod temperaturetype.mod landunit_varcon.mod landunittype.mod   
+AerosolMod.o : AerosolMod.F90 ncdio_pio.mod clm_varcon.mod clm_varpar.mod waterfluxbulktype.mod spmdmod.mod atm2lndtype.mod waterstatebulktype.mod shr_assert_mod.mod waterdiagnosticbulktype.mod clm_varctl.mod clm_time_manager.mod decompmod.mod histfilemod.mod restutilmod.mod columntype.mod fileutils.mod abortutils.mod   
+AnnualFluxDribbler.o : AnnualFluxDribbler.F90 clm_varcon.mod ncdio_pio.mod decompmod.mod restutilmod.mod shr_assert_mod.mod clm_time_manager.mod clm_varctl.mod abortutils.mod   
+Assertions.o : Assertions.F90.in abortutils.mod clm_varctl.mod   
+BalanceCheckMod.o : BalanceCheckMod.F90 watertype.mod atm2lndtype.mod landunit_varcon.mod gridcelltype.mod clm_varpar.mod clm_varcon.mod totalwaterandheatmod.mod waterdiagnostictype.mod energyfluxtype.mod canopystatetype.mod landunittype.mod abortutils.mod surfacealbedotype.mod subgridavemod.mod dynsubgridcontrolmod.mod decompmod.mod clm_varctl.mod waterdiagnosticbulktype.mod patchtype.mod soilhydrologytype.mod spmdmod.mod lakestatetype.mod waterbalancetype.mod solarabsorbedtype.mod waterstatetype.mod waterfluxtype.mod column_varcon.mod columntype.mod getglobalvaluesmod.mod waterlnd2atmtype.mod clm_time_manager.mod wateratm2lndtype.mod shr_assert_mod.mod   
+BandDiagonalMod.o : BandDiagonalMod.F90 abortutils.mod decompmod.mod clm_varctl.mod shr_assert_mod.mod   
+BareGroundFluxesMod.o : BareGroundFluxesMod.F90 waterdiagnosticbulktype.mod clm_varctl.mod decompmod.mod soilstatetype.mod wateratm2lndbulktype.mod landunittype.mod humanindexmod.mod energyfluxtype.mod clm_varcon.mod clm_varpar.mod photosynthesismod.mod landunit_varcon.mod surfaceresistancemod.mod atm2lndtype.mod waterstatebulktype.mod qsatmod.mod columntype.mod frictionvelocitymod.mod ncdio_pio.mod temperaturetype.mod waterfluxbulktype.mod paramutilmod.mod patchtype.mod ch4mod.mod   
+BiogeophysPreFluxCalcsMod.o : BiogeophysPreFluxCalcsMod.F90 columntype.mod shr_assert_mod.mod column_varcon.mod pftconmod.mod temperaturetype.mod frictionvelocitymod.mod patchtype.mod clmfatesinterfacemod.mod decompmod.mod clm_varctl.mod waterdiagnosticbulktype.mod canopystatetype.mod landunittype.mod wateratm2lndbulktype.mod soilstatetype.mod clm_varpar.mod clm_varcon.mod energyfluxtype.mod waterstatebulktype.mod atm2lndtype.mod surfaceresistancemod.mod landunit_varcon.mod   
+CNAnnualUpdateMod.o : CNAnnualUpdateMod.F90 patchtype.mod cnvegcarbonfluxtype.mod clm_time_manager.mod filtercolmod.mod cnvegstatetype.mod clm_varcon.mod subgridavemod.mod decompmod.mod   
+CNBalanceCheckMod.o : CNBalanceCheckMod.F90 cnvegcarbonstatetype.mod cnsharedparamsmod.mod cnvegnitrogenstatetype.mod soilbiogeochemnitrogenfluxtype.mod cnvegcarbonfluxtype.mod clm_time_manager.mod columntype.mod soilbiogeochemcarbonfluxtype.mod cnproductsmod.mod gridcelltype.mod atm2lndtype.mod clm_varctl.mod decompmod.mod cnvegnitrogenfluxtype.mod subgridavemod.mod abortutils.mod   
+CNC14DecayMod.o : CNC14DecayMod.F90 clm_varpar.mod gridcelltype.mod clm_varcon.mod decompmod.mod soilbiogeochemdecompcascadecontype.mod clm_varctl.mod soilbiogeochemcarbonstatetype.mod cnvegcarbonstatetype.mod patchtype.mod columntype.mod soilbiogeochemstatetype.mod clm_time_manager.mod pftconmod.mod   
+CNCIsoAtmTimeSeriesReadMod.o : CNCIsoAtmTimeSeriesReadMod.F90 ncdio_pio.mod spmdmod.mod clm_time_manager.mod fileutils.mod clm_varcon.mod clm_varctl.mod abortutils.mod   
+CNCIsoFluxMod.o : CNCIsoFluxMod.F90 soilbiogeochemcarbonstatetype.mod cnvegcarbonstatetype.mod patchtype.mod columntype.mod soilbiogeochemstatetype.mod cnvegcarbonfluxtype.mod soilbiogeochemcarbonfluxtype.mod pftconmod.mod clm_varpar.mod soilbiogeochemdecompcascadecontype.mod clm_varctl.mod abortutils.mod   
+CNCStateUpdate1Mod.o : CNCStateUpdate1Mod.F90 abortutils.mod soilbiogeochemdecompcascadecontype.mod decompmod.mod clm_varctl.mod clm_varpar.mod soilbiogeochemcarbonfluxtype.mod pftconmod.mod cnvegcarbonfluxtype.mod clm_time_manager.mod patchtype.mod soilbiogeochemcarbonstatetype.mod cnvegcarbonstatetype.mod croptype.mod   
+CNCStateUpdate2Mod.o : CNCStateUpdate2Mod.F90 cnvegcarbonstatetype.mod soilbiogeochemcarbonstatetype.mod clm_time_manager.mod cnvegcarbonfluxtype.mod clm_varpar.mod abortutils.mod   
+CNCStateUpdate3Mod.o : CNCStateUpdate3Mod.F90 abortutils.mod clm_varpar.mod clm_time_manager.mod cnvegcarbonfluxtype.mod cnvegcarbonstatetype.mod soilbiogeochemcarbonstatetype.mod   
+CNDVDriverMod.o : CNDVDriverMod.F90 decompmod.mod cndvestablishmentmod.mod clm_varctl.mod abortutils.mod wateratm2lndbulktype.mod cndvlightmod.mod landunittype.mod clm_varcon.mod clm_varpar.mod domainmod.mod cndvtype.mod atm2lndtype.mod clm_time_manager.mod cnvegcarbonfluxtype.mod fileutils.mod cnvegcarbonstatetype.mod ncdio_pio.mod patchtype.mod spmdmod.mod   
+CNDVEstablishmentMod.o : CNDVEstablishmentMod.F90 cnvegcarbonfluxtype.mod pftconmod.mod cnvegcarbonstatetype.mod patchtype.mod decompmod.mod clm_varctl.mod wateratm2lndbulktype.mod abortutils.mod landunittype.mod cndvtype.mod landunit_varcon.mod atm2lndtype.mod   
+CNDVLightMod.o : CNDVLightMod.F90 cndvtype.mod decompmod.mod patchtype.mod cnvegcarbonstatetype.mod pftconmod.mod   
+CNDVType.o : CNDVType.F90 clm_varpar.mod clm_varcon.mod clm_varctl.mod histfilemod.mod decompmod.mod accumulmod.mod abortutils.mod ncdio_pio.mod spmdmod.mod clm_time_manager.mod shr_assert_mod.mod restutilmod.mod pftconmod.mod   
+CNDriverMod.o : CNDriverMod.F90 soilstatetype.mod cnmrespmod.mod subgridavemod.mod cncstateupdate3mod.mod cnrootdynmod.mod activelayermod.mod canopystatetype.mod cnnstateupdate1mod.mod soilbiogeochempotentialmod.mod soilbiogeochemverticalprofilemod.mod wateratm2lndbulktype.mod firemethodtype.mod clm_varctl.mod cnfunmod.mod cncstateupdate1mod.mod waterdiagnosticbulktype.mod cnvegnitrogenfluxtype.mod dynsubgridcontrolmod.mod decompmod.mod atm2lndtype.mod cndvtype.mod waterstatebulktype.mod soilbiogeochemlittverttranspmod.mod cnvegstatetype.mod cnproductsmod.mod cngapmortalitymod.mod photosynthesismod.mod cnphenologymod.mod clm_varpar.mod soilwaterretentioncurvemod.mod soilbiogeochemnstateupdate1mod.mod energyfluxtype.mod cnprecisioncontrolmod.mod soilbiogeochemdecompmod.mod cncisofluxmod.mod soilbiogeochemdecompcascadecnmod.mod soilbiogeochemcarbonfluxtype.mod soilbiogeochemnitrifdenitrifmod.mod cnvegcarbonfluxtype.mod soilbiogeochemdecompcascadebgcmod.mod cngrespmod.mod soilbiogeochemnitrogenfluxtype.mod soilbiogeochemcompetitionmod.mod soilbiogeochemstatetype.mod cnc14decaymod.mod soilbiogeochemnitrogenstatetype.mod dynharvestmod.mod cnvegnitrogenstatetype.mod cnnstateupdate3mod.mod ch4mod.mod nutrientcompetitionmethodmod.mod cnndynamicsmod.mod croptype.mod cnvegcarbonstatetype.mod waterfluxbulktype.mod cnsharedparamsmod.mod cnnstateupdate2mod.mod saturatedexcessrunoffmod.mod soilbiogeochemcarbonstatetype.mod temperaturetype.mod soilbiogeochemnleachingmod.mod cncstateupdate2mod.mod   
+CNFUNMod.o : CNFUNMod.F90 clm_varctl.mod cnvegnitrogenfluxtype.mod decompmod.mod soilstatetype.mod subgridavemod.mod canopystatetype.mod abortutils.mod clm_varpar.mod clm_varcon.mod waterstatebulktype.mod cnvegstatetype.mod cnvegcarbonfluxtype.mod clm_time_manager.mod soilbiogeochemnitrogenfluxtype.mod columntype.mod soilbiogeochemnitrogenstatetype.mod pftconmod.mod soilbiogeochemcarbonfluxtype.mod ncdio_pio.mod cnvegcarbonstatetype.mod waterfluxbulktype.mod temperaturetype.mod cnvegnitrogenstatetype.mod patchtype.mod   
+CNFireBaseMod.o : CNFireBaseMod.F90 shr_assert_mod.mod firedatabasetype.mod cnvegcarbonfluxtype.mod clm_time_manager.mod columntype.mod fileutils.mod pftconmod.mod cnvegcarbonstatetype.mod ncdio_pio.mod saturatedexcessrunoffmod.mod cnvegnitrogenstatetype.mod spmdmod.mod paramutilmod.mod patchtype.mod waterdiagnosticbulktype.mod clm_varctl.mod decompmod.mod soilbiogeochemdecompcascadecontype.mod dynsubgridcontrolmod.mod histfilemod.mod cnvegnitrogenfluxtype.mod soilstatetype.mod wateratm2lndbulktype.mod firemethodtype.mod abortutils.mod energyfluxtype.mod soilwaterretentioncurvemod.mod clm_varcon.mod gridcelltype.mod clm_varpar.mod cndvtype.mod atm2lndtype.mod cnvegstatetype.mod waterstatebulktype.mod   
+CNFireEmissionsMod.o : CNFireEmissionsMod.F90 pftconmod.mod cnvegcarbonfluxtype.mod patchtype.mod cnvegcarbonstatetype.mod abortutils.mod histfilemod.mod decompmod.mod clm_varpar.mod fireemisfactorsmod.mod clm_varcon.mod   
+CNFireFactoryMod.o : CNFireFactoryMod.F90 decompmod.mod cnfireli2014mod.mod clm_varctl.mod abortutils.mod firemethodtype.mod cnfireli2021mod.mod cnfirenofiremod.mod fileutils.mod spmdmod.mod cnfireli2016mod.mod   
+CNFireLi2014Mod.o : CNFireLi2014Mod.F90 patchtype.mod cnvegnitrogenstatetype.mod saturatedexcessrunoffmod.mod cnvegcarbonstatetype.mod pftconmod.mod columntype.mod shr_assert_mod.mod clm_time_manager.mod cnvegcarbonfluxtype.mod cnvegstatetype.mod waterstatebulktype.mod cndvtype.mod atm2lndtype.mod clm_varcon.mod soilwaterretentioncurvemod.mod energyfluxtype.mod gridcelltype.mod clm_varpar.mod abortutils.mod firemethodtype.mod wateratm2lndbulktype.mod soilstatetype.mod subgridavemod.mod decompmod.mod soilbiogeochemdecompcascadecontype.mod cnvegnitrogenfluxtype.mod dynsubgridcontrolmod.mod cnfirebasemod.mod waterdiagnosticbulktype.mod clm_varctl.mod   
+CNFireLi2016Mod.o : CNFireLi2016Mod.F90 cnvegstatetype.mod waterstatebulktype.mod cndvtype.mod atm2lndtype.mod soilwaterretentioncurvemod.mod clm_varcon.mod energyfluxtype.mod clm_varpar.mod gridcelltype.mod abortutils.mod wateratm2lndbulktype.mod firemethodtype.mod soilstatetype.mod subgridavemod.mod soilbiogeochemdecompcascadecontype.mod decompmod.mod cnvegnitrogenfluxtype.mod dynsubgridcontrolmod.mod waterdiagnosticbulktype.mod cnfirebasemod.mod clm_varctl.mod patchtype.mod cnvegnitrogenstatetype.mod saturatedexcessrunoffmod.mod cnvegcarbonstatetype.mod pftconmod.mod columntype.mod soilbiogeochemstatetype.mod shr_assert_mod.mod clm_time_manager.mod cnvegcarbonfluxtype.mod   
+CNFireLi2021Mod.o : CNFireLi2021Mod.F90 cndvtype.mod atm2lndtype.mod cnvegstatetype.mod waterstatebulktype.mod energyfluxtype.mod clm_varcon.mod soilwaterretentioncurvemod.mod gridcelltype.mod clm_varpar.mod subgridavemod.mod soilstatetype.mod firemethodtype.mod wateratm2lndbulktype.mod abortutils.mod cnfirebasemod.mod waterdiagnosticbulktype.mod clm_varctl.mod soilbiogeochemdecompcascadecontype.mod decompmod.mod dynsubgridcontrolmod.mod cnvegnitrogenfluxtype.mod cnvegnitrogenstatetype.mod patchtype.mod cnvegcarbonstatetype.mod saturatedexcessrunoffmod.mod pftconmod.mod shr_assert_mod.mod cnvegcarbonfluxtype.mod clm_time_manager.mod soilbiogeochemstatetype.mod columntype.mod   
+CNFireNoFireMod.o : CNFireNoFireMod.F90 energyfluxtype.mod soilwaterretentioncurvemod.mod waterstatebulktype.mod cnvegstatetype.mod atm2lndtype.mod cnvegnitrogenfluxtype.mod decompmod.mod waterdiagnosticbulktype.mod cnfirebasemod.mod firemethodtype.mod wateratm2lndbulktype.mod subgridavemod.mod soilstatetype.mod saturatedexcessrunoffmod.mod cnvegcarbonstatetype.mod cnvegnitrogenstatetype.mod cnvegcarbonfluxtype.mod shr_assert_mod.mod   
+CNGRespMod.o : CNGRespMod.F90 cnvegcarbonfluxtype.mod pftconmod.mod cnvegcarbonstatetype.mod cnvegnitrogenstatetype.mod patchtype.mod canopystatetype.mod   
+CNGapMortalityMod.o : CNGapMortalityMod.F90 cndvtype.mod clm_varpar.mod clm_varcon.mod canopystatetype.mod abortutils.mod cnvegnitrogenfluxtype.mod decompmod.mod clm_varctl.mod patchtype.mod cnvegnitrogenstatetype.mod ncdio_pio.mod cnvegcarbonstatetype.mod pftconmod.mod columntype.mod cnvegcarbonfluxtype.mod clm_time_manager.mod shr_assert_mod.mod   
+CNMRespMod.o : CNMRespMod.F90 clm_varcon.mod clm_varpar.mod photosynthesismod.mod abortutils.mod canopystatetype.mod soilstatetype.mod decompmod.mod clm_varctl.mod patchtype.mod cnvegnitrogenstatetype.mod spmdmod.mod temperaturetype.mod cnsharedparamsmod.mod ncdio_pio.mod fileutils.mod pftconmod.mod cnvegcarbonfluxtype.mod   
+CNNDynamicsMod.o : CNNDynamicsMod.F90 patchtype.mod spmdmod.mod cnvegnitrogenstatetype.mod cnsharedparamsmod.mod waterfluxbulktype.mod croptype.mod pftconmod.mod fileutils.mod soilbiogeochemstatetype.mod columntype.mod soilbiogeochemnitrogenstatetype.mod cnvegcarbonfluxtype.mod clm_time_manager.mod soilbiogeochemnitrogenfluxtype.mod cnvegstatetype.mod atm2lndtype.mod clm_varcon.mod abortutils.mod subgridavemod.mod cnvegnitrogenfluxtype.mod decompmod.mod clm_varctl.mod waterdiagnosticbulktype.mod   
+CNNStateUpdate1Mod.o : CNNStateUpdate1Mod.F90 soilbiogeochemnitrogenstatetype.mod clm_time_manager.mod soilbiogeochemnitrogenfluxtype.mod pftconmod.mod cnsharedparamsmod.mod patchtype.mod cnvegnitrogenstatetype.mod cnvegnitrogenfluxtype.mod decompmod.mod clm_varctl.mod clm_varpar.mod clm_varcon.mod   
+CNNStateUpdate2Mod.o : CNNStateUpdate2Mod.F90 clm_varpar.mod cnvegnitrogenfluxtype.mod clm_varctl.mod cnvegnitrogenstatetype.mod soilbiogeochemnitrogenstatetype.mod clm_time_manager.mod   
+CNNStateUpdate3Mod.o : CNNStateUpdate3Mod.F90 cnvegnitrogenstatetype.mod soilbiogeochemnitrogenfluxtype.mod clm_time_manager.mod soilbiogeochemnitrogenstatetype.mod clm_varpar.mod clm_varctl.mod cnvegnitrogenfluxtype.mod   
+CNPhenologyMod.o : CNPhenologyMod.F90 cndvtype.mod atm2lndtype.mod cnvegstatetype.mod clm_varcon.mod gridcelltype.mod clm_varpar.mod subgridavemod.mod soilstatetype.mod wateratm2lndbulktype.mod initverticalmod.mod abortutils.mod canopystatetype.mod waterdiagnosticbulktype.mod clm_varctl.mod decompmod.mod cnvegnitrogenfluxtype.mod cnvegnitrogenstatetype.mod spmdmod.mod paramutilmod.mod patchtype.mod cnvegcarbonstatetype.mod croptype.mod ncdio_pio.mod temperaturetype.mod cnsharedparamsmod.mod fileutils.mod pftconmod.mod shr_assert_mod.mod cnvegcarbonfluxtype.mod clm_time_manager.mod columntype.mod   
+CNPrecisionControlMod.o : CNPrecisionControlMod.F90 cnvegcarbonstatetype.mod spmdmod.mod cnvegnitrogenstatetype.mod patchtype.mod shr_assert_mod.mod pftconmod.mod fileutils.mod clm_varctl.mod decompmod.mod abortutils.mod   
+CNProductsMod.o : CNProductsMod.F90 speciesbasetype.mod clm_varcon.mod subgridavemod.mod abortutils.mod histfilemod.mod decompmod.mod patchtype.mod ncdio_pio.mod pftconmod.mod clm_time_manager.mod shr_assert_mod.mod restutilmod.mod   
+CNRootDynMod.o : CNRootDynMod.F90 columntype.mod soilbiogeochemnitrogenstatetype.mod clm_time_manager.mod cnvegcarbonfluxtype.mod pftconmod.mod cnvegcarbonstatetype.mod croptype.mod patchtype.mod cnvegnitrogenstatetype.mod decompmod.mod clm_varctl.mod soilstatetype.mod clm_varpar.mod cnvegstatetype.mod   
+CNSharedParamsMod.o : CNSharedParamsMod.F90 fileutils.mod spmdmod.mod ncdio_pio.mod abortutils.mod clm_varctl.mod   
+CNSpeciesMod.o : CNSpeciesMod.F90    
+CNVegCarbonFluxType.o : CNVegCarbonFluxType.F90 patchtype.mod cnsharedparamsmod.mod ncdio_pio.mod pftconmod.mod annualfluxdribbler.mod restutilmod.mod columntype.mod shr_assert_mod.mod clm_time_manager.mod landunit_varcon.mod clm_varcon.mod clm_varpar.mod abortutils.mod landunittype.mod subgridavemod.mod soilbiogeochemdecompcascadecontype.mod decompmod.mod histfilemod.mod dynsubgridcontrolmod.mod clm_varctl.mod   
+CNVegCarbonStateType.o : CNVegCarbonStateType.F90 restutilmod.mod columntype.mod clm_time_manager.mod shr_assert_mod.mod pftconmod.mod fileutils.mod ncdio_pio.mod cnvegcomputeseedmod.mod patchtype.mod spmdmod.mod histfilemod.mod decompmod.mod clm_varctl.mod cnspeciesmod.mod landunittype.mod abortutils.mod subgridavemod.mod dynpatchstateupdatermod.mod clm_varcon.mod landunit_varcon.mod   
+CNVegComputeSeedMod.o : CNVegComputeSeedMod.F90 decompmod.mod cnspeciesmod.mod clm_varctl.mod abortutils.mod clm_varcon.mod shr_assert_mod.mod pftconmod.mod patchtype.mod   
+CNVegNitrogenFluxType.o : CNVegNitrogenFluxType.F90 restutilmod.mod columntype.mod cnsharedparamsmod.mod ncdio_pio.mod patchtype.mod soilbiogeochemdecompcascadecontype.mod decompmod.mod histfilemod.mod clm_varctl.mod abortutils.mod landunittype.mod subgridavemod.mod clm_varcon.mod clm_varpar.mod landunit_varcon.mod   
+CNVegNitrogenStateType.o : CNVegNitrogenStateType.F90 clm_varctl.mod cnspeciesmod.mod histfilemod.mod soilbiogeochemdecompcascadecontype.mod decompmod.mod subgridavemod.mod landunittype.mod abortutils.mod dynpatchstateupdatermod.mod clm_varpar.mod clm_varcon.mod landunit_varcon.mod clm_time_manager.mod shr_assert_mod.mod restutilmod.mod columntype.mod soilbiogeochemnitrogenstatetype.mod pftconmod.mod ncdio_pio.mod cnvegcomputeseedmod.mod cnsharedparamsmod.mod spmdmod.mod patchtype.mod   
+CNVegStateType.o : CNVegStateType.F90 clm_varcon.mod clm_varpar.mod landunit_varcon.mod clm_varctl.mod decompmod.mod histfilemod.mod dynsubgridcontrolmod.mod abortutils.mod landunittype.mod cnvegcarbonstatetype.mod ncdio_pio.mod cnvegnitrogenstatetype.mod spmdmod.mod patchtype.mod annualfluxdribbler.mod columntype.mod restutilmod.mod fileutils.mod pftconmod.mod   
+CNVegStructUpdateMod.o : CNVegStructUpdateMod.F90 decompmod.mod clm_varctl.mod waterdiagnosticbulktype.mod canopystatetype.mod clm_varcon.mod cnvegstatetype.mod cndvtype.mod clm_time_manager.mod pftconmod.mod frictionvelocitymod.mod cnvegcarbonstatetype.mod croptype.mod patchtype.mod   
+CNVegetationFacade.o : CNVegetationFacade.F90 decompmod.mod cnvegnitrogenfluxtype.mod cncstateupdate1mod.mod waterdiagnosticbulktype.mod clm_varctl.mod wateratm2lndbulktype.mod firemethodtype.mod abortutils.mod cnnstateupdate1mod.mod dynpriorweightsmod.mod activelayermod.mod canopystatetype.mod subgridavemod.mod soilstatetype.mod cnbalancecheckmod.mod cnfirefactorymod.mod energyfluxtype.mod soilwaterretentioncurvemod.mod clm_varcon.mod photosynthesismod.mod dynpatchstateupdatermod.mod cnfireemissionsmod.mod cndvdrivermod.mod cnproductsmod.mod cnvegstatetype.mod waterstatebulktype.mod cndvtype.mod cnvegstructupdatemod.mod atm2lndtype.mod speciesnonisotopetype.mod soilbiogeochemnitrogenstatetype.mod soilbiogeochemstatetype.mod soilbiogeochemnitrogenfluxtype.mod shr_assert_mod.mod cnvegcarbonfluxtype.mod clm_time_manager.mod soilbiogeochemcarbonfluxtype.mod fileutils.mod cnprecisioncontrolmod.mod pftconmod.mod saturatedexcessrunoffmod.mod soilbiogeochemcarbonstatetype.mod temperaturetype.mod cnannualupdatemod.mod soilbiogeochemprecisioncontrolmod.mod waterfluxbulktype.mod cnvegcarbonstatetype.mod croptype.mod ncdio_pio.mod dyncndvmod.mod frictionvelocitymod.mod dyncolumnstateupdatermod.mod nutrientcompetitionmethodmod.mod speciesisotopetype.mod ch4mod.mod patchtype.mod dynconsbiogeochemmod.mod cnvegnitrogenstatetype.mod cndrivermod.mod spmdmod.mod   
+CanopyFluxesMod.o : CanopyFluxesMod.F90 waterstatebulktype.mod atm2lndtype.mod surfaceresistancemod.mod soilwaterretentioncurvemod.mod clm_varcon.mod energyfluxtype.mod photosynthesismod.mod soilmoiststressmod.mod gridcelltype.mod clm_varpar.mod humanindexmod.mod abortutils.mod wateratm2lndbulktype.mod activelayermod.mod canopystatetype.mod surfacealbedotype.mod soilstatetype.mod simplemathmod.mod decompmod.mod waterdiagnosticbulktype.mod clm_varctl.mod patchtype.mod ch4mod.mod clmfatesinterfacemod.mod edaccumulatefluxesmod.mod paramutilmod.mod spmdmod.mod temperaturetype.mod edtypesmod.mod waterfluxbulktype.mod frictionvelocitymod.mod ncdio_pio.mod lunamod.mod ozonebasemod.mod solarabsorbedtype.mod fileutils.mod pftconmod.mod columntype.mod qsatmod.mod shr_assert_mod.mod clm_time_manager.mod   
+CanopyHydrologyMod.o : CanopyHydrologyMod.F90 column_varcon.mod fileutils.mod aerosolmod.mod clm_time_manager.mod shr_assert_mod.mod columntype.mod paramutilmod.mod spmdmod.mod patchtype.mod watertracerutils.mod ncdio_pio.mod waterfluxbulktype.mod temperaturetype.mod subgridavemod.mod landunittype.mod canopystatetype.mod wateratm2lndbulktype.mod abortutils.mod clm_varctl.mod waterdiagnosticbulktype.mod decompmod.mod atm2lndtype.mod watertype.mod waterstatebulktype.mod clm_varcon.mod   
+CanopyStateType.o : CanopyStateType.F90 clm_varcon.mod clm_varpar.mod landunit_varcon.mod clm_varctl.mod decompmod.mod histfilemod.mod abortutils.mod accumulmod.mod landunittype.mod ncdio_pio.mod spmdmod.mod patchtype.mod clm_time_manager.mod restutilmod.mod fileutils.mod   
+ChecksBalancesMod.o : ChecksBalancesMod.F90 prtgenericmod.mod edtypesmod.mod fatesglobals.mod fatesinterfacetypesmod.mod fateslittermod.mod fatesconstantsmod.mod   
+ColumnType.o : ColumnType.F90 clm_varcon.mod clm_varpar.mod landunittype.mod clm_varctl.mod column_varcon.mod   
+CropType.o : CropType.F90 ncdio_pio.mod patchtype.mod spmdmod.mod columntype.mod restutilmod.mod clm_time_manager.mod shr_assert_mod.mod pftconmod.mod fileutils.mod clm_varpar.mod gridcelltype.mod clm_varcon.mod clm_instur.mod landunit_varcon.mod histfilemod.mod decompmod.mod clm_varctl.mod accumulmod.mod landunittype.mod abortutils.mod   
+DUSTMod.o : DUSTMod.F90 subgridavemod.mod soilstatetype.mod abortutils.mod landunittype.mod canopystatetype.mod waterdiagnosticbulktype.mod clm_varctl.mod decompmod.mod histfilemod.mod landunit_varcon.mod atm2lndtype.mod waterstatebulktype.mod clm_varcon.mod clm_varpar.mod columntype.mod patchtype.mod frictionvelocitymod.mod   
+DaylengthMod.o : DaylengthMod.F90 shr_assert_mod.mod clm_time_manager.mod decompmod.mod gridcelltype.mod   
+DryDepVelocity.o : DryDepVelocity.F90 pftconmod.mod clm_time_manager.mod patchtype.mod spmdmod.mod frictionvelocitymod.mod landunittype.mod canopystatetype.mod wateratm2lndbulktype.mod abortutils.mod histfilemod.mod decompmod.mod clm_varctl.mod waterdiagnosticbulktype.mod waterstatebulktype.mod atm2lndtype.mod landunit_varcon.mod gridcelltype.mod photosynthesismod.mod clm_varcon.mod   
+EDAccumulateFluxesMod.o : EDAccumulateFluxesMod.F90 fatesinterfacetypesmod.mod fatesglobals.mod fatesconstantsmod.mod edtypesmod.mod   
+EDBGCDynMod.o : EDBGCDynMod.F90 soilbiogeochemdecompmod.mod cncisofluxmod.mod cnprecisioncontrolmod.mod soilbiogeochemcarbonfluxtype.mod soilbiogeochemnitrifdenitrifmod.mod soilbiogeochemdecompcascadecnmod.mod soilbiogeochemdecompcascadebgcmod.mod cnvegcarbonfluxtype.mod soilbiogeochemnitrogenfluxtype.mod cngrespmod.mod soilbiogeochemcompetitionmod.mod soilbiogeochemstatetype.mod soilbiogeochemnitrogenstatetype.mod cnc14decaymod.mod clmfatesinterfacemod.mod soilhydrologytype.mod ch4mod.mod cnndynamicsmod.mod cnvegcarbonstatetype.mod croptype.mod cnnstateupdate2mod.mod soilbiogeochemprecisioncontrolmod.mod waterfluxbulktype.mod cncstateupdate2mod.mod temperaturetype.mod soilbiogeochemcarbonstatetype.mod subgridavemod.mod soilstatetype.mod cnmrespmod.mod cnnstateupdate1mod.mod cncstateupdate3mod.mod canopystatetype.mod activelayermod.mod soilbiogeochemverticalprofilemod.mod abortutils.mod soilbiogeochempotentialmod.mod clm_varctl.mod cncstateupdate1mod.mod decompmod.mod atm2lndtype.mod soilbiogeochemlittverttranspmod.mod cngapmortalitymod.mod clm_varpar.mod cnphenologymod.mod soilbiogeochemnstateupdate1mod.mod   
+EDBtranMod.o : EDBtranMod.F90 edtypesmod.mod edpftvarcon.mod fatesallometrymod.mod fatesplanthydraulicsmod.mod fatesconstantsmod.mod fatesinterfacetypesmod.mod fatesglobals.mod   
+EDCanopyStructureMod.o : EDCanopyStructureMod.F90 fatesglobals.mod fatesinterfacetypesmod.mod prtparametersmod.mod edpatchdynamicsmod.mod fatesplanthydraulicsmod.mod fatesconstantsmod.mod fatessizeagetypeindicesmod.mod fatesallometrymod.mod prtgenericmod.mod edpftvarcon.mod edcohortdynamicsmod.mod sfparamsmod.mod edtypesmod.mod edparamsmod.mod   
+EDCohortDynamicsMod.o : EDCohortDynamicsMod.F90 fatesinterfacetypesmod.mod prtparametersmod.mod fatesglobals.mod fatesplanthydraulicsmod.mod prtallometriccarbonmod.mod fatesconstantsmod.mod fateslittermod.mod edpftvarcon.mod prtgenericmod.mod sfparamsmod.mod prtallometriccnpmod.mod fatessizeagetypeindicesmod.mod fatesallometrymod.mod fatesparameterderivedmod.mod edtypesmod.mod edparamsmod.mod   
+EDInitMod.o : EDInitMod.F90 checksbalancesmod.mod edtypesmod.mod fatesallometrymod.mod prtgenericmod.mod edpftvarcon.mod edcohortdynamicsmod.mod edpatchdynamicsmod.mod fatesconstantsmod.mod fatesplanthydraulicsmod.mod fatesinventoryinitmod.mod fatesglobals.mod fatesinterfacetypesmod.mod prtparametersmod.mod   
+EDLoggingMortalityMod.o : EDLoggingMortalityMod.F90 prtgenericmod.mod edpftvarcon.mod sfparamsmod.mod fatesallometrymod.mod edtypesmod.mod edparamsmod.mod fatesinterfacetypesmod.mod prtparametersmod.mod fatesglobals.mod fatesplanthydraulicsmod.mod fatesconstantsmod.mod fateslittermod.mod   
+EDMainMod.o : EDMainMod.F90 edphysiologymod.mod edtypesmod.mod checksbalancesmod.mod edmortalityfunctionsmod.mod fatessoilbgcfluxmod.mod prtgenericmod.mod edpftvarcon.mod edcohortdynamicsmod.mod sfmainmod.mod fatessizeagetypeindicesmod.mod fatesallometrymod.mod fatesplanthydraulicsmod.mod fatesconstantsmod.mod prtlossfluxesmod.mod fateslittermod.mod edpatchdynamicsmod.mod edcanopystructuremod.mod edloggingmortalitymod.mod fatesinterfacetypesmod.mod fatesglobals.mod   
+EDMortalityFunctionsMod.o : EDMortalityFunctionsMod.F90 prtgenericmod.mod edpftvarcon.mod fatesallometrymod.mod edtypesmod.mod edparamsmod.mod fatesinterfacetypesmod.mod edloggingmortalitymod.mod fatesglobals.mod fatesconstantsmod.mod   
+EDParamsMod.o : EDParamsMod.F90 fatesconstantsmod.mod fatesparametersinterface.mod fatesglobals.mod   
+EDPatchDynamicsMod.o : EDPatchDynamicsMod.F90 fateslittermod.mod fatesconstantsmod.mod prtlossfluxesmod.mod fatesplanthydraulicsmod.mod fatesglobals.mod fatesinterfacetypesmod.mod prtparametersmod.mod edloggingmortalitymod.mod checksbalancesmod.mod edmortalityfunctionsmod.mod edtypesmod.mod edparamsmod.mod fatesallometrymod.mod fatessizeagetypeindicesmod.mod sfparamsmod.mod edpftvarcon.mod prtgenericmod.mod edcohortdynamicsmod.mod   
+EDPftvarcon.o : EDPftvarcon.F90 fateslittermod.mod fatesconstantsmod.mod fatesglobals.mod fatesparametersinterface.mod fatesinterfacetypesmod.mod prtparametersmod.mod edtypesmod.mod edparamsmod.mod prtgenericmod.mod   
+EDPhysiologyMod.o : EDPhysiologyMod.F90 edparamsmod.mod edtypesmod.mod shr_assert_mod.mod fatesallometrymod.mod sfparamsmod.mod edcohortdynamicsmod.mod fatessynchronizedparamsmod.mod edpftvarcon.mod prtgenericmod.mod fateslittermod.mod prtlossfluxesmod.mod fatesconstantsmod.mod fatesplanthydraulicsmod.mod fatesglobals.mod prtparametersmod.mod fatesinterfacetypesmod.mod   
+EDSurfaceAlbedoMod.o : EDSurfaceAlbedoMod.F90 fatesinterfacetypesmod.mod edcanopystructuremod.mod fatesglobals.mod fatesconstantsmod.mod edpftvarcon.mod shr_assert_mod.mod edtypesmod.mod   
+EDTypesMod.o : EDTypesMod.F90 prtgenericmod.mod fatesutilsmod.mod fateslittermod.mod fatesconstantsmod.mod fateshydraulicsmemmod.mod fatesglobals.mod   
+EnergyFluxType.o : EnergyFluxType.F90 clm_varctl.mod decompmod.mod histfilemod.mod abortutils.mod landunittype.mod accumulmod.mod clm_varcon.mod clm_varpar.mod landunit_varcon.mod shr_assert_mod.mod clm_time_manager.mod annualfluxdribbler.mod restutilmod.mod columntype.mod column_varcon.mod ncdio_pio.mod spmdmod.mod patchtype.mod   
+FATESFireBase.o : FATESFireBase.F90 cndvtype.mod atm2lndtype.mod cnvegstatetype.mod waterstatebulktype.mod soilwaterretentioncurvemod.mod energyfluxtype.mod soilstatetype.mod abortutils.mod wateratm2lndbulktype.mod cnfirebasemod.mod waterdiagnosticbulktype.mod decompmod.mod cnvegnitrogenfluxtype.mod cnvegnitrogenstatetype.mod cnvegcarbonstatetype.mod ncdio_pio.mod saturatedexcessrunoffmod.mod cnvegcarbonfluxtype.mod   
+FATESFireDataMod.o : FATESFireDataMod.F90 fatesfirebase.mod shr_assert_mod.mod clm_time_manager.mod clm_varcon.mod decompmod.mod clm_varctl.mod abortutils.mod accumulmod.mod   
+FATESFireFactoryMod.o : FATESFireFactoryMod.F90 clm_varctl.mod abortutils.mod fatesfiredatamod.mod fatesfirenodatamod.mod fatesfirebase.mod   
+FATESFireNoDataMod.o : FATESFireNoDataMod.F90 shr_assert_mod.mod fatesfirebase.mod abortutils.mod clm_varctl.mod decompmod.mod   
+FatesAllometryMod.o : FatesAllometryMod.F90 prtparametersmod.mod fatesglobals.mod fatesconstantsmod.mod edtypesmod.mod   
+FatesBstressMod.o : FatesBstressMod.F90 fatesconstantsmod.mod fatesinterfacetypesmod.mod fatesglobals.mod edbtranmod.mod edtypesmod.mod fatesallometrymod.mod   
+FatesConstantsMod.o : FatesConstantsMod.F90    
+FatesGlobals.o : FatesGlobals.F90 fatesconstantsmod.mod   
+FatesHistoryInterfaceMod.o : FatesHistoryInterfaceMod.F90 fatesutilsmod.mod fateslittermod.mod fatesconstantsmod.mod fatesiovariablekindmod.mod fateshistoryvariabletype.mod fateshydraulicsmemmod.mod fatesglobals.mod fatesinterfacetypesmod.mod prtparametersmod.mod edtypesmod.mod edparamsmod.mod fatesiodimensionsmod.mod fatessizeagetypeindicesmod.mod edpftvarcon.mod prtgenericmod.mod   
+FatesHistoryVariableType.o : FatesHistoryVariableType.F90 fatesglobals.mod fatesiovariablekindmod.mod fatesconstantsmod.mod fatesiodimensionsmod.mod   
+FatesHydraulicsMemMod.o : FatesHydraulicsMemMod.F90 fatesconstantsmod.mod fateshydrowtfmod.mod   
+FatesHydroWTFMod.o : FatesHydroWTFMod.F90 fatesconstantsmod.mod fatesglobals.mod   
+FatesIODimensionsMod.o : FatesIODimensionsMod.F90 fatesconstantsmod.mod   
+FatesIOVariableKindMod.o : FatesIOVariableKindMod.F90 fatesglobals.mod fatesconstantsmod.mod fatesiodimensionsmod.mod   
+FatesIntegratorsMod.o : FatesIntegratorsMod.F90 fatesconstantsmod.mod   
+FatesInterfaceMod.o : FatesInterfaceMod.F90 fatesglobals.mod clmfatesparaminterfacemod.mod prtinitparamsfatesmod.mod prtparametersmod.mod fatesinterfacetypesmod.mod fateslittermod.mod fatesplanthydraulicsmod.mod prtallometriccarbonmod.mod fatesconstantsmod.mod prtallometriccnpmod.mod edpftvarcon.mod prtgenericmod.mod sfparamsmod.mod edparamsmod.mod edtypesmod.mod   
+FatesInterfaceTypesMod.o : FatesInterfaceTypesMod.F90 edtypesmod.mod fatesconstantsmod.mod fatesglobals.mod   
+FatesInventoryInitMod.o : FatesInventoryInitMod.F90 fatesinterfacetypesmod.mod prtparametersmod.mod fatesglobals.mod fatesconstantsmod.mod fateslittermod.mod edpatchdynamicsmod.mod sfparamsmod.mod edpftvarcon.mod prtgenericmod.mod edcohortdynamicsmod.mod fatesallometrymod.mod fatessizeagetypeindicesmod.mod edtypesmod.mod   
+FatesLitterMod.o : FatesLitterMod.F90 fatesconstantsmod.mod fatesglobals.mod   
+FatesParameterDerivedMod.o : FatesParameterDerivedMod.F90 fatesinterfacetypesmod.mod fatesconstantsmod.mod edpftvarcon.mod   
+FatesParametersInterface.o : FatesParametersInterface.F90 fatesglobals.mod abortutils.mod fatesconstantsmod.mod   
+FatesPlantHydraulicsMod.o : FatesPlantHydraulicsMod.F90 fateshydraulicsmemmod.mod fatesconstantsmod.mod fatesutilsmod.mod prtparametersmod.mod fatesinterfacetypesmod.mod fateshydrowtfmod.mod fatesglobals.mod edparamsmod.mod edtypesmod.mod prtgenericmod.mod edpftvarcon.mod clm_time_manager.mod fatesallometrymod.mod   
+FatesPlantRespPhotosynthMod.o : FatesPlantRespPhotosynthMod.F90 prtgenericmod.mod fatessynchronizedparamsmod.mod edpftvarcon.mod fatesallometrymod.mod fatesparameterderivedmod.mod edtypesmod.mod edparamsmod.mod edcanopystructuremod.mod fatesinterfacetypesmod.mod prtparametersmod.mod fatesglobals.mod fatesconstantsmod.mod   
+FatesRestartInterfaceMod.o : FatesRestartInterfaceMod.F90 fateslittermod.mod fatesutilsmod.mod edpatchdynamicsmod.mod fateshydraulicsmemmod.mod fatesplanthydraulicsmod.mod fatesconstantsmod.mod fatesiovariablekindmod.mod fatesglobals.mod fatesrestartvariablemod.mod fatesinterfacetypesmod.mod edtypesmod.mod edinitmod.mod fatesiodimensionsmod.mod fatessizeagetypeindicesmod.mod edsurfaceradiationmod.mod fatesallometrymod.mod edpftvarcon.mod prtgenericmod.mod edcohortdynamicsmod.mod   
+FatesRestartVariableType.o : FatesRestartVariableType.F90 fatesiodimensionsmod.mod fatesiovariablekindmod.mod fatesconstantsmod.mod fatesglobals.mod   
+FatesSizeAgeTypeIndicesMod.o : FatesSizeAgeTypeIndicesMod.F90 edparamsmod.mod fatesconstantsmod.mod fatesinterfacetypesmod.mod   
+FatesSoilBGCFluxMod.o : FatesSoilBGCFluxMod.F90 edtypesmod.mod edparamsmod.mod prtgenericmod.mod edpftvarcon.mod fatesallometrymod.mod fatesconstantsmod.mod fateslittermod.mod fatesinterfacetypesmod.mod prtparametersmod.mod fatesglobals.mod   
+FatesSynchronizedParamsMod.o : FatesSynchronizedParamsMod.F90 fatesconstantsmod.mod fatesparametersinterface.mod   
+FatesUtilsMod.o : FatesUtilsMod.F90 fatesconstantsmod.mod fatesglobals.mod   
+FireDataBaseType.o : FireDataBaseType.F90 domainmod.mod ndepstreammod.mod clm_varctl.mod histfilemod.mod decompmod.mod abortutils.mod firemethodtype.mod ncdio_pio.mod spmdmod.mod clm_time_manager.mod clm_nlutilsmod.mod shr_assert_mod.mod fileutils.mod   
+FireEmisFactorsMod.o : FireEmisFactorsMod.F90 ncdio_pio.mod fileutils.mod pftconmod.mod clm_varpar.mod abortutils.mod clm_varctl.mod   
+FireMethodType.o : FireMethodType.F90 energyfluxtype.mod soilwaterretentioncurvemod.mod cnvegstatetype.mod waterstatebulktype.mod cndvtype.mod atm2lndtype.mod decompmod.mod cnvegnitrogenfluxtype.mod waterdiagnosticbulktype.mod wateratm2lndbulktype.mod soilstatetype.mod saturatedexcessrunoffmod.mod cnvegcarbonstatetype.mod ncdio_pio.mod cnvegnitrogenstatetype.mod cnvegcarbonfluxtype.mod   
+FrictionVelocityMod.o : FrictionVelocityMod.F90 patchtype.mod paramutilmod.mod spmdmod.mod ncdio_pio.mod fileutils.mod columntype.mod restutilmod.mod shr_assert_mod.mod landunit_varcon.mod atm2lndtype.mod clm_varcon.mod abortutils.mod canopystatetype.mod landunittype.mod decompmod.mod histfilemod.mod waterdiagnosticbulktype.mod clm_varctl.mod   
+FuncPedotransferMod.o : FuncPedotransferMod.F90 abortutils.mod   
+GetGlobalValuesMod.o : GetGlobalValuesMod.F90 gridcelltype.mod clm_varcon.mod clm_varctl.mod decompmod.mod landunittype.mod spmdmod.mod patchtype.mod shr_assert_mod.mod columntype.mod   
+GlacierSurfaceMassBalanceMod.o : GlacierSurfaceMassBalanceMod.F90 columntype.mod clm_time_manager.mod shr_assert_mod.mod waterfluxbulktype.mod decompmod.mod clm_varctl.mod landunittype.mod clm_varpar.mod clm_varcon.mod waterstatebulktype.mod glc2lndmod.mod landunit_varcon.mod   
+GridcellType.o : GridcellType.F90 landunit_varcon.mod clm_varcon.mod   
+HumanIndexMod.o : HumanIndexMod.F90 fileutils.mod spmdmod.mod abortutils.mod clm_varctl.mod decompmod.mod histfilemod.mod clm_varcon.mod   
+HydrologyDrainageMod.o : HydrologyDrainageMod.F90 column_varcon.mod soilhydrologymod.mod columntype.mod clm_time_manager.mod soilhydrologytype.mod waterfluxbulktype.mod temperaturetype.mod waterbalancetype.mod landunittype.mod glaciersurfacemassbalancemod.mod wateratm2lndbulktype.mod soilstatetype.mod decompmod.mod clm_varctl.mod soilwatermovementmod.mod waterdiagnosticbulktype.mod waterstatebulktype.mod glc2lndmod.mod atm2lndtype.mod landunit_varcon.mod clm_varpar.mod totalwaterandheatmod.mod clm_varcon.mod   
+HydrologyNoDrainageMod.o : HydrologyNoDrainageMod.F90 clm_varpar.mod snowhydrologymod.mod energyfluxtype.mod clm_varcon.mod soilwaterretentioncurvemod.mod watertype.mod waterstatebulktype.mod infiltrationexcessrunoffmod.mod atm2lndtype.mod landunit_varcon.mod decompmod.mod clm_varctl.mod waterdiagnosticbulktype.mod soilwatermovementmod.mod surfacewatermod.mod canopystatetype.mod landunittype.mod wateratm2lndbulktype.mod soilstatetype.mod waterfluxbulktype.mod temperaturetype.mod irrigationmod.mod saturatedexcessrunoffmod.mod clmfatesinterfacemod.mod soilhydrologytype.mod soilwaterplantsinkmod.mod columntype.mod clm_time_manager.mod aerosolmod.mod topomod.mod column_varcon.mod soilhydrologymod.mod snowcoverfractionbasemod.mod   
+InfiltrationExcessRunoffMod.o : InfiltrationExcessRunoffMod.F90 ncdio_pio.mod waterfluxbulktype.mod saturatedexcessrunoffmod.mod paramutilmod.mod soilhydrologytype.mod shr_assert_mod.mod clm_varcon.mod clm_varctl.mod waterdiagnosticbulktype.mod histfilemod.mod decompmod.mod soilstatetype.mod abortutils.mod   
+IrrigationMod.o : IrrigationMod.F90 clm_varctl.mod decompmod.mod histfilemod.mod soilstatetype.mod subgridavemod.mod abortutils.mod soilwaterretentioncurvemod.mod clm_varcon.mod clm_varpar.mod gridcelltype.mod clm_instur.mod filtercolmod.mod waterstatebulktype.mod watertype.mod shr_assert_mod.mod clm_time_manager.mod columntype.mod restutilmod.mod fileutils.mod soilhydrologymod.mod pftconmod.mod waterstatetype.mod waterfluxtype.mod ncdio_pio.mod watertracerutils.mod waterfluxbulktype.mod spmdmod.mod soilhydrologytype.mod patchtype.mod   
+IssueFixedMetadataHandler.o : IssueFixedMetadataHandler.F90 ncdio_pio.mod clm_varctl.mod abortutils.mod   
+LakeCon.o : LakeCon.F90 spmdmod.mod decompmod.mod clm_varctl.mod   
+LakeFluxesMod.o : LakeFluxesMod.F90 wateratm2lndbulktype.mod clm_varctl.mod waterdiagnosticbulktype.mod decompmod.mod atm2lndtype.mod waterstatebulktype.mod humanindexmod.mod clm_varpar.mod gridcelltype.mod energyfluxtype.mod clm_varcon.mod solarabsorbedtype.mod qsatmod.mod columntype.mod lakecon.mod paramutilmod.mod patchtype.mod frictionvelocitymod.mod ncdio_pio.mod lakestatetype.mod waterfluxbulktype.mod temperaturetype.mod   
+LakeHydrologyMod.o : LakeHydrologyMod.F90 columntype.mod clm_time_manager.mod shr_assert_mod.mod aerosolmod.mod topomod.mod snowcoverfractionbasemod.mod lakestatetype.mod temperaturetype.mod frictionvelocitymod.mod patchtype.mod decompmod.mod clm_varctl.mod soilstatetype.mod snowhydrologymod.mod clm_varpar.mod clm_varcon.mod totalwaterandheatmod.mod energyfluxtype.mod watertype.mod atm2lndtype.mod   
+LakeStateType.o : LakeStateType.F90 columntype.mod restutilmod.mod fileutils.mod ncdio_pio.mod spmdmod.mod clm_varctl.mod decompmod.mod histfilemod.mod abortutils.mod landunittype.mod clm_varcon.mod clm_varpar.mod   
+LakeTemperatureMod.o : LakeTemperatureMod.F90 tridiagonalmod.mod soilstatetype.mod decompmod.mod waterdiagnosticbulktype.mod clm_varctl.mod waterstatebulktype.mod energyfluxtype.mod clm_varcon.mod clm_varpar.mod solarabsorbedtype.mod columntype.mod qsatmod.mod shr_assert_mod.mod clm_time_manager.mod patchtype.mod ch4mod.mod lakecon.mod temperaturetype.mod lakestatetype.mod waterfluxbulktype.mod   
+LandunitType.o : LandunitType.F90 clm_varcon.mod   
+LunaMod.o : LunaMod.F90 clm_varcon.mod photosynthesismod.mod gridcelltype.mod clm_varpar.mod atm2lndtype.mod decompmod.mod quadraticmod.mod waterdiagnosticbulktype.mod clm_varctl.mod abortutils.mod canopystatetype.mod surfacealbedotype.mod temperaturetype.mod cnsharedparamsmod.mod ncdio_pio.mod frictionvelocitymod.mod patchtype.mod paramutilmod.mod spmdmod.mod shr_assert_mod.mod clm_time_manager.mod ozonebasemod.mod solarabsorbedtype.mod fileutils.mod pftconmod.mod   
+MEGANFactorsMod.o : MEGANFactorsMod.F90 clm_varpar.mod abortutils.mod clm_varctl.mod ncdio_pio.mod fileutils.mod   
+NumericsMod.o : NumericsMod.F90 shr_assert_mod.mod   
+NutrientCompetitionCLM45defaultMod.o : NutrientCompetitionCLM45defaultMod.F90 energyfluxtype.mod clm_varcon.mod photosynthesismod.mod cnvegstatetype.mod clm_varctl.mod decompmod.mod cnvegnitrogenfluxtype.mod landunittype.mod canopystatetype.mod cnvegcarbonstatetype.mod croptype.mod cnsharedparamsmod.mod cnvegnitrogenstatetype.mod nutrientcompetitionmethodmod.mod patchtype.mod shr_assert_mod.mod cnvegcarbonfluxtype.mod clm_time_manager.mod soilbiogeochemnitrogenstatetype.mod columntype.mod pftconmod.mod soilbiogeochemcarbonfluxtype.mod   
+NutrientCompetitionFactoryMod.o : NutrientCompetitionFactoryMod.F90 nutrientcompetitionmethodmod.mod decompmod.mod clm_varctl.mod abortutils.mod nutrientcompetitionclm45defaultmod.mod nutrientcompetitionflexiblecnmod.mod   
+NutrientCompetitionFlexibleCNMod.o : NutrientCompetitionFlexibleCNMod.F90 shr_assert_mod.mod cnvegcarbonfluxtype.mod clm_time_manager.mod soilbiogeochemnitrogenstatetype.mod columntype.mod cnprecisioncontrolmod.mod pftconmod.mod soilbiogeochemcarbonfluxtype.mod croptype.mod cnvegcarbonstatetype.mod cnsharedparamsmod.mod cnvegnitrogenstatetype.mod nutrientcompetitionmethodmod.mod patchtype.mod clm_varctl.mod decompmod.mod histfilemod.mod cnvegnitrogenfluxtype.mod canopystatetype.mod landunittype.mod clm_varcon.mod energyfluxtype.mod photosynthesismod.mod clm_varpar.mod cnvegstatetype.mod   
+NutrientCompetitionMethodMod.o : NutrientCompetitionMethodMod.F90 ncdio_pio.mod croptype.mod cnvegcarbonstatetype.mod cnvegnitrogenstatetype.mod cnvegcarbonfluxtype.mod soilbiogeochemnitrogenstatetype.mod soilbiogeochemcarbonfluxtype.mod photosynthesismod.mod energyfluxtype.mod cnvegstatetype.mod cnvegnitrogenfluxtype.mod decompmod.mod canopystatetype.mod abortutils.mod   
+OzoneBaseMod.o : OzoneBaseMod.F90 decompmod.mod ncdio_pio.mod   
+OzoneFactoryMod.o : OzoneFactoryMod.F90 ozonebasemod.mod ozoneoffmod.mod clm_varctl.mod ozonemod.mod decompmod.mod   
+OzoneMod.o : OzoneMod.F90 abortutils.mod clm_varctl.mod decompmod.mod histfilemod.mod clm_varcon.mod pftconmod.mod ozonebasemod.mod shr_assert_mod.mod clm_time_manager.mod restutilmod.mod patchtype.mod ncdio_pio.mod   
+OzoneOffMod.o : OzoneOffMod.F90 ncdio_pio.mod shr_assert_mod.mod ozonebasemod.mod decompmod.mod abortutils.mod   
+PRTAllometricCNPMod.o : PRTAllometricCNPMod.F90 prtgenericmod.mod fatesallometrymod.mod edtypesmod.mod prtparametersmod.mod fatesglobals.mod fatesintegratorsmod.mod fatesconstantsmod.mod   
+PRTAllometricCarbonMod.o : PRTAllometricCarbonMod.F90 fatesconstantsmod.mod fatesintegratorsmod.mod fatesglobals.mod prtparametersmod.mod fatesallometrymod.mod prtgenericmod.mod   
+PRTGenericMod.o : PRTGenericMod.F90 fatesconstantsmod.mod prtparametersmod.mod fatesglobals.mod   
+PRTLossFluxesMod.o : PRTLossFluxesMod.F90 prtgenericmod.mod fatesglobals.mod prtparametersmod.mod fatesconstantsmod.mod   
+PRTParametersMod.o : PRTParametersMod.F90 fatesconstantsmod.mod   
+PRTParamsFATESMod.o : PRTParamsFATESMod.F90 prtgenericmod.mod fatesparametersinterface.mod fatesglobals.mod prtparametersmod.mod fatesinterfacetypesmod.mod fatesconstantsmod.mod   
+PatchType.o : PatchType.F90 clm_varctl.mod clm_varcon.mod   
+PhotosynthesisMod.o : PhotosynthesisMod.F90 landunit_varcon.mod atm2lndtype.mod clm_varcon.mod clm_varpar.mod gridcelltype.mod surfacealbedotype.mod soilstatetype.mod abortutils.mod landunittype.mod canopystatetype.mod quadraticmod.mod waterdiagnosticbulktype.mod clm_varctl.mod decompmod.mod histfilemod.mod spmdmod.mod paramutilmod.mod patchtype.mod cisoatmtimeseriesmod.mod ncdio_pio.mod temperaturetype.mod waterfluxbulktype.mod fileutils.mod pftconmod.mod ozonebasemod.mod solarabsorbedtype.mod shr_assert_mod.mod clm_time_manager.mod restutilmod.mod columntype.mod   
+QSatMod.o : QSatMod.F90    
+RootBiophysMod.o : RootBiophysMod.F90 shr_assert_mod.mod clm_nlutilsmod.mod columntype.mod fileutils.mod pftconmod.mod spmdmod.mod patchtype.mod clm_varctl.mod decompmod.mod abortutils.mod   
+SFMainMod.o : SFMainMod.F90 fateslittermod.mod fatesconstantsmod.mod fatesglobals.mod prtparametersmod.mod fatesinterfacetypesmod.mod edparamsmod.mod edtypesmod.mod prtgenericmod.mod edpftvarcon.mod sfparamsmod.mod   
+SFParamsMod.o : SFParamsMod.F90 fatesconstantsmod.mod fateslittermod.mod fatesglobals.mod fatesparametersinterface.mod edtypesmod.mod   
+SatellitePhenologyMod.o : SatellitePhenologyMod.F90 clm_varcon.mod clm_varpar.mod ndepstreammod.mod controlmod.mod domainmod.mod decompmod.mod histfilemod.mod waterdiagnosticbulktype.mod clm_varctl.mod abortutils.mod canopystatetype.mod ncdio_pio.mod patchtype.mod spmdmod.mod shr_assert_mod.mod clm_time_manager.mod clm_nlutilsmod.mod fileutils.mod pftconmod.mod   
+SaturatedExcessRunoffMod.o : SaturatedExcessRunoffMod.F90 clm_varctl.mod decompmod.mod histfilemod.mod soilstatetype.mod abortutils.mod landunittype.mod clm_varcon.mod landunit_varcon.mod shr_assert_mod.mod columntype.mod ncdio_pio.mod waterfluxbulktype.mod paramutilmod.mod soilhydrologytype.mod   
+SelfTestDriver.o : SelfTestDriver.F90 testncdiopio.mod clm_varctl.mod decompmod.mod   
+SimpleMathMod.o : SimpleMathMod.F90 shr_assert_mod.mod   
+SnowCoverFractionBaseMod.o : SnowCoverFractionBaseMod.F90 shr_assert_mod.mod decompmod.mod clm_varctl.mod landunit_varcon.mod   
+SnowCoverFractionFactoryMod.o : SnowCoverFractionFactoryMod.F90 glcbehaviormod.mod ncdio_pio.mod snowcoverfractionbasemod.mod columntype.mod snowcoverfractionniuyang2007mod.mod abortutils.mod snowcoverfractionswensonlawrence2012mod.mod decompmod.mod clm_varctl.mod   
+SnowCoverFractionNiuYang2007Mod.o : SnowCoverFractionNiuYang2007Mod.F90 clm_varctl.mod decompmod.mod abortutils.mod ncdio_pio.mod paramutilmod.mod shr_assert_mod.mod snowcoverfractionbasemod.mod   
+SnowCoverFractionSwensonLawrence2012Mod.o : SnowCoverFractionSwensonLawrence2012Mod.F90 columntype.mod shr_assert_mod.mod snowcoverfractionbasemod.mod fileutils.mod glcbehaviormod.mod ncdio_pio.mod paramutilmod.mod spmdmod.mod decompmod.mod clm_varctl.mod abortutils.mod clm_varcon.mod landunit_varcon.mod   
+SnowHydrologyMod.o : SnowHydrologyMod.F90 abortutils.mod landunittype.mod waterdiagnosticbulktype.mod clm_varctl.mod decompmod.mod landunit_varcon.mod atm2lndtype.mod filtercolmod.mod waterstatebulktype.mod watertype.mod numericsmod.mod clm_varcon.mod clm_varpar.mod fileutils.mod snowcoverfractionbasemod.mod topomod.mod column_varcon.mod aerosolmod.mod shr_assert_mod.mod clm_time_manager.mod columntype.mod spmdmod.mod paramutilmod.mod lakecon.mod ncdio_pio.mod snowsnicarmod.mod watertracerutils.mod temperaturetype.mod waterfluxbulktype.mod   
+SnowSnicarMod.o : SnowSnicarMod.F90 landunittype.mod abortutils.mod decompmod.mod clm_varctl.mod waterdiagnosticbulktype.mod waterstatebulktype.mod atm2lndtype.mod gridcelltype.mod clm_varpar.mod clm_varcon.mod aerosolmod.mod fileutils.mod columntype.mod clm_time_manager.mod shr_assert_mod.mod spmdmod.mod waterfluxbulktype.mod temperaturetype.mod ncdio_pio.mod   
+SoilBiogeochemCarbonFluxType.o : SoilBiogeochemCarbonFluxType.F90 ncdio_pio.mod restutilmod.mod columntype.mod clm_varcon.mod clm_varpar.mod landunit_varcon.mod soilbiogeochemdecompcascadecontype.mod decompmod.mod histfilemod.mod ch4varcon.mod clm_varctl.mod landunittype.mod   
+SoilBiogeochemCarbonStateType.o : SoilBiogeochemCarbonStateType.F90 dyncolumnstateupdatermod.mod spmdmod.mod ncdio_pio.mod soilbiogeochemstatetype.mod columntype.mod restutilmod.mod clm_time_manager.mod landunit_varcon.mod clm_varcon.mod gridcelltype.mod clm_varpar.mod abortutils.mod landunittype.mod decompmod.mod soilbiogeochemdecompcascadecontype.mod histfilemod.mod clm_varctl.mod   
+SoilBiogeochemCompetitionMod.o : SoilBiogeochemCompetitionMod.F90 cnvegnitrogenstatetype.mod ncdio_pio.mod cnvegcarbonstatetype.mod cnsharedparamsmod.mod waterfluxbulktype.mod temperaturetype.mod soilbiogeochemcarbonstatetype.mod soilbiogeochemcarbonfluxtype.mod cnvegcarbonfluxtype.mod clm_time_manager.mod soilbiogeochemnitrogenfluxtype.mod columntype.mod soilbiogeochemstatetype.mod soilbiogeochemnitrogenstatetype.mod waterstatebulktype.mod cnvegstatetype.mod clm_varpar.mod clm_varcon.mod soilbiogeochemnitrogenuptakemod.mod soilstatetype.mod subgridavemod.mod canopystatetype.mod abortutils.mod clm_varctl.mod cnfunmod.mod cnvegnitrogenfluxtype.mod decompmod.mod   
+SoilBiogeochemDecompCascadeBGCMod.o : SoilBiogeochemDecompCascadeBGCMod.F90 soilbiogeochemstatetype.mod columntype.mod clm_time_manager.mod soilbiogeochemcarbonfluxtype.mod fileutils.mod temperaturetype.mod cnsharedparamsmod.mod ncdio_pio.mod ch4mod.mod spmdmod.mod decompmod.mod soilbiogeochemdecompcascadecontype.mod clm_varctl.mod abortutils.mod soilstatetype.mod clm_varcon.mod clm_varpar.mod gridcelltype.mod   
+SoilBiogeochemDecompCascadeCNMod.o : SoilBiogeochemDecompCascadeCNMod.F90 abortutils.mod soilstatetype.mod soilbiogeochemdecompcascadecontype.mod decompmod.mod clm_varctl.mod clm_varpar.mod clm_varcon.mod soilbiogeochemcarbonfluxtype.mod soilbiogeochemstatetype.mod columntype.mod clm_time_manager.mod ch4mod.mod cnsharedparamsmod.mod temperaturetype.mod ncdio_pio.mod   
+SoilBiogeochemDecompCascadeConType.o : SoilBiogeochemDecompCascadeConType.F90 clm_varpar.mod   
+SoilBiogeochemDecompMod.o : SoilBiogeochemDecompMod.F90 soilbiogeochemcarbonfluxtype.mod shr_assert_mod.mod soilbiogeochemnitrogenfluxtype.mod soilbiogeochemnitrogenstatetype.mod soilbiogeochemstatetype.mod ncdio_pio.mod soilbiogeochemcarbonstatetype.mod abortutils.mod clm_varctl.mod decompmod.mod soilbiogeochemdecompcascadecontype.mod clm_varcon.mod clm_varpar.mod   
+SoilBiogeochemLittVertTranspMod.o : SoilBiogeochemLittVertTranspMod.F90 gridcelltype.mod clm_varpar.mod clm_varcon.mod decompmod.mod soilbiogeochemdecompcascadecontype.mod clm_varctl.mod activelayermod.mod abortutils.mod tridiagonalmod.mod soilbiogeochemcarbonstatetype.mod ncdio_pio.mod columntype.mod soilbiogeochemstatetype.mod soilbiogeochemnitrogenstatetype.mod clm_time_manager.mod soilbiogeochemnitrogenfluxtype.mod soilbiogeochemcarbonfluxtype.mod   
+SoilBiogeochemNLeachingMod.o : SoilBiogeochemNLeachingMod.F90 waterfluxbulktype.mod ncdio_pio.mod soilbiogeochemnitrogenstatetype.mod columntype.mod soilbiogeochemnitrogenfluxtype.mod clm_time_manager.mod clm_varcon.mod clm_varpar.mod waterstatebulktype.mod decompmod.mod clm_varctl.mod abortutils.mod   
+SoilBiogeochemNStateUpdate1Mod.o : SoilBiogeochemNStateUpdate1Mod.F90 cnsharedparamsmod.mod clm_time_manager.mod soilbiogeochemnitrogenfluxtype.mod soilbiogeochemstatetype.mod columntype.mod soilbiogeochemnitrogenstatetype.mod clm_varpar.mod clm_varcon.mod clm_varctl.mod soilbiogeochemdecompcascadecontype.mod   
+SoilBiogeochemNitrifDenitrifMod.o : SoilBiogeochemNitrifDenitrifMod.F90 soilbiogeochemcarbonfluxtype.mod clm_time_manager.mod soilbiogeochemnitrogenfluxtype.mod columntype.mod soilbiogeochemnitrogenstatetype.mod ch4mod.mod ncdio_pio.mod cnsharedparamsmod.mod temperaturetype.mod soilstatetype.mod abortutils.mod clm_varctl.mod decompmod.mod waterstatebulktype.mod clm_varpar.mod clm_varcon.mod   
+SoilBiogeochemNitrogenFluxType.o : SoilBiogeochemNitrogenFluxType.F90 columntype.mod cnsharedparamsmod.mod landunittype.mod abortutils.mod histfilemod.mod decompmod.mod soilbiogeochemdecompcascadecontype.mod clm_varctl.mod landunit_varcon.mod clm_varpar.mod clm_varcon.mod   
+SoilBiogeochemNitrogenStateType.o : SoilBiogeochemNitrogenStateType.F90 dyncolumnstateupdatermod.mod spmdmod.mod ncdio_pio.mod columntype.mod restutilmod.mod soilbiogeochemstatetype.mod shr_assert_mod.mod clm_time_manager.mod landunit_varcon.mod clm_varcon.mod clm_varpar.mod gridcelltype.mod abortutils.mod landunittype.mod decompmod.mod soilbiogeochemdecompcascadecontype.mod histfilemod.mod clm_varctl.mod   
+SoilBiogeochemNitrogenUptakeMod.o : SoilBiogeochemNitrogenUptakeMod.F90 decompmod.mod shr_assert_mod.mod   
+SoilBiogeochemPotentialMod.o : SoilBiogeochemPotentialMod.F90 soilbiogeochemcarbonstatetype.mod ncdio_pio.mod soilbiogeochemcarbonfluxtype.mod soilbiogeochemnitrogenstatetype.mod soilbiogeochemstatetype.mod shr_assert_mod.mod soilbiogeochemnitrogenfluxtype.mod clm_varpar.mod abortutils.mod soilbiogeochemdecompcascadecontype.mod decompmod.mod clm_varctl.mod   
+SoilBiogeochemPrecisionControlMod.o : SoilBiogeochemPrecisionControlMod.F90 columntype.mod soilbiogeochemnitrogenstatetype.mod cnsharedparamsmod.mod soilbiogeochemcarbonstatetype.mod clm_varctl.mod clm_varpar.mod   
+SoilBiogeochemStateType.o : SoilBiogeochemStateType.F90 columntype.mod restutilmod.mod fileutils.mod ncdio_pio.mod cnsharedparamsmod.mod spmdmod.mod clm_varctl.mod decompmod.mod histfilemod.mod abortutils.mod landunittype.mod clm_varcon.mod clm_varpar.mod landunit_varcon.mod   
+SoilBiogeochemVerticalProfileMod.o : SoilBiogeochemVerticalProfileMod.F90 clm_varpar.mod clm_varcon.mod clm_varctl.mod decompmod.mod soilstatetype.mod activelayermod.mod abortutils.mod patchtype.mod shr_assert_mod.mod soilbiogeochemstatetype.mod columntype.mod pftconmod.mod   
+SoilFluxesMod.o : SoilFluxesMod.F90 abortutils.mod canopystatetype.mod landunittype.mod subgridavemod.mod decompmod.mod waterdiagnosticbulktype.mod clm_varctl.mod waterstatebulktype.mod landunit_varcon.mod atm2lndtype.mod clm_varcon.mod energyfluxtype.mod clm_varpar.mod solarabsorbedtype.mod column_varcon.mod columntype.mod clm_time_manager.mod patchtype.mod temperaturetype.mod waterfluxbulktype.mod   
+SoilHydrologyInitTimeConstMod.o : SoilHydrologyInitTimeConstMod.F90 soilstateinittimeconstmod.mod ncdio_pio.mod spmdmod.mod soilhydrologytype.mod columntype.mod column_varcon.mod fileutils.mod clm_varpar.mod clm_varcon.mod landunit_varcon.mod waterstatebulktype.mod clm_varctl.mod decompmod.mod soilstatetype.mod landunittype.mod abortutils.mod   
+SoilHydrologyMod.o : SoilHydrologyMod.F90 paramutilmod.mod spmdmod.mod patchtype.mod soilhydrologytype.mod ncdio_pio.mod temperaturetype.mod waterfluxbulktype.mod fileutils.mod column_varcon.mod waterstatetype.mod waterfluxtype.mod shr_assert_mod.mod clm_time_manager.mod columntype.mod landunit_varcon.mod infiltrationexcessrunoffmod.mod waterstatebulktype.mod clm_varcon.mod energyfluxtype.mod clm_varpar.mod gridcelltype.mod soilstatetype.mod abortutils.mod wateratm2lndbulktype.mod landunittype.mod waterdiagnosticbulktype.mod clm_varctl.mod decompmod.mod   
+SoilHydrologyType.o : SoilHydrologyType.F90 clm_varcon.mod clm_varpar.mod waterstatebulktype.mod clm_varctl.mod decompmod.mod histfilemod.mod abortutils.mod landunittype.mod ncdio_pio.mod spmdmod.mod clm_nlutilsmod.mod columntype.mod restutilmod.mod fileutils.mod column_varcon.mod   
+SoilMoistStressMod.o : SoilMoistStressMod.F90 soilstatetype.mod simplemathmod.mod abortutils.mod activelayermod.mod waterdiagnosticbulktype.mod clm_varctl.mod decompmod.mod waterstatebulktype.mod clm_varcon.mod soilwaterretentioncurvemod.mod energyfluxtype.mod pftconmod.mod shr_assert_mod.mod columntype.mod patchtype.mod temperaturetype.mod   
+SoilMoistureStreamMod.o : SoilMoistureStreamMod.F90 decompmod.mod clm_varctl.mod landunittype.mod abortutils.mod soilstatetype.mod clm_varpar.mod ndepstreammod.mod clm_varcon.mod domainmod.mod controlmod.mod waterstatebulktype.mod landunit_varcon.mod columntype.mod clm_time_manager.mod clm_nlutilsmod.mod shr_assert_mod.mod fileutils.mod ncdio_pio.mod spmdmod.mod   
+SoilStateInitTimeConstMod.o : SoilStateInitTimeConstMod.F90 organicfilemod.mod funcpedotransfermod.mod decompmod.mod clm_varctl.mod landunittype.mod abortutils.mod soilstatetype.mod gridcelltype.mod clm_varpar.mod clm_varcon.mod rootbiophysmod.mod landunit_varcon.mod columntype.mod clm_nlutilsmod.mod column_varcon.mod fileutils.mod ncdio_pio.mod patchtype.mod spmdmod.mod paramutilmod.mod   
+SoilStateType.o : SoilStateType.F90 restutilmod.mod columntype.mod ncdio_pio.mod patchtype.mod spmdmod.mod decompmod.mod histfilemod.mod clm_varctl.mod abortutils.mod landunittype.mod clm_varcon.mod clm_varpar.mod rootbiophysmod.mod   
+SoilTemperatureMod.o : SoilTemperatureMod.F90 columntype.mod urbanparamstype.mod shr_assert_mod.mod clm_time_manager.mod solarabsorbedtype.mod column_varcon.mod temperaturetype.mod waterfluxbulktype.mod banddiagonalmod.mod patchtype.mod decompmod.mod waterdiagnosticbulktype.mod clm_varctl.mod abortutils.mod landunittype.mod canopystatetype.mod soilstatetype.mod clm_varcon.mod energyfluxtype.mod clm_varpar.mod urbantimevartype.mod waterstatebulktype.mod landunit_varcon.mod urbbuildtempoleson2015mod.mod atm2lndtype.mod   
+SoilWaterMovementMod.o : SoilWaterMovementMod.F90 soilwaterplantsinkmod.mod columntype.mod clm_nlutilsmod.mod clm_time_manager.mod shr_assert_mod.mod column_varcon.mod fileutils.mod waterfluxbulktype.mod temperaturetype.mod ncdio_pio.mod patchtype.mod soilhydrologytype.mod paramutilmod.mod spmdmod.mod decompmod.mod clm_varctl.mod canopystatetype.mod abortutils.mod tridiagonalmod.mod soilstatetype.mod clm_varpar.mod soilwaterretentioncurvemod.mod clm_varcon.mod energyfluxtype.mod controlmod.mod waterstatebulktype.mod   
+SoilWaterPlantSinkMod.o : SoilWaterPlantSinkMod.F90 patchtype.mod waterfluxbulktype.mod column_varcon.mod columntype.mod landunit_varcon.mod clm_varpar.mod photosynthesismod.mod energyfluxtype.mod landunittype.mod canopystatetype.mod abortutils.mod soilstatetype.mod decompmod.mod clm_varctl.mod   
+SoilWaterRetentionCurveClappHornberg1978Mod.o : SoilWaterRetentionCurveClappHornberg1978Mod.F90 soilstatetype.mod soilwaterretentioncurvemod.mod   
+SoilWaterRetentionCurveFactoryMod.o : SoilWaterRetentionCurveFactoryMod.F90 clm_varctl.mod soilwaterretentioncurvevangenuchten1980mod.mod soilwaterretentioncurveclapphornberg1978mod.mod abortutils.mod soilwaterretentioncurvemod.mod   
+SoilWaterRetentionCurveMod.o : SoilWaterRetentionCurveMod.F90 soilstatetype.mod   
+SoilWaterRetentionCurveVanGenuchten1980Mod.o : SoilWaterRetentionCurveVanGenuchten1980Mod.F90 soilwaterretentioncurvemod.mod soilstatetype.mod   
+SolarAbsorbedType.o : SolarAbsorbedType.F90 ncdio_pio.mod spmdmod.mod restutilmod.mod clm_varcon.mod clm_varpar.mod landunit_varcon.mod clm_varctl.mod decompmod.mod histfilemod.mod abortutils.mod   
+SpeciesBaseType.o : SpeciesBaseType.F90    
+SpeciesIsotopeType.o : SpeciesIsotopeType.F90 speciesbasetype.mod clm_varctl.mod abortutils.mod   
+SpeciesNonIsotopeType.o : SpeciesNonIsotopeType.F90 abortutils.mod clm_varctl.mod speciesbasetype.mod   
+SurfaceAlbedoMod.o : SurfaceAlbedoMod.F90 columntype.mod shr_assert_mod.mod clm_time_manager.mod aerosolmod.mod fileutils.mod pftconmod.mod temperaturetype.mod lakestatetype.mod ncdio_pio.mod snowsnicarmod.mod patchtype.mod clmfatesinterfacemod.mod spmdmod.mod lakecon.mod decompmod.mod waterdiagnosticbulktype.mod clm_varctl.mod abortutils.mod landunittype.mod canopystatetype.mod surfacealbedotype.mod clm_varcon.mod clm_varpar.mod gridcelltype.mod waterstatebulktype.mod landunit_varcon.mod   
+SurfaceAlbedoType.o : SurfaceAlbedoType.F90 clm_varctl.mod decompmod.mod histfilemod.mod abortutils.mod clm_varcon.mod clm_varpar.mod shr_assert_mod.mod restutilmod.mod ncdio_pio.mod spmdmod.mod   
+SurfaceHumidityMod.o : SurfaceHumidityMod.F90 temperaturetype.mod shr_assert_mod.mod qsatmod.mod columntype.mod column_varcon.mod clm_varcon.mod clm_varpar.mod landunit_varcon.mod atm2lndtype.mod waterstatebulktype.mod waterdiagnosticbulktype.mod decompmod.mod soilstatetype.mod abortutils.mod wateratm2lndbulktype.mod landunittype.mod   
+SurfaceRadiationMod.o : SurfaceRadiationMod.F90 landunit_varcon.mod atm2lndtype.mod clm_varcon.mod clm_varpar.mod gridcelltype.mod surfacealbedotype.mod abortutils.mod canopystatetype.mod landunittype.mod waterdiagnosticbulktype.mod clm_varctl.mod decompmod.mod histfilemod.mod patchtype.mod snowsnicarmod.mod solarabsorbedtype.mod clm_time_manager.mod columntype.mod   
+SurfaceResistanceMod.o : SurfaceResistanceMod.F90 temperaturetype.mod ncdio_pio.mod paramutilmod.mod spmdmod.mod columntype.mod shr_assert_mod.mod clm_nlutilsmod.mod fileutils.mod column_varcon.mod clm_varcon.mod waterstatebulktype.mod landunit_varcon.mod decompmod.mod waterdiagnosticbulktype.mod clm_varctl.mod abortutils.mod landunittype.mod soilstatetype.mod   
+SurfaceWaterMod.o : SurfaceWaterMod.F90 column_varcon.mod shr_assert_mod.mod clm_time_manager.mod columntype.mod soilhydrologytype.mod watertracerutils.mod waterfluxbulktype.mod waterdiagnosticbulktype.mod decompmod.mod infiltrationexcessrunoffmod.mod waterstatebulktype.mod watertype.mod numericsmod.mod clm_varcon.mod energyfluxtype.mod clm_varpar.mod   
+TemperatureType.o : TemperatureType.F90 column_varcon.mod clm_time_manager.mod shr_assert_mod.mod columntype.mod restutilmod.mod spmdmod.mod patchtype.mod ncdio_pio.mod accumulmod.mod landunittype.mod abortutils.mod clm_varctl.mod histfilemod.mod decompmod.mod landunit_varcon.mod clm_varpar.mod gridcelltype.mod clm_varcon.mod   
+TestNcdioPio.o : TestNcdioPio.F90 ncdio_pio.mod spmdmod.mod shr_assert_mod.mod assertions.mod gridcelltype.mod clm_varcon.mod array_utils.mod decompmod.mod abortutils.mod   
+TopoMod.o : TopoMod.F90 decompmod.mod histfilemod.mod landunittype.mod filtercolmod.mod clm_instur.mod glc2lndmod.mod landunit_varcon.mod columntype.mod restutilmod.mod column_varcon.mod glcbehaviormod.mod ncdio_pio.mod patchtype.mod   
+TotalWaterAndHeatMod.o : TotalWaterAndHeatMod.F90 soilhydrologytype.mod temperaturetype.mod lakestatetype.mod column_varcon.mod waterstatetype.mod shr_assert_mod.mod urbanparamstype.mod columntype.mod landunit_varcon.mod waterstatebulktype.mod clm_varcon.mod waterdiagnostictype.mod clm_varpar.mod subgridavemod.mod soilstatetype.mod landunittype.mod waterdiagnosticbulktype.mod decompmod.mod   
+TridiagonalMod.o : TridiagonalMod.F90 shr_assert_mod.mod columntype.mod clm_varctl.mod decompmod.mod   
+UrbBuildTempOleson2015Mod.o : UrbBuildTempOleson2015Mod.F90 energyfluxtype.mod clm_varcon.mod clm_varpar.mod urbantimevartype.mod decompmod.mod clm_varctl.mod abortutils.mod landunittype.mod temperaturetype.mod columntype.mod shr_assert_mod.mod urbanparamstype.mod clm_time_manager.mod column_varcon.mod   
+UrbanAlbedoMod.o : UrbanAlbedoMod.F90 surfacealbedotype.mod abortutils.mod landunittype.mod waterdiagnosticbulktype.mod clm_varctl.mod decompmod.mod waterstatebulktype.mod clm_varcon.mod clm_varpar.mod column_varcon.mod solarabsorbedtype.mod shr_assert_mod.mod urbanparamstype.mod columntype.mod patchtype.mod   
+UrbanFluxesMod.o : UrbanFluxesMod.F90 waterstatebulktype.mod atm2lndtype.mod energyfluxtype.mod clm_varcon.mod clm_varpar.mod gridcelltype.mod humanindexmod.mod wateratm2lndbulktype.mod abortutils.mod landunittype.mod soilstatetype.mod decompmod.mod filtermod.mod waterdiagnosticbulktype.mod clm_varctl.mod patchtype.mod paramutilmod.mod temperaturetype.mod waterfluxbulktype.mod ncdio_pio.mod frictionvelocitymod.mod column_varcon.mod columntype.mod qsatmod.mod urbanparamstype.mod clm_time_manager.mod   
+UrbanParamsType.o : UrbanParamsType.F90 clm_instur.mod landunit_varcon.mod clm_varpar.mod clm_varcon.mod domainmod.mod landunittype.mod abortutils.mod decompmod.mod clm_varctl.mod spmdmod.mod ncdio_pio.mod column_varcon.mod fileutils.mod   
+UrbanRadiationMod.o : UrbanRadiationMod.F90 atm2lndtype.mod clm_varpar.mod energyfluxtype.mod clm_varcon.mod landunittype.mod abortutils.mod surfacealbedotype.mod decompmod.mod clm_varctl.mod waterdiagnosticbulktype.mod patchtype.mod temperaturetype.mod solarabsorbedtype.mod column_varcon.mod columntype.mod clm_time_manager.mod shr_assert_mod.mod urbanparamstype.mod   
+UrbanTimeVarType.o : UrbanTimeVarType.F90 landunit_varcon.mod clm_instur.mod domainmod.mod ndepstreammod.mod gridcelltype.mod clm_varcon.mod landunittype.mod abortutils.mod clm_varctl.mod histfilemod.mod decompmod.mod spmdmod.mod ncdio_pio.mod fileutils.mod clm_nlutilsmod.mod clm_time_manager.mod   
+VOCEmissionMod.o : VOCEmissionMod.F90 ncdio_pio.mod temperaturetype.mod patchtype.mod meganfactorsmod.mod pftconmod.mod fileutils.mod solarabsorbedtype.mod clm_varpar.mod photosynthesismod.mod clm_varcon.mod atm2lndtype.mod clm_varctl.mod histfilemod.mod decompmod.mod subgridavemod.mod soilstatetype.mod canopystatetype.mod abortutils.mod   
+WaterBalanceType.o : WaterBalanceType.F90 decompmod.mod histfilemod.mod clm_varcon.mod shr_assert_mod.mod waterinfobasetype.mod watertracerutils.mod watertracercontainertype.mod   
+WaterDiagnosticBulkType.o : WaterDiagnosticBulkType.F90 clm_varctl.mod histfilemod.mod decompmod.mod landunittype.mod abortutils.mod clm_varpar.mod clm_varcon.mod waterdiagnostictype.mod issuefixedmetadatahandler.mod landunit_varcon.mod waterstatebulktype.mod filtercolmod.mod clm_time_manager.mod waterinfobasetype.mod shr_assert_mod.mod restutilmod.mod columntype.mod column_varcon.mod waterstatetype.mod waterfluxtype.mod ncdio_pio.mod spmdmod.mod paramutilmod.mod watertracercontainertype.mod   
+WaterDiagnosticType.o : WaterDiagnosticType.F90 watertracercontainertype.mod watertracerutils.mod ncdio_pio.mod waterfluxtype.mod waterstatetype.mod waterinfobasetype.mod shr_assert_mod.mod restutilmod.mod clm_varcon.mod landunittype.mod clm_varctl.mod histfilemod.mod decompmod.mod   
+WaterFluxBulkType.o : WaterFluxBulkType.F90 accumulmod.mod decompmod.mod histfilemod.mod clm_varcon.mod clm_varpar.mod waterfluxtype.mod restutilmod.mod waterinfobasetype.mod clm_time_manager.mod watertracercontainertype.mod cnsharedparamsmod.mod ncdio_pio.mod   
+WaterFluxType.o : WaterFluxType.F90 restutilmod.mod columntype.mod annualfluxdribbler.mod waterinfobasetype.mod watertracerutils.mod ncdio_pio.mod watertracercontainertype.mod histfilemod.mod decompmod.mod landunittype.mod clm_varpar.mod clm_varcon.mod landunit_varcon.mod   
+WaterInfoBaseType.o : WaterInfoBaseType.F90    
+WaterInfoBulkType.o : WaterInfoBulkType.F90 waterinfobasetype.mod   
+WaterInfoIsotopeType.o : WaterInfoIsotopeType.F90 waterinfotracertype.mod   
+WaterInfoTracerType.o : WaterInfoTracerType.F90 waterinfobasetype.mod   
+WaterStateBulkType.o : WaterStateBulkType.F90 ncdio_pio.mod watertracercontainertype.mod restutilmod.mod waterinfobasetype.mod shr_assert_mod.mod waterstatetype.mod clm_varpar.mod clm_varcon.mod histfilemod.mod decompmod.mod   
+WaterStateType.o : WaterStateType.F90 clm_varpar.mod clm_varcon.mod landunit_varcon.mod clm_varctl.mod histfilemod.mod decompmod.mod landunittype.mod abortutils.mod ncdio_pio.mod watertracerutils.mod watertracercontainertype.mod clm_time_manager.mod waterinfobasetype.mod shr_assert_mod.mod restutilmod.mod columntype.mod column_varcon.mod   
+WaterTracerContainerType.o : WaterTracerContainerType.F90 shr_assert_mod.mod abortutils.mod decompmod.mod clm_varctl.mod   
+WaterTracerUtils.o : WaterTracerUtils.F90 clm_varcon.mod clm_varctl.mod decompmod.mod abortutils.mod watertracercontainertype.mod shr_assert_mod.mod   
+WaterType.o : WaterType.F90 ncdio_pio.mod watertracerutils.mod waterbalancetype.mod waterfluxbulktype.mod spmdmod.mod watertracercontainertype.mod shr_assert_mod.mod waterinfobasetype.mod waterlnd2atmtype.mod wateratm2lndtype.mod waterlnd2atmbulktype.mod fileutils.mod waterinfotracertype.mod waterstatetype.mod waterfluxtype.mod waterdiagnostictype.mod clm_varpar.mod waterstatebulktype.mod waterinfoisotopetype.mod waterdiagnosticbulktype.mod clm_varctl.mod decompmod.mod waterinfobulktype.mod abortutils.mod wateratm2lndbulktype.mod   
+Wateratm2lndBulkType.o : Wateratm2lndBulkType.F90 accumulmod.mod abortutils.mod histfilemod.mod decompmod.mod clm_varctl.mod clm_varcon.mod clm_time_manager.mod waterinfobasetype.mod wateratm2lndtype.mod shr_assert_mod.mod patchtype.mod watertracercontainertype.mod   
+Wateratm2lndType.o : Wateratm2lndType.F90 watertracercontainertype.mod watertracerutils.mod columntype.mod waterinfobasetype.mod shr_assert_mod.mod clm_varcon.mod histfilemod.mod decompmod.mod   
+Waterlnd2atmBulkType.o : Waterlnd2atmBulkType.F90 shr_assert_mod.mod waterinfobasetype.mod waterlnd2atmtype.mod watertracercontainertype.mod decompmod.mod clm_varpar.mod   
+Waterlnd2atmType.o : Waterlnd2atmType.F90 shr_assert_mod.mod waterinfobasetype.mod watertracerutils.mod watertracercontainertype.mod decompmod.mod histfilemod.mod   
+abortutils.o : abortutils.F90 getglobalvaluesmod.mod clm_varctl.mod   
+accumulMod.o : accumulMod.F90 columntype.mod restutilmod.mod clm_time_manager.mod shr_assert_mod.mod ncdio_pio.mod patchtype.mod spmdmod.mod decompmod.mod clm_varctl.mod landunittype.mod abortutils.mod gridcelltype.mod clm_varcon.mod   
+array_utils.o : array_utils.F90.in shr_assert_mod.mod   
+atm2lndMod.o : atm2lndMod.F90 clm_varcon.mod clm_varpar.mod landunit_varcon.mod atm2lndtype.mod filtercolmod.mod watertype.mod clm_varctl.mod decompmod.mod wateratm2lndbulktype.mod abortutils.mod landunittype.mod shr_assert_mod.mod qsatmod.mod columntype.mod topomod.mod   
+atm2lndType.o : atm2lndType.F90 histfilemod.mod decompmod.mod clm_varctl.mod accumulmod.mod abortutils.mod clm_varpar.mod clm_varcon.mod restutilmod.mod clm_time_manager.mod fileutils.mod ncdio_pio.mod patchtype.mod spmdmod.mod   
+ch4FInundatedStreamType.o : ch4FInundatedStreamType.F90 abortutils.mod waterdiagnosticbulktype.mod ch4varcon.mod clm_varctl.mod decompmod.mod domainmod.mod clm_varpar.mod ndepstreammod.mod fileutils.mod shr_assert_mod.mod clm_time_manager.mod columntype.mod spmdmod.mod soilhydrologytype.mod ncdio_pio.mod   
+ch4Mod.o : ch4Mod.F90 gridcelltype.mod clm_varpar.mod clm_varcon.mod energyfluxtype.mod atm2lndtype.mod landunit_varcon.mod waterstatebulktype.mod filtercolmod.mod ch4varcon.mod clm_varctl.mod waterdiagnosticbulktype.mod histfilemod.mod decompmod.mod tridiagonalmod.mod soilstatetype.mod subgridavemod.mod landunittype.mod canopystatetype.mod lnd2atmtype.mod abortutils.mod ncdio_pio.mod lakestatetype.mod waterfluxbulktype.mod cnsharedparamsmod.mod temperaturetype.mod spmdmod.mod lakecon.mod soilhydrologytype.mod patchtype.mod dyncolumnstateupdatermod.mod clm_time_manager.mod soilbiogeochemnitrogenfluxtype.mod shr_assert_mod.mod restutilmod.mod columntype.mod ch4finundatedstreamtype.mod pftconmod.mod fileutils.mod soilbiogeochemcarbonfluxtype.mod   
+ch4varcon.o : ch4varcon.F90 clm_varctl.mod abortutils.mod fileutils.mod spmdmod.mod   
+clm_cpl_indices.o : clm_cpl_indices.F90 clm_varctl.mod   
+clm_driver.o : clm_driver.F90 atm2lndmod.mod columntype.mod restfilemod.mod dustmod.mod satellitephenologymod.mod clm_time_manager.mod aerosolmod.mod edbgcdynmod.mod drydepvelocity.mod waterfluxbulktype.mod lakehydrologymod.mod canopyfluxesmod.mod waterbalancetype.mod hydrologydrainagemod.mod urbanradiationmod.mod surfacealbedomod.mod baregroundfluxesmod.mod snowsnicarmod.mod dynsubgriddrivermod.mod ch4mod.mod patchtype.mod biogeophysprefluxcalcsmod.mod soilmoisturestreammod.mod spmdmod.mod fatesfirefactorymod.mod soiltemperaturemod.mod daylengthmod.mod hydrologynodrainagemod.mod filtermod.mod urbanalbedomod.mod histfilemod.mod canopyhydrologymod.mod surfacehumiditymod.mod decompmod.mod urbanfluxesmod.mod clm_varctl.mod waterdiagnosticbulktype.mod soilwatermovementmod.mod clm_varorb.mod soilfluxesmod.mod lnd2atmtype.mod landunittype.mod canopystatetype.mod surfacewatermod.mod soilbiogeochemverticalprofilemod.mod abortutils.mod lnd2glcmod.mod lnd2atmmod.mod subgridavemod.mod gridcelltype.mod clm_varpar.mod ndepstreammod.mod energyfluxtype.mod balancecheckmod.mod lakefluxesmod.mod vocemissionmod.mod waterstatebulktype.mod surfaceradiationmod.mod urbantimevartype.mod laketemperaturemod.mod clm_instmod.mod   
+clm_initializeMod.o : clm_initializeMod.F90 domainmod.mod controlmod.mod balancecheckmod.mod ndepstreammod.mod nutrientcompetitionfactorymod.mod clm_varpar.mod gridcelltype.mod clm_varcon.mod landunit_varcon.mod clm_instmod.mod selftestdriver.mod surfrdmod.mod clm_instur.mod initgridcellsmod.mod clm_varctl.mod ch4varcon.mod readparamsmod.mod initinterpmod.mod histfilemod.mod filtermod.mod dynsubgridcontrolmod.mod decompmod.mod landunittype.mod accumulmod.mod clm_varorb.mod lnd2atmmod.mod abortutils.mod snowsnicarmod.mod ncdio_pio.mod fatesfirefactorymod.mod spmdmod.mod lakecon.mod daylengthmod.mod patchtype.mod cisoatmtimeseriesmod.mod clmfatesinterfacemod.mod dynsubgriddrivermod.mod soilmoisturestreammod.mod clm_time_manager.mod dynconsbiogeophysmod.mod decompinitmod.mod satellitephenologymod.mod urbanparamstype.mod columntype.mod subgridweightsmod.mod restfilemod.mod pftconmod.mod reweightmod.mod fileutils.mod   
+clm_instMod.o : clm_instMod.F90 snowcoverfractionbasemod.mod fileutils.mod topomod.mod aerosolmod.mod soilbiogeochemcarbonfluxtype.mod urbanparamstype.mod dustmod.mod soilbiogeochemdecompcascadebgcmod.mod soilbiogeochemnitrogenstatetype.mod soilhydrologyinittimeconstmod.mod soilbiogeochemstatetype.mod soilbiogeochemcompetitionmod.mod lakecon.mod nutrientcompetitionmethodmod.mod clmfatesinterfacemod.mod soilhydrologytype.mod ch4mod.mod croptype.mod frictionvelocitymod.mod soilbiogeochemcarbonstatetype.mod temperaturetype.mod drydepvelocity.mod soilwaterretentioncurvefactorymod.mod soilbiogeochemprecisioncontrolmod.mod initverticalmod.mod lnd2glcmod.mod cnvegetationfacade.mod activelayermod.mod landunittype.mod canopystatetype.mod soilwatermovementmod.mod decompmod.mod cndvtype.mod landunit_varcon.mod urbantimevartype.mod watertype.mod surfaceradiationmod.mod cnfireemissionsmod.mod domainmod.mod energyfluxtype.mod clm_varcon.mod soilwaterretentioncurvemod.mod snowcoverfractionfactorymod.mod ozonebasemod.mod solarabsorbedtype.mod soilbiogeochemdecompcascadecnmod.mod soilbiogeochemnitrogenfluxtype.mod columntype.mod patchtype.mod surfacealbedomod.mod soilstateinittimeconstmod.mod ncdio_pio.mod saturatedexcessrunoffmod.mod irrigationmod.mod glcbehaviormod.mod lakestatetype.mod soilstatetype.mod surfacealbedotype.mod glaciersurfacemassbalancemod.mod accumulmod.mod lnd2atmtype.mod clm_varctl.mod soilbiogeochemdecompcascadecontype.mod atm2lndtype.mod glc2lndmod.mod vocemissionmod.mod infiltrationexcessrunoffmod.mod controlmod.mod balancecheckmod.mod humanindexmod.mod clm_varpar.mod gridcelltype.mod photosynthesismod.mod ozonefactorymod.mod   
+clm_nlUtilsMod.o : clm_nlUtilsMod.F90    
+clm_time_manager.o : clm_time_manager.F90 clm_varctl.mod ncdio_pio.mod shr_assert_mod.mod clm_varcon.mod spmdmod.mod restutilmod.mod   
+clm_varcon.o : clm_varcon.F90 clm_varpar.mod   
+clm_varctl.o : clm_varctl.F90    
+clm_varorb.o : clm_varorb.F90    
+clm_varpar.o : clm_varpar.F90 spmdmod.mod clm_varctl.mod   
+clm_varsur.o : clm_varsur.F90    
+clmfates_interfaceMod.o : clmfates_interfaceMod.F90 solarabsorbedtype.mod clm_time_manager.mod fatesplantrespphotosynthmod.mod shr_assert_mod.mod columntype.mod fatesfirefactorymod.mod dynharvestmod.mod fatesparameterderivedmod.mod patchtype.mod ncdio_pio.mod fatesfirebase.mod fatessoilbgcfluxmod.mod edmainmod.mod fateshistoryinterfacemod.mod fatesinterfacetypesmod.mod soilstatetype.mod surfacealbedotype.mod abortutils.mod clm_varctl.mod quadraticmod.mod waterdiagnosticbulktype.mod histfilemod.mod dynsubgridcontrolmod.mod atm2lndtype.mod fatesconstantsmod.mod waterstatebulktype.mod photosynthesismod.mod gridcelltype.mod clm_varpar.mod fateslittermod.mod pftconmod.mod soilbiogeochemcarbonfluxtype.mod prtgenericmod.mod edpftvarcon.mod subgridmod.mod restutilmod.mod edsurfaceradiationmod.mod fatesiodimensionsmod.mod spmdmod.mod edaccumulatefluxesmod.mod edbtranmod.mod edinitmod.mod frictionvelocitymod.mod waterfluxbulktype.mod temperaturetype.mod soilbiogeochemcarbonstatetype.mod edtypesmod.mod activelayermod.mod landunittype.mod canopystatetype.mod edcanopystructuremod.mod wateratm2lndbulktype.mod fatesinterfacemod.mod funcpedotransfermod.mod decompmod.mod fatesiovariablekindmod.mod fatesrestartinterfacemod.mod landunit_varcon.mod fatesplanthydraulicsmod.mod clm_instur.mod soilwaterretentioncurvemod.mod clm_varcon.mod energyfluxtype.mod   
+clmfates_paraminterfaceMod.o : clmfates_paraminterfaceMod.F90 paramutilmod.mod spmdmod.mod fileutils.mod edpftvarcon.mod fatessynchronizedparamsmod.mod fatesparametersinterface.mod ncdio_pio.mod edparamsmod.mod sfparamsmod.mod clm_varctl.mod fatesglobals.mod prtinitparamsfatesmod.mod abortutils.mod   
+column_varcon.o : column_varcon.F90 landunit_varcon.mod clm_varpar.mod ncdio_pio.mod shr_assert_mod.mod   
+controlMod.o : controlMod.F90 initinterpmod.mod decompmod.mod cnmrespmod.mod clm_varcon.mod cnphenologymod.mod snowhydrologymod.mod landunit_varcon.mod surfaceresistancemod.mod urbanparamstype.mod soilbiogeochemdecompcascadebgcmod.mod soilbiogeochemcompetitionmod.mod fileutils.mod soilbiogeochemnitrifdenitrifmod.mod cnndynamicsmod.mod canopyfluxesmod.mod spmdmod.mod lakecon.mod clm_varctl.mod canopyhydrologymod.mod histfilemod.mod cnfirefactorymod.mod abortutils.mod soilbiogeochemverticalprofilemod.mod humanindexmod.mod clm_varpar.mod soilbiogeochemlittverttranspmod.mod cnprecisioncontrolmod.mod soilhydrologymod.mod lunamod.mod surfacealbedomod.mod cnsharedparamsmod.mod cisoatmtimeseriesmod.mod   
+decompInitMod.o : decompInitMod.F90 subgridmod.mod spmdmod.mod landunittype.mod decompmod.mod clm_varcon.mod columntype.mod patchtype.mod glcbehaviormod.mod fatesinterfacetypesmod.mod abortutils.mod clm_varctl.mod spmdgathscatmod.mod gridcelltype.mod   
+decompMod.o : decompMod.F90 clm_varctl.mod clm_varcon.mod domainmod.mod   
+domainMod.o : domainMod.F90 clm_varctl.mod spmdmod.mod   
+dynCNDVMod.o : dynCNDVMod.F90 landunit_varcon.mod cndvtype.mod decompmod.mod landunittype.mod clm_varctl.mod patchtype.mod clm_time_manager.mod   
+dynColumnStateUpdaterMod.o : dynColumnStateUpdaterMod.F90 abortutils.mod clm_varctl.mod dyncolumntemplatemod.mod columntype.mod shr_assert_mod.mod landunittype.mod decompmod.mod landunit_varcon.mod clm_varcon.mod   
+dynColumnTemplateMod.o : dynColumnTemplateMod.F90 landunittype.mod decompmod.mod landunit_varcon.mod clm_varcon.mod columntype.mod shr_assert_mod.mod gridcelltype.mod   
+dynConsBiogeochemMod.o : dynConsBiogeochemMod.F90 clm_varpar.mod photosynthesismod.mod cnvegstatetype.mod clm_varctl.mod abortutils.mod patchtype.mod cnvegnitrogenstatetype.mod columntype.mod clm_time_manager.mod dynpatchstateupdatermod.mod clm_varcon.mod landunit_varcon.mod cnvegnitrogenfluxtype.mod decompmod.mod dynpriorweightsmod.mod canopystatetype.mod landunittype.mod soilbiogeochemcarbonstatetype.mod cnvegcarbonstatetype.mod ch4mod.mod dyncolumnstateupdatermod.mod soilbiogeochemstatetype.mod soilbiogeochemnitrogenstatetype.mod cnvegcarbonfluxtype.mod soilbiogeochemcarbonfluxtype.mod pftconmod.mod   
+dynConsBiogeophysMod.o : dynConsBiogeophysMod.F90 subgridavemod.mod landunittype.mod decompmod.mod landunit_varcon.mod watertype.mod energyfluxtype.mod clm_varcon.mod waterstatetype.mod urbanparamstype.mod soilhydrologytype.mod temperaturetype.mod soilstatetype.mod waterdiagnosticbulktype.mod dynsubgridcontrolmod.mod filtercolmod.mod waterstatebulktype.mod waterdiagnostictype.mod totalwaterandheatmod.mod gridcelltype.mod waterfluxtype.mod shr_assert_mod.mod columntype.mod patchtype.mod waterbalancetype.mod lakestatetype.mod   
+dynEDMod.o : dynEDMod.F90 patchtype.mod columntype.mod landunit_varcon.mod decompmod.mod   
+dynFileMod.o : dynFileMod.F90 fileutils.mod dyntimeinfomod.mod abortutils.mod ncdio_pio.mod   
+dynHarvestMod.o : dynHarvestMod.F90 dynfilemod.mod clm_varcon.mod decompmod.mod cnvegnitrogenfluxtype.mod dyntimeinfomod.mod cnvegcarbonstatetype.mod pftconmod.mod soilbiogeochemstatetype.mod cnvegcarbonfluxtype.mod clm_varpar.mod abortutils.mod dynvartimeuninterpmod.mod clm_varctl.mod patchtype.mod cnvegnitrogenstatetype.mod columntype.mod shr_assert_mod.mod clm_time_manager.mod   
+dynInitColumnsMod.o : dynInitColumnsMod.F90 abortutils.mod clm_varctl.mod dyncolumntemplatemod.mod gridcelltype.mod columntype.mod shr_assert_mod.mod landunittype.mod decompmod.mod watertype.mod landunit_varcon.mod clm_varcon.mod getglobalvaluesmod.mod soilhydrologytype.mod temperaturetype.mod   
+dynLandunitAreaMod.o : dynLandunitAreaMod.F90 subgridweightsmod.mod landunittype.mod decompmod.mod landunit_varcon.mod clm_varcon.mod shr_assert_mod.mod abortutils.mod clm_varctl.mod gridcelltype.mod   
+dynPatchStateUpdaterMod.o : dynPatchStateUpdaterMod.F90 decompmod.mod columntype.mod shr_assert_mod.mod patchtype.mod abortutils.mod clm_varpar.mod   
+dynPriorWeightsMod.o : dynPriorWeightsMod.F90 patchtype.mod columntype.mod shr_assert_mod.mod decompmod.mod   
+dynSubgridControlMod.o : dynSubgridControlMod.F90 clm_varctl.mod abortutils.mod shr_assert_mod.mod spmdmod.mod clm_nlutilsmod.mod fileutils.mod   
+dynSubgridDriverMod.o : dynSubgridDriverMod.F90 soilstatetype.mod clm_varctl.mod filtermod.mod dynsubgridcontrolmod.mod dynedmod.mod glc2lndmod.mod dynlakefilemod.mod photosynthesismod.mod dyncropfilemod.mod shr_assert_mod.mod dynconsbiogeophysmod.mod dynpftfilemod.mod dynharvestmod.mod lakestatetype.mod glcbehaviormod.mod dynpriorweightsmod.mod canopystatetype.mod dynlandunitareamod.mod cnvegetationfacade.mod decompmod.mod watertype.mod dyninitcolumnsmod.mod energyfluxtype.mod dynpatchstateupdatermod.mod reweightmod.mod soilbiogeochemcarbonfluxtype.mod urbanparamstype.mod soilbiogeochemnitrogenstatetype.mod subgridweightsmod.mod soilbiogeochemstatetype.mod dyncolumnstateupdatermod.mod ch4mod.mod soilhydrologytype.mod croptype.mod soilbiogeochemcarbonstatetype.mod temperaturetype.mod   
+dynTimeInfoMod.o : dynTimeInfoMod.F90 shr_assert_mod.mod clm_time_manager.mod abortutils.mod clm_varctl.mod   
+dynVarMod.o : dynVarMod.F90.in abortutils.mod clm_varctl.mod shr_assert_mod.mod surfrdutilsmod.mod ncdio_pio.mod dynfilemod.mod dyntimeinfomod.mod spmdmod.mod   
+dynVarTimeInterpMod.o : dynVarTimeInterpMod.F90.in shr_assert_mod.mod dynvarmod.mod dynfilemod.mod dyntimeinfomod.mod   
+dynVarTimeUninterpMod.o : dynVarTimeUninterpMod.F90.in dynvarmod.mod shr_assert_mod.mod dynfilemod.mod dyntimeinfomod.mod   
+dyncropFileMod.o : dyncropFileMod.F90 abortutils.mod clm_varctl.mod dynvartimeuninterpmod.mod clm_varpar.mod columntype.mod shr_assert_mod.mod surfrdutilsmod.mod patchtype.mod ncdio_pio.mod landunittype.mod decompmod.mod landunit_varcon.mod dynfilemod.mod clm_varcon.mod subgridweightsmod.mod dyntimeinfomod.mod spmdmod.mod croptype.mod   
+dynlakeFileMod.o : dynlakeFileMod.F90 dynvartimeuninterpmod.mod clm_varctl.mod abortutils.mod shr_assert_mod.mod decompmod.mod clm_varcon.mod landunit_varcon.mod dynfilemod.mod subgridweightsmod.mod spmdmod.mod dyntimeinfomod.mod   
+dynpftFileMod.o : dynpftFileMod.F90 clm_varcon.mod clm_instur.mod landunit_varcon.mod dynfilemod.mod decompmod.mod landunittype.mod dyntimeinfomod.mod spmdmod.mod clm_nlutilsmod.mod fileutils.mod clm_varpar.mod controlmod.mod dynvartimeuninterpmod.mod clm_varctl.mod abortutils.mod ncdio_pio.mod patchtype.mod columntype.mod shr_assert_mod.mod   
+fileutils.o : fileutils.F90 spmdmod.mod clm_varctl.mod   
+filterColMod.o : filterColMod.F90 clm_varcon.mod decompmod.mod landunittype.mod gridcelltype.mod clm_varctl.mod shr_assert_mod.mod columntype.mod   
+filterMod.o : filterMod.F90 pftconmod.mod landunit_varcon.mod landunittype.mod decompmod.mod patchtype.mod glcbehaviormod.mod shr_assert_mod.mod columntype.mod gridcelltype.mod abortutils.mod clm_varctl.mod   
+getdatetime.o : getdatetime.F90 spmdmod.mod   
+glc2lndMod.o : glc2lndMod.F90 subgridweightsmod.mod column_varcon.mod decompmod.mod landunittype.mod domainmod.mod clm_varcon.mod landunit_varcon.mod shr_assert_mod.mod columntype.mod glcbehaviormod.mod clm_varctl.mod histfilemod.mod abortutils.mod gridcelltype.mod clm_varpar.mod   
+glcBehaviorMod.o : glcBehaviorMod.F90 clm_varcon.mod clm_instur.mod landunit_varcon.mod decompmod.mod spmdmod.mod clm_nlutilsmod.mod fileutils.mod column_varcon.mod clm_varpar.mod filtercolmod.mod clm_varctl.mod abortutils.mod ncdio_pio.mod patchtype.mod columntype.mod shr_assert_mod.mod   
+histFileMod.o : histFileMod.F90 clm_varctl.mod abortutils.mod fatesinterfacetypesmod.mod gridcelltype.mod clm_varpar.mod fateslittermod.mod columntype.mod clm_time_manager.mod shr_assert_mod.mod ncdio_pio.mod patchtype.mod decompmod.mod landunittype.mod subgridavemod.mod clm_varcon.mod domainmod.mod landunit_varcon.mod restutilmod.mod getglobalvaluesmod.mod prtgenericmod.mod column_varcon.mod pftconmod.mod fileutils.mod edtypesmod.mod spmdmod.mod   
+initGridCellsMod.o : initGridCellsMod.F90 spmdmod.mod subgridweightsmod.mod subgridmod.mod urbanparamstype.mod pftconmod.mod column_varcon.mod clm_varcon.mod domainmod.mod clm_instur.mod landunit_varcon.mod decompmod.mod landunittype.mod initsubgridmod.mod glcbehaviormod.mod patchtype.mod columntype.mod shr_assert_mod.mod gridcelltype.mod clm_varpar.mod clm_varctl.mod abortutils.mod   
+initInterp.o : initInterp.F90 initinterputils.mod restutilmod.mod fileutils.mod spmdmod.mod initinterpbounds.mod initinterp1ddata.mod decompmod.mod shr_assert_mod.mod initinterpmultilevelbase.mod ncdio_pio.mod initinterp2dvar.mod glcbehaviormod.mod clm_varctl.mod initinterpmindist.mod initinterpmultilevelcontainer.mod abortutils.mod issuefixedmetadatahandler.mod ncdio_utils.mod   
+initInterp1dData.o : initInterp1dData.F90 clm_varcon.mod shr_assert_mod.mod   
+initInterp2dvar.o : initInterp2dvar.F90.in shr_assert_mod.mod ncdio_pio.mod clm_varctl.mod abortutils.mod restutilmod.mod initinterpbounds.mod   
+initInterpBounds.o : initInterpBounds.F90 abortutils.mod   
+initInterpMindist.o : initInterpMindist.F90 spmdmod.mod clm_varcon.mod shr_assert_mod.mod glcbehaviormod.mod abortutils.mod clm_varctl.mod   
+initInterpMultilevelBase.o : initInterpMultilevelBase.F90    
+initInterpMultilevelContainer.o : initInterpMultilevelContainer.F90 initinterpmultilevelsnow.mod initinterpmultilevelcopy.mod initinterpmultilevelsplit.mod initinterp1ddata.mod initinterpbounds.mod spmdmod.mod initinterpmultilevelinterp.mod abortutils.mod array_utils.mod clm_varctl.mod initinterp2dvar.mod initinterpmultilevelbase.mod ncdio_pio.mod shr_assert_mod.mod   
+initInterpMultilevelCopy.o : initInterpMultilevelCopy.F90 initinterpmultilevelbase.mod shr_assert_mod.mod   
+initInterpMultilevelInterp.o : initInterpMultilevelInterp.F90 clm_varcon.mod clm_varctl.mod array_utils.mod abortutils.mod shr_assert_mod.mod initinterpmultilevelbase.mod   
+initInterpMultilevelSnow.o : initInterpMultilevelSnow.F90 clm_varctl.mod abortutils.mod initinterpmultilevelbase.mod shr_assert_mod.mod   
+initInterpMultilevelSplit.o : initInterpMultilevelSplit.F90 clm_varctl.mod abortutils.mod initinterpmultilevelbase.mod shr_assert_mod.mod   
+initInterpUtils.o : initInterpUtils.F90 abortutils.mod ncdio_pio.mod   
+initSubgridMod.o : initSubgridMod.F90 column_varcon.mod spmdmod.mod landunittype.mod decompmod.mod landunit_varcon.mod clm_varcon.mod columntype.mod patchtype.mod abortutils.mod clm_varctl.mod clm_varpar.mod gridcelltype.mod   
+initVerticalMod.o : initVerticalMod.F90 shr_assert_mod.mod columntype.mod ncdio_pio.mod glcbehaviormod.mod abortutils.mod clm_varctl.mod clm_varpar.mod gridcelltype.mod column_varcon.mod fileutils.mod spmdmod.mod landunittype.mod decompmod.mod landunit_varcon.mod snowhydrologymod.mod clm_varcon.mod   
+init_hydrology.o : init_hydrology.F90 spmdmod.mod fileutils.mod rootbiophysmod.mod soilmoiststressmod.mod soilwatermovementmod.mod funcpedotransfermod.mod   
+landunit_varcon.o : landunit_varcon.F90 shr_assert_mod.mod   
+lnd2atmMod.o : lnd2atmMod.F90 decompmod.mod ch4varcon.mod landunittype.mod subgridavemod.mod clm_varcon.mod energyfluxtype.mod cnfireemissionsmod.mod watertype.mod landunit_varcon.mod dustmod.mod drydepvelocity.mod waterfluxbulktype.mod temperaturetype.mod frictionvelocitymod.mod ch4mod.mod clm_varctl.mod lnd2atmtype.mod surfacealbedotype.mod gridcelltype.mod clm_varpar.mod vocemissionmod.mod filtercolmod.mod glc2lndmod.mod atm2lndtype.mod columntype.mod shr_assert_mod.mod solarabsorbedtype.mod glcbehaviormod.mod   
+lnd2atmType.o : lnd2atmType.F90 clm_varpar.mod histfilemod.mod clm_varctl.mod abortutils.mod clm_varcon.mod decompmod.mod spmdmod.mod fileutils.mod   
+lnd2glcMod.o : lnd2glcMod.F90 clm_varctl.mod histfilemod.mod abortutils.mod clm_varpar.mod columntype.mod decompmod.mod landunittype.mod domainmod.mod clm_varcon.mod landunit_varcon.mod subgridweightsmod.mod column_varcon.mod topomod.mod waterfluxbulktype.mod temperaturetype.mod   
+lnd_comp_mct.o : lnd_comp_mct.F90 clm_driver.mod clm_time_manager.mod clm_cpl_indices.mod controlmod.mod lnd_import_export.mod clm_varctl.mod clm_varorb.mod abortutils.mod spmdmod.mod domainmod.mod clm_varcon.mod clm_initializemod.mod clm_instmod.mod decompmod.mod   
+lnd_import_export.o : lnd_import_export.F90 clm_cpl_indices.mod waterlnd2atmbulktype.mod lnd_import_export_utils.mod abortutils.mod lnd2atmtype.mod clm_varctl.mod glc2lndmod.mod atm2lndtype.mod wateratm2lndbulktype.mod lnd2glcmod.mod decompmod.mod clm_varcon.mod domainmod.mod   
+lnd_import_export_utils.o : lnd_import_export_utils.F90 clm_varcon.mod wateratm2lndbulktype.mod decompmod.mod qsatmod.mod atm2lndtype.mod clm_varctl.mod   
+ncdio_pio.o : ncdio_pio.F90.in clm_varctl.mod array_utils.mod clm_varcon.mod decompmod.mod spmdmod.mod fileutils.mod   
+ncdio_utils.o : ncdio_utils.F90 ncdio_pio.mod   
+ndepStreamMod.o : ndepStreamMod.F90 abortutils.mod clm_varctl.mod atm2lndtype.mod clm_time_manager.mod ncdio_pio.mod decompmod.mod domainmod.mod clm_varcon.mod fileutils.mod spmdmod.mod   
+organicFileMod.o : organicFileMod.F90 fileutils.mod spmdmod.mod domainmod.mod clm_varcon.mod ncdio_pio.mod abortutils.mod clm_varctl.mod   
+paramUtilMod.o : paramUtilMod.F90 ncdio_pio.mod abortutils.mod   
+pftconMod.o : pftconMod.F90 clm_varctl.mod abortutils.mod clm_varpar.mod ncdio_pio.mod clmfatesparaminterfacemod.mod fileutils.mod spmdmod.mod   
+point_of_interest.o : point_of_interest.F90 landunittype.mod landunit_varcon.mod gridcelltype.mod columntype.mod   
+quadraticMod.o : quadraticMod.F90 abortutils.mod clm_varctl.mod   
+readParamsMod.o : readParamsMod.F90 soilbiogeochemdecompcascadecnmod.mod soilhydrologymod.mod soilbiogeochemdecompmod.mod cnsharedparamsmod.mod saturatedexcessrunoffmod.mod lunamod.mod soilstateinittimeconstmod.mod ncdio_pio.mod baregroundfluxesmod.mod canopyhydrologymod.mod urbanfluxesmod.mod clm_varctl.mod waterdiagnosticbulktype.mod cnfunmod.mod photosynthesismod.mod lakefluxesmod.mod soilbiogeochemlittverttranspmod.mod infiltrationexcessrunoffmod.mod soilbiogeochemcompetitionmod.mod soilbiogeochemdecompcascadebgcmod.mod soilbiogeochemnitrifdenitrifmod.mod fileutils.mod soilbiogeochemnleachingmod.mod canopyfluxesmod.mod ch4mod.mod nutrientcompetitionmethodmod.mod spmdmod.mod soilwatermovementmod.mod soilbiogeochempotentialmod.mod cnmrespmod.mod snowhydrologymod.mod cnphenologymod.mod cngapmortalitymod.mod surfaceresistancemod.mod   
+restFileMod.o : restFileMod.F90 spmdmod.mod column_varcon.mod pftconmod.mod reweightmod.mod fileutils.mod clm_nlutilsmod.mod clm_instmod.mod landunit_varcon.mod clm_varcon.mod subgridrestmod.mod decompmod.mod glcbehaviormod.mod ncdio_pio.mod clm_time_manager.mod shr_assert_mod.mod ncdio_utils.mod clm_varpar.mod issuefixedmetadatahandler.mod controlmod.mod accumulmod.mod abortutils.mod histfilemod.mod dynsubgridcontrolmod.mod clm_varctl.mod   
+restUtilMod.o : restUtilMod.F90.in clm_varcon.mod subgridavemod.mod decompmod.mod spmdmod.mod ncdio_utils.mod abortutils.mod clm_varctl.mod ncdio_pio.mod shr_assert_mod.mod   
+reweightMod.o : reweightMod.F90 filtermod.mod shr_assert_mod.mod glcbehaviormod.mod decompmod.mod subgridweightsmod.mod   
+spmdGathScatMod.o : spmdGathScatMod.F90 decompmod.mod clm_varcon.mod spmdmod.mod abortutils.mod clm_varctl.mod   
+spmdMod.o : spmdMod.F90 clm_varctl.mod   
+subgridAveMod.o : subgridAveMod.F90 column_varcon.mod landunittype.mod decompmod.mod landunit_varcon.mod clm_varcon.mod shr_assert_mod.mod columntype.mod patchtype.mod abortutils.mod clm_varctl.mod   
+subgridMod.o : subgridMod.F90 glcbehaviormod.mod shr_assert_mod.mod clm_varpar.mod clm_varctl.mod dynsubgridcontrolmod.mod fatesinterfacetypesmod.mod abortutils.mod spmdmod.mod pftconmod.mod landunit_varcon.mod clm_instur.mod   
+subgridRestMod.o : subgridRestMod.F90 abortutils.mod dynsubgridcontrolmod.mod clm_varctl.mod clm_varpar.mod gridcelltype.mod columntype.mod shr_assert_mod.mod clm_time_manager.mod patchtype.mod ncdio_pio.mod landunittype.mod decompmod.mod landunit_varcon.mod clm_varcon.mod domainmod.mod getglobalvaluesmod.mod restutilmod.mod   
+subgridWeightsMod.o : subgridWeightsMod.F90 gridcelltype.mod clm_varpar.mod abortutils.mod clm_varctl.mod histfilemod.mod patchtype.mod glcbehaviormod.mod shr_assert_mod.mod columntype.mod landunit_varcon.mod clm_varcon.mod landunittype.mod decompmod.mod column_varcon.mod   
+surfrdMod.o : surfrdMod.F90 spmdmod.mod pftconmod.mod fileutils.mod urbanparamstype.mod clm_instur.mod landunit_varcon.mod clm_varcon.mod domainmod.mod irrigationmod.mod ncdio_pio.mod surfrdutilsmod.mod shr_assert_mod.mod clm_varpar.mod abortutils.mod dynsubgridcontrolmod.mod clm_varctl.mod   
+surfrdUtilsMod.o : surfrdUtilsMod.F90 shr_assert_mod.mod clm_varpar.mod array_utils.mod clm_varctl.mod abortutils.mod spmdmod.mod pftconmod.mod clm_instur.mod landunit_varcon.mod   
+# The following section relates each module to the corresponding file.
+%.mod : 
+	@:
+abortutils.mod : abortutils.o
+accumulmod.mod : accumulMod.o
+activelayermod.mod : ActiveLayerMod.o
+aerosolmod.mod : AerosolMod.o
+annualfluxdribbler.mod : AnnualFluxDribbler.o
+array_utils.mod : array_utils.o
+assertions.mod : Assertions.o
+atm2lndmod.mod : atm2lndMod.o
+atm2lndtype.mod : atm2lndType.o
+balancecheckmod.mod : BalanceCheckMod.o
+banddiagonalmod.mod : BandDiagonalMod.o
+baregroundfluxesmod.mod : BareGroundFluxesMod.o
+biogeophysprefluxcalcsmod.mod : BiogeophysPreFluxCalcsMod.o
+canopyfluxesmod.mod : CanopyFluxesMod.o
+canopyhydrologymod.mod : CanopyHydrologyMod.o
+canopystatetype.mod : CanopyStateType.o
+ch4finundatedstreamtype.mod : ch4FInundatedStreamType.o
+ch4mod.mod : ch4Mod.o
+ch4varcon.mod : ch4varcon.o
+checksbalancesmod.mod : ChecksBalancesMod.o
+cisoatmtimeseriesmod.mod : CNCIsoAtmTimeSeriesReadMod.o
+clm_cpl_indices.mod : clm_cpl_indices.o
+clm_driver.mod : clm_driver.o
+clm_initializemod.mod : clm_initializeMod.o
+clm_instmod.mod : clm_instMod.o
+clm_instur.mod : clm_varsur.o
+clm_nlutilsmod.mod : clm_nlUtilsMod.o
+clm_time_manager.mod : clm_time_manager.o
+clm_varcon.mod : clm_varcon.o
+clm_varctl.mod : clm_varctl.o
+clm_varorb.mod : clm_varorb.o
+clm_varpar.mod : clm_varpar.o
+clmfatesinterfacemod.mod : clmfates_interfaceMod.o
+clmfatesparaminterfacemod.mod : clmfates_paraminterfaceMod.o
+cnannualupdatemod.mod : CNAnnualUpdateMod.o
+cnbalancecheckmod.mod : CNBalanceCheckMod.o
+cnc14decaymod.mod : CNC14DecayMod.o
+cncisofluxmod.mod : CNCIsoFluxMod.o
+cncstateupdate1mod.mod : CNCStateUpdate1Mod.o
+cncstateupdate2mod.mod : CNCStateUpdate2Mod.o
+cncstateupdate3mod.mod : CNCStateUpdate3Mod.o
+cndrivermod.mod : CNDriverMod.o
+cndvdrivermod.mod : CNDVDriverMod.o
+cndvestablishmentmod.mod : CNDVEstablishmentMod.o
+cndvlightmod.mod : CNDVLightMod.o
+cndvtype.mod : CNDVType.o
+cnfirebasemod.mod : CNFireBaseMod.o
+cnfireemissionsmod.mod : CNFireEmissionsMod.o
+cnfirefactorymod.mod : CNFireFactoryMod.o
+cnfireli2014mod.mod : CNFireLi2014Mod.o
+cnfireli2016mod.mod : CNFireLi2016Mod.o
+cnfireli2021mod.mod : CNFireLi2021Mod.o
+cnfirenofiremod.mod : CNFireNoFireMod.o
+cnfunmod.mod : CNFUNMod.o
+cngapmortalitymod.mod : CNGapMortalityMod.o
+cngrespmod.mod : CNGRespMod.o
+cnmrespmod.mod : CNMRespMod.o
+cnndynamicsmod.mod : CNNDynamicsMod.o
+cnnstateupdate1mod.mod : CNNStateUpdate1Mod.o
+cnnstateupdate2mod.mod : CNNStateUpdate2Mod.o
+cnnstateupdate3mod.mod : CNNStateUpdate3Mod.o
+cnphenologymod.mod : CNPhenologyMod.o
+cnprecisioncontrolmod.mod : CNPrecisionControlMod.o
+cnproductsmod.mod : CNProductsMod.o
+cnrootdynmod.mod : CNRootDynMod.o
+cnsharedparamsmod.mod : CNSharedParamsMod.o
+cnspeciesmod.mod : CNSpeciesMod.o
+cnvegcarbonfluxtype.mod : CNVegCarbonFluxType.o
+cnvegcarbonstatetype.mod : CNVegCarbonStateType.o
+cnvegcomputeseedmod.mod : CNVegComputeSeedMod.o
+cnvegetationfacade.mod : CNVegetationFacade.o
+cnvegnitrogenfluxtype.mod : CNVegNitrogenFluxType.o
+cnvegnitrogenstatetype.mod : CNVegNitrogenStateType.o
+cnvegstatetype.mod : CNVegStateType.o
+cnvegstructupdatemod.mod : CNVegStructUpdateMod.o
+column_varcon.mod : column_varcon.o
+columntype.mod : ColumnType.o
+controlmod.mod : controlMod.o
+croptype.mod : CropType.o
+daylengthmod.mod : DaylengthMod.o
+decompinitmod.mod : decompInitMod.o
+decompmod.mod : decompMod.o
+domainmod.mod : domainMod.o
+drydepvelocity.mod : DryDepVelocity.o
+dustmod.mod : DUSTMod.o
+dyncndvmod.mod : dynCNDVMod.o
+dyncolumnstateupdatermod.mod : dynColumnStateUpdaterMod.o
+dyncolumntemplatemod.mod : dynColumnTemplateMod.o
+dynconsbiogeochemmod.mod : dynConsBiogeochemMod.o
+dynconsbiogeophysmod.mod : dynConsBiogeophysMod.o
+dyncropfilemod.mod : dyncropFileMod.o
+dynedmod.mod : dynEDMod.o
+dynfilemod.mod : dynFileMod.o
+dynharvestmod.mod : dynHarvestMod.o
+dyninitcolumnsmod.mod : dynInitColumnsMod.o
+dynlakefilemod.mod : dynlakeFileMod.o
+dynlandunitareamod.mod : dynLandunitAreaMod.o
+dynpatchstateupdatermod.mod : dynPatchStateUpdaterMod.o
+dynpftfilemod.mod : dynpftFileMod.o
+dynpriorweightsmod.mod : dynPriorWeightsMod.o
+dynsubgridcontrolmod.mod : dynSubgridControlMod.o
+dynsubgriddrivermod.mod : dynSubgridDriverMod.o
+dyntimeinfomod.mod : dynTimeInfoMod.o
+dynvarmod.mod : dynVarMod.o
+dynvartimeuninterpmod.mod : dynVarTimeUninterpMod.o
+edaccumulatefluxesmod.mod : EDAccumulateFluxesMod.o
+edbgcdynmod.mod : EDBGCDynMod.o
+edbtranmod.mod : EDBtranMod.o
+edcanopystructuremod.mod : EDCanopyStructureMod.o
+edcohortdynamicsmod.mod : EDCohortDynamicsMod.o
+edinitmod.mod : EDInitMod.o
+edloggingmortalitymod.mod : EDLoggingMortalityMod.o
+edmainmod.mod : EDMainMod.o
+edmortalityfunctionsmod.mod : EDMortalityFunctionsMod.o
+edparamsmod.mod : EDParamsMod.o
+edpatchdynamicsmod.mod : EDPatchDynamicsMod.o
+edpftvarcon.mod : EDPftvarcon.o
+edphysiologymod.mod : EDPhysiologyMod.o
+edsurfaceradiationmod.mod : EDSurfaceAlbedoMod.o
+edtypesmod.mod : EDTypesMod.o
+energyfluxtype.mod : EnergyFluxType.o
+fatesallometrymod.mod : FatesAllometryMod.o
+fatesconstantsmod.mod : FatesConstantsMod.o
+fatesfirebase.mod : FATESFireBase.o
+fatesfiredatamod.mod : FATESFireDataMod.o
+fatesfirefactorymod.mod : FATESFireFactoryMod.o
+fatesfirenodatamod.mod : FATESFireNoDataMod.o
+fatesglobals.mod : FatesGlobals.o
+fateshistoryinterfacemod.mod : FatesHistoryInterfaceMod.o
+fateshistoryvariabletype.mod : FatesHistoryVariableType.o
+fateshydraulicsmemmod.mod : FatesHydraulicsMemMod.o
+fateshydrowtfmod.mod : FatesHydroWTFMod.o
+fatesintegratorsmod.mod : FatesIntegratorsMod.o
+fatesinterfacemod.mod : FatesInterfaceMod.o
+fatesinterfacetypesmod.mod : FatesInterfaceTypesMod.o
+fatesinventoryinitmod.mod : FatesInventoryInitMod.o
+fatesiodimensionsmod.mod : FatesIODimensionsMod.o
+fatesiovariablekindmod.mod : FatesIOVariableKindMod.o
+fateslittermod.mod : FatesLitterMod.o
+fatesparameterderivedmod.mod : FatesParameterDerivedMod.o
+fatesparametersinterface.mod : FatesParametersInterface.o
+fatesplanthydraulicsmod.mod : FatesPlantHydraulicsMod.o
+fatesplantrespphotosynthmod.mod : FatesPlantRespPhotosynthMod.o
+fatesrestartinterfacemod.mod : FatesRestartInterfaceMod.o
+fatesrestartvariablemod.mod : FatesRestartVariableType.o
+fatessizeagetypeindicesmod.mod : FatesSizeAgeTypeIndicesMod.o
+fatessoilbgcfluxmod.mod : FatesSoilBGCFluxMod.o
+fatessynchronizedparamsmod.mod : FatesSynchronizedParamsMod.o
+fatesutilsmod.mod : FatesUtilsMod.o
+fileutils.mod : fileutils.o
+filtercolmod.mod : filterColMod.o
+filtermod.mod : filterMod.o
+firedatabasetype.mod : FireDataBaseType.o
+fireemisfactorsmod.mod : FireEmisFactorsMod.o
+firemethodtype.mod : FireMethodType.o
+frictionvelocitymod.mod : FrictionVelocityMod.o
+funcpedotransfermod.mod : FuncPedotransferMod.o
+getglobalvaluesmod.mod : GetGlobalValuesMod.o
+glaciersurfacemassbalancemod.mod : GlacierSurfaceMassBalanceMod.o
+glc2lndmod.mod : glc2lndMod.o
+glcbehaviormod.mod : glcBehaviorMod.o
+gridcelltype.mod : GridcellType.o
+histfilemod.mod : histFileMod.o
+humanindexmod.mod : HumanIndexMod.o
+hydrologydrainagemod.mod : HydrologyDrainageMod.o
+hydrologynodrainagemod.mod : HydrologyNoDrainageMod.o
+infiltrationexcessrunoffmod.mod : InfiltrationExcessRunoffMod.o
+initgridcellsmod.mod : initGridCellsMod.o
+initinterp1ddata.mod : initInterp1dData.o
+initinterp2dvar.mod : initInterp2dvar.o
+initinterpbounds.mod : initInterpBounds.o
+initinterpmindist.mod : initInterpMindist.o
+initinterpmod.mod : initInterp.o
+initinterpmultilevelbase.mod : initInterpMultilevelBase.o
+initinterpmultilevelcontainer.mod : initInterpMultilevelContainer.o
+initinterpmultilevelcopy.mod : initInterpMultilevelCopy.o
+initinterpmultilevelinterp.mod : initInterpMultilevelInterp.o
+initinterpmultilevelsnow.mod : initInterpMultilevelSnow.o
+initinterpmultilevelsplit.mod : initInterpMultilevelSplit.o
+initinterputils.mod : initInterpUtils.o
+initsubgridmod.mod : initSubgridMod.o
+initverticalmod.mod : initVerticalMod.o
+irrigationmod.mod : IrrigationMod.o
+issuefixedmetadatahandler.mod : IssueFixedMetadataHandler.o
+lakecon.mod : LakeCon.o
+lakefluxesmod.mod : LakeFluxesMod.o
+lakehydrologymod.mod : LakeHydrologyMod.o
+lakestatetype.mod : LakeStateType.o
+laketemperaturemod.mod : LakeTemperatureMod.o
+landunit_varcon.mod : landunit_varcon.o
+landunittype.mod : LandunitType.o
+lnd2atmmod.mod : lnd2atmMod.o
+lnd2atmtype.mod : lnd2atmType.o
+lnd2glcmod.mod : lnd2glcMod.o
+lnd_import_export.mod : lnd_import_export.o
+lnd_import_export_utils.mod : lnd_import_export_utils.o
+lunamod.mod : LunaMod.o
+meganfactorsmod.mod : MEGANFactorsMod.o
+ncdio_pio.mod : ncdio_pio.o
+ncdio_utils.mod : ncdio_utils.o
+ndepstreammod.mod : ndepStreamMod.o
+numericsmod.mod : NumericsMod.o
+nutrientcompetitionclm45defaultmod.mod : NutrientCompetitionCLM45defaultMod.o
+nutrientcompetitionfactorymod.mod : NutrientCompetitionFactoryMod.o
+nutrientcompetitionflexiblecnmod.mod : NutrientCompetitionFlexibleCNMod.o
+nutrientcompetitionmethodmod.mod : NutrientCompetitionMethodMod.o
+organicfilemod.mod : organicFileMod.o
+ozonebasemod.mod : OzoneBaseMod.o
+ozonefactorymod.mod : OzoneFactoryMod.o
+ozonemod.mod : OzoneMod.o
+ozoneoffmod.mod : OzoneOffMod.o
+paramutilmod.mod : paramUtilMod.o
+patchtype.mod : PatchType.o
+pftconmod.mod : pftconMod.o
+photosynthesismod.mod : PhotosynthesisMod.o
+prtallometriccarbonmod.mod : PRTAllometricCarbonMod.o
+prtallometriccnpmod.mod : PRTAllometricCNPMod.o
+prtgenericmod.mod : PRTGenericMod.o
+prtinitparamsfatesmod.mod : PRTParamsFATESMod.o
+prtlossfluxesmod.mod : PRTLossFluxesMod.o
+prtparametersmod.mod : PRTParametersMod.o
+qsatmod.mod : QSatMod.o
+quadraticmod.mod : quadraticMod.o
+readparamsmod.mod : readParamsMod.o
+restfilemod.mod : restFileMod.o
+restutilmod.mod : restUtilMod.o
+reweightmod.mod : reweightMod.o
+rootbiophysmod.mod : RootBiophysMod.o
+satellitephenologymod.mod : SatellitePhenologyMod.o
+saturatedexcessrunoffmod.mod : SaturatedExcessRunoffMod.o
+selftestdriver.mod : SelfTestDriver.o
+sfmainmod.mod : SFMainMod.o
+sfparamsmod.mod : SFParamsMod.o
+simplemathmod.mod : SimpleMathMod.o
+snowcoverfractionbasemod.mod : SnowCoverFractionBaseMod.o
+snowcoverfractionfactorymod.mod : SnowCoverFractionFactoryMod.o
+snowcoverfractionniuyang2007mod.mod : SnowCoverFractionNiuYang2007Mod.o
+snowcoverfractionswensonlawrence2012mod.mod : SnowCoverFractionSwensonLawrence2012Mod.o
+snowhydrologymod.mod : SnowHydrologyMod.o
+snowsnicarmod.mod : SnowSnicarMod.o
+soilbiogeochemcarbonfluxtype.mod : SoilBiogeochemCarbonFluxType.o
+soilbiogeochemcarbonstatetype.mod : SoilBiogeochemCarbonStateType.o
+soilbiogeochemcompetitionmod.mod : SoilBiogeochemCompetitionMod.o
+soilbiogeochemdecompcascadebgcmod.mod : SoilBiogeochemDecompCascadeBGCMod.o
+soilbiogeochemdecompcascadecnmod.mod : SoilBiogeochemDecompCascadeCNMod.o
+soilbiogeochemdecompcascadecontype.mod : SoilBiogeochemDecompCascadeConType.o
+soilbiogeochemdecompmod.mod : SoilBiogeochemDecompMod.o
+soilbiogeochemlittverttranspmod.mod : SoilBiogeochemLittVertTranspMod.o
+soilbiogeochemnitrifdenitrifmod.mod : SoilBiogeochemNitrifDenitrifMod.o
+soilbiogeochemnitrogenfluxtype.mod : SoilBiogeochemNitrogenFluxType.o
+soilbiogeochemnitrogenstatetype.mod : SoilBiogeochemNitrogenStateType.o
+soilbiogeochemnitrogenuptakemod.mod : SoilBiogeochemNitrogenUptakeMod.o
+soilbiogeochemnleachingmod.mod : SoilBiogeochemNLeachingMod.o
+soilbiogeochemnstateupdate1mod.mod : SoilBiogeochemNStateUpdate1Mod.o
+soilbiogeochempotentialmod.mod : SoilBiogeochemPotentialMod.o
+soilbiogeochemprecisioncontrolmod.mod : SoilBiogeochemPrecisionControlMod.o
+soilbiogeochemstatetype.mod : SoilBiogeochemStateType.o
+soilbiogeochemverticalprofilemod.mod : SoilBiogeochemVerticalProfileMod.o
+soilfluxesmod.mod : SoilFluxesMod.o
+soilhydrologyinittimeconstmod.mod : SoilHydrologyInitTimeConstMod.o
+soilhydrologymod.mod : SoilHydrologyMod.o
+soilhydrologytype.mod : SoilHydrologyType.o
+soilmoiststressmod.mod : SoilMoistStressMod.o
+soilmoisturestreammod.mod : SoilMoistureStreamMod.o
+soilstateinittimeconstmod.mod : SoilStateInitTimeConstMod.o
+soilstatetype.mod : SoilStateType.o
+soiltemperaturemod.mod : SoilTemperatureMod.o
+soilwatermovementmod.mod : SoilWaterMovementMod.o
+soilwaterplantsinkmod.mod : SoilWaterPlantSinkMod.o
+soilwaterretentioncurveclapphornberg1978mod.mod : SoilWaterRetentionCurveClappHornberg1978Mod.o
+soilwaterretentioncurvefactorymod.mod : SoilWaterRetentionCurveFactoryMod.o
+soilwaterretentioncurvemod.mod : SoilWaterRetentionCurveMod.o
+soilwaterretentioncurvevangenuchten1980mod.mod : SoilWaterRetentionCurveVanGenuchten1980Mod.o
+solarabsorbedtype.mod : SolarAbsorbedType.o
+speciesbasetype.mod : SpeciesBaseType.o
+speciesisotopetype.mod : SpeciesIsotopeType.o
+speciesnonisotopetype.mod : SpeciesNonIsotopeType.o
+spmdgathscatmod.mod : spmdGathScatMod.o
+spmdmod.mod : spmdMod.o
+subgridavemod.mod : subgridAveMod.o
+subgridmod.mod : subgridMod.o
+subgridrestmod.mod : subgridRestMod.o
+subgridweightsmod.mod : subgridWeightsMod.o
+surfacealbedomod.mod : SurfaceAlbedoMod.o
+surfacealbedotype.mod : SurfaceAlbedoType.o
+surfacehumiditymod.mod : SurfaceHumidityMod.o
+surfaceradiationmod.mod : SurfaceRadiationMod.o
+surfaceresistancemod.mod : SurfaceResistanceMod.o
+surfacewatermod.mod : SurfaceWaterMod.o
+surfrdmod.mod : surfrdMod.o
+surfrdutilsmod.mod : surfrdUtilsMod.o
+temperaturetype.mod : TemperatureType.o
+testncdiopio.mod : TestNcdioPio.o
+topomod.mod : TopoMod.o
+totalwaterandheatmod.mod : TotalWaterAndHeatMod.o
+tridiagonalmod.mod : TridiagonalMod.o
+urbanalbedomod.mod : UrbanAlbedoMod.o
+urbanfluxesmod.mod : UrbanFluxesMod.o
+urbanparamstype.mod : UrbanParamsType.o
+urbanradiationmod.mod : UrbanRadiationMod.o
+urbantimevartype.mod : UrbanTimeVarType.o
+urbbuildtempoleson2015mod.mod : UrbBuildTempOleson2015Mod.o
+vocemissionmod.mod : VOCEmissionMod.o
+wateratm2lndbulktype.mod : Wateratm2lndBulkType.o
+wateratm2lndtype.mod : Wateratm2lndType.o
+waterbalancetype.mod : WaterBalanceType.o
+waterdiagnosticbulktype.mod : WaterDiagnosticBulkType.o
+waterdiagnostictype.mod : WaterDiagnosticType.o
+waterfluxbulktype.mod : WaterFluxBulkType.o
+waterfluxtype.mod : WaterFluxType.o
+waterinfobasetype.mod : WaterInfoBaseType.o
+waterinfobulktype.mod : WaterInfoBulkType.o
+waterinfoisotopetype.mod : WaterInfoIsotopeType.o
+waterinfotracertype.mod : WaterInfoTracerType.o
+waterlnd2atmbulktype.mod : Waterlnd2atmBulkType.o
+waterlnd2atmtype.mod : Waterlnd2atmType.o
+waterstatebulktype.mod : WaterStateBulkType.o
+waterstatetype.mod : WaterStateType.o
+watertracercontainertype.mod : WaterTracerContainerType.o
+watertracerutils.mod : WaterTracerUtils.o
+watertype.mod : WaterType.o

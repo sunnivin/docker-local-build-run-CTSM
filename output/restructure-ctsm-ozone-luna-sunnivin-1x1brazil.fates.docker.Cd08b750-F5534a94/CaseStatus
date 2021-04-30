@@ -1,0 +1,31 @@
+2021-04-07 14:11:27: xmlchange success <command> ./xmlchange STOP_N=2  </command>
+ ---------------------------------------------------
+2021-04-07 14:11:27: xmlchange success <command> ./xmlchange STOP_OPTION=nyears  </command>
+ ---------------------------------------------------
+2021-04-07 14:11:27: xmlchange success <command> ./xmlchange DEBUG=FALSE  </command>
+ ---------------------------------------------------
+2021-04-07 14:11:27: xmlchange success <command> ./xmlchange CIME_OUTPUT_ROOT=/output  </command>
+ ---------------------------------------------------
+2021-04-07 14:11:27: xmlchange success <command> ./xmlchange DIN_LOC_ROOT=/inputdata  </command>
+ ---------------------------------------------------
+2021-04-07 14:11:27: xmlchange success <command> ./xmlchange DIN_LOC_ROOT_CLMFORC=/inputdata/atm/datm7  </command>
+ ---------------------------------------------------
+2021-04-07 14:11:28: xmlchange success <command> ./xmlchange DOUT_S_ROOT=/output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94/run  </command>
+ ---------------------------------------------------
+2021-04-07 14:11:28: case.setup starting 
+ ---------------------------------------------------
+2021-04-07 14:11:28: case.setup success 
+ ---------------------------------------------------
+2021-04-07 14:11:28: case.build starting 
+ ---------------------------------------------------
+2021-04-07 14:13:24: case.build error 
+
+ ---------------------------------------------------
+2021-04-07 15:17:35: xmlchange success <command> ./xmlchange CLM_NAMELIST_OPTS=hist_dov2xy=.false.  </command>
+ ---------------------------------------------------
+2021-04-08 12:05:47: case.setup starting 
+ ---------------------------------------------------
+2021-04-08 12:05:47: case.setup success 
+ ---------------------------------------------------
+2021-04-08 12:28:12: xmlchange success <command> ./xmlchange CLM_NAMELIST_OPTS=hist_dov2xy=.false.  </command>
+ ---------------------------------------------------

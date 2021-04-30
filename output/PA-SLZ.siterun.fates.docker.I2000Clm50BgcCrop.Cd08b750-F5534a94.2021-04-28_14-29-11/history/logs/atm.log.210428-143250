@@ -1,0 +1,216 @@
+(datm_comp_init)  decomp   = 1d
+(datm_comp_init)  iradsw   =        1
+(datm_comp_init)  factorFn = null
+(datm_comp_init)  restfilm = undefined
+(datm_comp_init)  restfils = undefined
+(datm_comp_init)  presaero =  T
+(datm_comp_init)  force_prognostic_true =  F
+(datm_comp_init)  wiso_datm   =  F
+(datm_comp_init) inst_index  =         1
+(datm_comp_init) inst_name   =  ATM
+(datm_comp_init) inst_suffix =  
+(shr_strdata_readnml) reading input namelist file: datm_in
+(shr_stream_init) Reading file datm.streams.txt.CLMGSWP3v1.Solar
+(shr_file_freeUnit) unit   97 was not in use
+(shr_stream_init) Reading file datm.streams.txt.CLMGSWP3v1.Precip
+(shr_file_freeUnit) unit   97 was not in use
+(shr_stream_init) Reading file datm.streams.txt.CLMGSWP3v1.TPQW
+(shr_file_freeUnit) unit   97 was not in use
+(shr_stream_init) Reading file datm.streams.txt.presaero.clim_2000
+(shr_file_freeUnit) unit   97 was not in use
+(shr_stream_init) Reading file datm.streams.txt.topo.observed
+(shr_file_freeUnit) unit   97 was not in use
+(datm_comp_init)  datm datamode = CLMNCEP
+ (shr_strdata_init_streams)  stream            1
+ (shr_strdata_init_streams)  filePath =            1 /inputdata/single_site/PA-SLZ/datmdata/atm_forcing.datm7.GSWP3.0.5d.v1.c170516/
+ (shr_strdata_init_streams)  fileName =            1 /inputdata/single_site/PA-SLZ/datmdata/atm_forcing.datm7.GSWP3.0.5d.v1.c170516/domain.lnd.360x720_gswp3.0v1.c170606.nc
+ (shr_strdata_init_streams)  timeName =            1 time
+ (shr_strdata_init_streams)   lonName =            1 xc
+ (shr_strdata_init_streams)   latName =            1 yc
+ (shr_strdata_init_streams)   hgtName =            1 unknownname
+ (shr_strdata_init_streams)  maskName =            1 mask
+ (shr_strdata_init_streams)  areaName =            1 area
+ (shr_strdata_init_streams)  stream            2
+ (shr_strdata_init_streams)  filePath =            2 /inputdata/single_site/PA-SLZ/datmdata/atm_forcing.datm7.GSWP3.0.5d.v1.c170516/
+ (shr_strdata_init_streams)  fileName =            2 /inputdata/single_site/PA-SLZ/datmdata/atm_forcing.datm7.GSWP3.0.5d.v1.c170516/domain.lnd.360x720_gswp3.0v1.c170606.nc
+ (shr_strdata_init_streams)  timeName =            2 time
+ (shr_strdata_init_streams)   lonName =            2 xc
+ (shr_strdata_init_streams)   latName =            2 yc
+ (shr_strdata_init_streams)   hgtName =            2 unknownname
+ (shr_strdata_init_streams)  maskName =            2 mask
+ (shr_strdata_init_streams)  areaName =            2 area
+ (shr_strdata_init_streams)  stream            3
+ (shr_strdata_init_streams)  filePath =            3 /inputdata/single_site/PA-SLZ/datmdata/atm_forcing.datm7.GSWP3.0.5d.v1.c170516/
+ (shr_strdata_init_streams)  fileName =            3 /inputdata/single_site/PA-SLZ/datmdata/atm_forcing.datm7.GSWP3.0.5d.v1.c170516/domain.lnd.360x720_gswp3.0v1.c170606.nc
+ (shr_strdata_init_streams)  timeName =            3 time
+ (shr_strdata_init_streams)   lonName =            3 xc
+ (shr_strdata_init_streams)   latName =            3 yc
+ (shr_strdata_init_streams)   hgtName =            3 unknownname
+ (shr_strdata_init_streams)  maskName =            3 mask
+ (shr_strdata_init_streams)  areaName =            3 area
+ (shr_strdata_init_streams)  stream            4
+ (shr_strdata_init_streams)  filePath =            4 /inputdata/atm/cam/chem/trop_mozart_aero/aero/
+ (shr_strdata_init_streams)  fileName =            4 /inputdata/atm/cam/chem/trop_mozart_aero/aero/aerosoldep_WACCM.ensmean_monthly_hist_1849-2015_0.9x1.25_CMIP6_c180926.nc
+ (shr_strdata_init_streams)  timeName =            4 time
+ (shr_strdata_init_streams)   lonName =            4 lon
+ (shr_strdata_init_streams)   latName =            4 lat
+ (shr_strdata_init_streams)   hgtName =            4 unknownname
+ (shr_strdata_init_streams)  maskName =            4 mask
+ (shr_strdata_init_streams)  areaName =            4 area
+ (shr_strdata_init_streams)  stream            5
+ (shr_strdata_init_streams)  filePath =            5 /inputdata/atm/datm7/topo_forcing/
+ (shr_strdata_init_streams)  fileName =            5 /inputdata/atm/datm7/topo_forcing/topodata_0.9x1.25_USGS_070110_stream_c151201.nc
+ (shr_strdata_init_streams)  timeName =            5 time
+ (shr_strdata_init_streams)   lonName =            5 LONGXY
+ (shr_strdata_init_streams)   latName =            5 LATIXY
+ (shr_strdata_init_streams)   hgtName =            5 unknownname
+ (shr_strdata_init_streams)  maskName =            5 mask
+ (shr_strdata_init_streams)  areaName =            5 area
+(shr_strdata_init_mapping)  calling shr_dmodel_mapSet for fill
+(shr_strdata_init_mapping)  calling shr_dmodel_mapSet for remap
+(shr_strdata_init_mapping)  calling shr_dmodel_mapSet for fill
+(shr_strdata_init_mapping)  calling shr_dmodel_mapSet for remap
+(shr_strdata_init_mapping)  calling shr_dmodel_mapSet for fill
+(shr_strdata_init_mapping)  calling shr_dmodel_mapSet for remap
+(shr_strdata_init_mapping)  calling shr_dmodel_mapSet for fill
+(shr_strdata_init_mapping)  calling shr_dmodel_mapSet for remap
+(shr_strdata_init_mapping)  calling shr_dmodel_mapSet for fill
+(shr_strdata_init_mapping)  calling shr_dmodel_mapSet for remap
+(shr_strdata_print) ----------------------------------------------------------
+(shr_strdata_print) name        = ATM data
+(shr_strdata_print) dataMode    = CLMNCEP
+(shr_strdata_print) domainFile  = /inputdata/single_site/PA-SLZ/domain.lnd.1x1pt-brazil_navy.090715.nc
+(shr_strdata_print) nxg         =      1
+(shr_strdata_print) nyg         =      1
+(shr_strdata_print) nzg         =     -1
+(shr_strdata_print) calendar    = GREGORIAN
+(shr_strdata_print) io_type     =      6
+(shr_strdata_print) eccen       =  1.000000E+36
+(shr_strdata_print) mvelpp      =  1.000000E+36
+(shr_strdata_print) lambm0      =  1.000000E+36
+(shr_strdata_print) obliqr      =  1.000000E+36
+(shr_strdata_print) nstreams    =      5
+(shr_strdata_print) pio_iotype  =      6
+(shr_strdata_print)   streams ( 1) = datm.streams.txt.CLMGSWP3v1.Solar 2010 2010 2014
+(shr_strdata_print)   taxMode ( 1) = cycle
+(shr_strdata_print)   dtlimit ( 1) =  1.500000E+00
+(shr_strdata_print)   strnxg  ( 1) =      1
+(shr_strdata_print)   strnyg  ( 1) =      1
+(shr_strdata_print)   strnzg  ( 1) =     -1
+(shr_strdata_print)   dofill  ( 1) =  T
+(shr_strdata_print)   fillalgo( 1) = nn
+(shr_strdata_print)   fillmask( 1) = nomask
+(shr_strdata_print)   fillread( 1) = NOT_SET
+(shr_strdata_print)   fillwrit( 1) = NOT_SET
+(shr_strdata_print)   domaps  ( 1) =  T
+(shr_strdata_print)   mapalgo ( 1) = nn
+(shr_strdata_print)   mapmask ( 1) = nomask
+(shr_strdata_print)   mapread ( 1) = NOT_SET
+(shr_strdata_print)   mapwrit ( 1) = NOT_SET
+(shr_strdata_print)   tintalgo( 1) = coszen
+(shr_strdata_print)   readmode( 1) = single
+(shr_strdata_print)  
+(shr_strdata_print)   streams ( 2) = datm.streams.txt.CLMGSWP3v1.Precip 2010 2010 2014
+(shr_strdata_print)   taxMode ( 2) = cycle
+(shr_strdata_print)   dtlimit ( 2) =  1.500000E+00
+(shr_strdata_print)   strnxg  ( 2) =      1
+(shr_strdata_print)   strnyg  ( 2) =      1
+(shr_strdata_print)   strnzg  ( 2) =     -1
+(shr_strdata_print)   dofill  ( 2) =  T
+(shr_strdata_print)   fillalgo( 2) = nn
+(shr_strdata_print)   fillmask( 2) = nomask
+(shr_strdata_print)   fillread( 2) = NOT_SET
+(shr_strdata_print)   fillwrit( 2) = NOT_SET
+(shr_strdata_print)   domaps  ( 2) =  T
+(shr_strdata_print)   mapalgo ( 2) = nn
+(shr_strdata_print)   mapmask ( 2) = nomask
+(shr_strdata_print)   mapread ( 2) = NOT_SET
+(shr_strdata_print)   mapwrit ( 2) = NOT_SET
+(shr_strdata_print)   tintalgo( 2) = nearest
+(shr_strdata_print)   readmode( 2) = single
+(shr_strdata_print)  
+(shr_strdata_print)   streams ( 3) = datm.streams.txt.CLMGSWP3v1.TPQW 2010 2010 2014
+(shr_strdata_print)   taxMode ( 3) = cycle
+(shr_strdata_print)   dtlimit ( 3) =  1.500000E+00
+(shr_strdata_print)   strnxg  ( 3) =      1
+(shr_strdata_print)   strnyg  ( 3) =      1
+(shr_strdata_print)   strnzg  ( 3) =     -1
+(shr_strdata_print)   dofill  ( 3) =  T
+(shr_strdata_print)   fillalgo( 3) = nn
+(shr_strdata_print)   fillmask( 3) = nomask
+(shr_strdata_print)   fillread( 3) = NOT_SET
+(shr_strdata_print)   fillwrit( 3) = NOT_SET
+(shr_strdata_print)   domaps  ( 3) =  T
+(shr_strdata_print)   mapalgo ( 3) = nn
+(shr_strdata_print)   mapmask ( 3) = nomask
+(shr_strdata_print)   mapread ( 3) = NOT_SET
+(shr_strdata_print)   mapwrit ( 3) = NOT_SET
+(shr_strdata_print)   tintalgo( 3) = linear
+(shr_strdata_print)   readmode( 3) = single
+(shr_strdata_print)  
+(shr_strdata_print)   streams ( 4) = datm.streams.txt.presaero.clim_2000 1 2000 2000
+(shr_strdata_print)   taxMode ( 4) = cycle
+(shr_strdata_print)   dtlimit ( 4) =  1.500000E+00
+(shr_strdata_print)   strnxg  ( 4) =    288
+(shr_strdata_print)   strnyg  ( 4) =    192
+(shr_strdata_print)   strnzg  ( 4) =     -1
+(shr_strdata_print)   dofill  ( 4) =  T
+(shr_strdata_print)   fillalgo( 4) = nn
+(shr_strdata_print)   fillmask( 4) = nomask
+(shr_strdata_print)   fillread( 4) = NOT_SET
+(shr_strdata_print)   fillwrit( 4) = NOT_SET
+(shr_strdata_print)   domaps  ( 4) =  T
+(shr_strdata_print)   mapalgo ( 4) = bilinear
+(shr_strdata_print)   mapmask ( 4) = nomask
+(shr_strdata_print)   mapread ( 4) = NOT_SET
+(shr_strdata_print)   mapwrit ( 4) = NOT_SET
+(shr_strdata_print)   tintalgo( 4) = linear
+(shr_strdata_print)   readmode( 4) = single
+(shr_strdata_print)  
+(shr_strdata_print)   streams ( 5) = datm.streams.txt.topo.observed 1 1 1
+(shr_strdata_print)   taxMode ( 5) = cycle
+(shr_strdata_print)   dtlimit ( 5) =  1.500000E+00
+(shr_strdata_print)   strnxg  ( 5) =    288
+(shr_strdata_print)   strnyg  ( 5) =    192
+(shr_strdata_print)   strnzg  ( 5) =     -1
+(shr_strdata_print)   dofill  ( 5) =  T
+(shr_strdata_print)   fillalgo( 5) = nn
+(shr_strdata_print)   fillmask( 5) = nomask
+(shr_strdata_print)   fillread( 5) = NOT_SET
+(shr_strdata_print)   fillwrit( 5) = NOT_SET
+(shr_strdata_print)   domaps  ( 5) =  T
+(shr_strdata_print)   mapalgo ( 5) = bilinear
+(shr_strdata_print)   mapmask ( 5) = nomask
+(shr_strdata_print)   mapread ( 5) = NOT_SET
+(shr_strdata_print)   mapwrit ( 5) = NOT_SET
+(shr_strdata_print)   tintalgo( 5) = lower
+(shr_strdata_print)   readmode( 5) = single
+(shr_strdata_print)  
+(shr_strdata_print) nvectors    =      0
+(shr_strdata_print) ----------------------------------------------------------
+(datm_comp_init)  initialize gsmaps
+(datm_comp_init) copy domains
+(datm_comp_init) allocate AVs
+(datm_comp_init)  flds_strm = strm_swdn:strm_precn:strm_tbot:strm_wind:strm_pbot:strm_shum:strm_lwdn
+(shr_dmodel_readstrm) open   : /inputdata/single_site/PA-SLZ/datmdata/atm_forcing.datm7.GSWP3.0.5d.v1.c170516/Solar/clmforc.GSWP3.c2011.0.5x0.5.Solr.2012-01.nc
+(shr_dmodel_readstrm) file lb: /inputdata/single_site/PA-SLZ/datmdata/atm_forcing.datm7.GSWP3.0.5d.v1.c170516/Solar/clmforc.GSWP3.c2011.0.5x0.5.Solr.2012-01.nc       1
+(shr_dmodel_readstrm) file ub: /inputdata/single_site/PA-SLZ/datmdata/atm_forcing.datm7.GSWP3.0.5d.v1.c170516/Solar/clmforc.GSWP3.c2011.0.5x0.5.Solr.2012-01.nc       2
+(shr_dmodel_readstrm) open   : /inputdata/single_site/PA-SLZ/datmdata/atm_forcing.datm7.GSWP3.0.5d.v1.c170516/Precip/clmforc.GSWP3.c2011.0.5x0.5.Prec.2011-12.nc
+(shr_dmodel_readstrm) file lb: /inputdata/single_site/PA-SLZ/datmdata/atm_forcing.datm7.GSWP3.0.5d.v1.c170516/Precip/clmforc.GSWP3.c2011.0.5x0.5.Prec.2011-12.nc     248
+(shr_dmodel_readstrm) close  : /inputdata/single_site/PA-SLZ/datmdata/atm_forcing.datm7.GSWP3.0.5d.v1.c170516/Precip/clmforc.GSWP3.c2011.0.5x0.5.Prec.2011-12.nc
+(shr_dmodel_readstrm) open   : /inputdata/single_site/PA-SLZ/datmdata/atm_forcing.datm7.GSWP3.0.5d.v1.c170516/Precip/clmforc.GSWP3.c2011.0.5x0.5.Prec.2012-01.nc
+(shr_dmodel_readstrm) file ub: /inputdata/single_site/PA-SLZ/datmdata/atm_forcing.datm7.GSWP3.0.5d.v1.c170516/Precip/clmforc.GSWP3.c2011.0.5x0.5.Prec.2012-01.nc       1
+(shr_dmodel_readstrm) open   : /inputdata/single_site/PA-SLZ/datmdata/atm_forcing.datm7.GSWP3.0.5d.v1.c170516/TPHWL/clmforc.GSWP3.c2011.0.5x0.5.TPQWL.2011-12.nc
+(shr_dmodel_readstrm) file lb: /inputdata/single_site/PA-SLZ/datmdata/atm_forcing.datm7.GSWP3.0.5d.v1.c170516/TPHWL/clmforc.GSWP3.c2011.0.5x0.5.TPQWL.2011-12.nc     248
+(shr_dmodel_readstrm) close  : /inputdata/single_site/PA-SLZ/datmdata/atm_forcing.datm7.GSWP3.0.5d.v1.c170516/TPHWL/clmforc.GSWP3.c2011.0.5x0.5.TPQWL.2011-12.nc
+(shr_dmodel_readstrm) open   : /inputdata/single_site/PA-SLZ/datmdata/atm_forcing.datm7.GSWP3.0.5d.v1.c170516/TPHWL/clmforc.GSWP3.c2011.0.5x0.5.TPQWL.2012-01.nc
+(shr_dmodel_readstrm) file ub: /inputdata/single_site/PA-SLZ/datmdata/atm_forcing.datm7.GSWP3.0.5d.v1.c170516/TPHWL/clmforc.GSWP3.c2011.0.5x0.5.TPQWL.2012-01.nc       1
+(shr_dmodel_readstrm) open   : /inputdata/atm/cam/chem/trop_mozart_aero/aero/aerosoldep_WACCM.ensmean_monthly_hist_1849-2015_0.9x1.25_CMIP6_c180926.nc
+(shr_dmodel_readstrm) file lb: /inputdata/atm/cam/chem/trop_mozart_aero/aero/aerosoldep_WACCM.ensmean_monthly_hist_1849-2015_0.9x1.25_CMIP6_c180926.nc    1824
+(shr_dmodel_readstrm) file ub: /inputdata/atm/cam/chem/trop_mozart_aero/aero/aerosoldep_WACCM.ensmean_monthly_hist_1849-2015_0.9x1.25_CMIP6_c180926.nc    1813
+(shr_dmodel_readstrm) open   : /inputdata/atm/datm7/topo_forcing/topodata_0.9x1.25_USGS_070110_stream_c151201.nc
+(shr_dmodel_readstrm) file lb: /inputdata/atm/datm7/topo_forcing/topodata_0.9x1.25_USGS_070110_stream_c151201.nc       1
+(shr_dmodel_readstrm) file ub: /inputdata/atm/datm7/topo_forcing/topodata_0.9x1.25_USGS_070110_stream_c151201.nc       1
+ (datm_comp_run) max values =    298.66662597656250        0.0000000000000000        0.0000000000000000     
+(datm_comp_run) atm: model date 20120101       0s
+(datm_comp_init) datm_comp_init done

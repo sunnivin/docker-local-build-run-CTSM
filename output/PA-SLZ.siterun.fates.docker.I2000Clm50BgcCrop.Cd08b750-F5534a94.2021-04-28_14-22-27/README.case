@@ -1,0 +1,48 @@
+2021-04-28 14:22:28: ./create_newcase --case=/output/PA-SLZ.siterun.fates.docker.I2000Clm50BgcCrop.Cd08b750-F5534a94.2021-04-28_14-22-27 --res=CLM_USRDAT --compset=I2000Clm50BgcCrop --mach=docker --compiler=gnu --run-unsupported
+ ---------------------------------------------------
+2021-04-28 14:22:28: Compset longname is 2000_DATM%GSWP3v1_CLM50%BGC-CROP_SICE_SOCN_MOSART_SGLC_SWAV_SIAC_SESP
+ ---------------------------------------------------
+2021-04-28 14:22:28: Compset specification file is /CTSM/cime_config/config_compsets.xml
+ ---------------------------------------------------
+2021-04-28 14:22:28: Pes     specification file is /CTSM/cime_config/config_pes.xml
+ ---------------------------------------------------
+2021-04-28 14:22:28: Forcing is 1972-2004
+ ---------------------------------------------------
+2021-04-28 14:22:28: Using None coupler instances
+ ---------------------------------------------------
+2021-04-28 14:22:28: Component ATM is  Data driven ATM  GSWP3v1 data set 
+ ---------------------------------------------------
+2021-04-28 14:22:28: ATM_GRID is CLM_USRDAT
+ ---------------------------------------------------
+2021-04-28 14:22:28: Component LND is clm5.0:BGC (vert. resol. CN and methane) with prognostic crop:
+ ---------------------------------------------------
+2021-04-28 14:22:28: LND_GRID is CLM_USRDAT
+ ---------------------------------------------------
+2021-04-28 14:22:28: Component ICE is Stub ice component
+ ---------------------------------------------------
+2021-04-28 14:22:28: ICE_GRID is null
+ ---------------------------------------------------
+2021-04-28 14:22:28: Component OCN is Stub ocn component
+ ---------------------------------------------------
+2021-04-28 14:22:28: OCN_GRID is null
+ ---------------------------------------------------
+2021-04-28 14:22:28: Component ROF is MOSART: MOdel for Scale Adaptive River Transport
+ ---------------------------------------------------
+2021-04-28 14:22:28: ROF_GRID is null
+ ---------------------------------------------------
+2021-04-28 14:22:28: Component GLC is Stub glacier (land ice) component
+ ---------------------------------------------------
+2021-04-28 14:22:28: GLC_GRID is null
+ ---------------------------------------------------
+2021-04-28 14:22:28: Component WAV is Stub wave component
+ ---------------------------------------------------
+2021-04-28 14:22:28: WAV_GRID is null
+ ---------------------------------------------------
+2021-04-28 14:22:28: Component IAC is Stub iac component
+ ---------------------------------------------------
+2021-04-28 14:22:28: IAC_GRID is null
+ ---------------------------------------------------
+2021-04-28 14:22:28: Component ESP is Stub external system processing (ESP) component
+ ---------------------------------------------------
+2021-04-28 14:22:28: ESP_GRID is None
+ ---------------------------------------------------

@@ -1,0 +1,5 @@
+# Declare all module files used to build each object.
+glc_comp_mct.o : glc_comp_mct.F90    
+# The following section relates each module to the corresponding file.
+%.mod : 
+	@:

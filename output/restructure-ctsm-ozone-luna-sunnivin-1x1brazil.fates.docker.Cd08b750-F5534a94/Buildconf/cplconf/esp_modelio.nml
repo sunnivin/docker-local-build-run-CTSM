@@ -1,0 +1,13 @@
+&modelio
+  diri = "/output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94/bld/esp"
+  diro = "/output/restructure-ctsm-ozone-luna-sunnivin-1x1brazil.fates.docker.Cd08b750-F5534a94/run"
+  logfile = "esp.log.210407-151800"
+/
+&pio_inparm
+  pio_netcdf_format = ""
+  pio_numiotasks = -99
+  pio_rearranger = -99
+  pio_root = -99
+  pio_stride = -99
+  pio_typename = "nothing"
+/

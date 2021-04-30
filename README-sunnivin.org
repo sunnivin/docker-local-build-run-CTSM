@@ -1,6 +1,6 @@
 #NB!
-The local version of the other ESCOMP components must be added to the CTSM-repository before the container is called. 
-$CTSM_ROOT ./manage_externals/checkout_externals 
+The local version of the other ESCOMP components must be added to the CTSM-repository before the container is called.
+$CTSM_ROOT ./manage_externals/checkout_externals
 
 
 ### About permissions and tests
@@ -12,26 +12,32 @@ $ docker build -t ctsm-ozone-luna docker/ctsm/ctsm-gcc650
 
 
 ### Test case to build the code
-- Make a new script to call the case 
+- Make a new script to call the case
 $  cd scripts/
-$ cp sunnivin-ctsm-fates-docker-1x1brazil.sh sunnivin-my-name.sh 
-$ emacs -Q sunnivin-my-name.sh # Make necessary changes 
+$ cp sunnivin-ctsm-fates-docker-1x1brazil.sh sunnivin-my-name.sh
+$ emacs -Q sunnivin-my-name.sh # Make necessary changes
 $ chmod 755 sunnivin-my-name.sh
 $ cd ..
 
-#### Run the containe, mount in local  CTSM code, and compile 
+#### Run the containe, mount in local  CTSM code, and compile
 $ docker run --rm -ti --hostname=docker -u $(id -u):$(id -g) \
+-v /home/sunnivin/Data/cesm_input_datasets:/inputdata \
 -v /home/sunnivin/Documents/UiO/code/ESCMOP/ctsm-ozone-luna/docker/output:/output \
 -v /home/sunnivin/Documents/UiO/code/ESCMOP/ctsm-ozone-luna/CTSM:/CTSM \
 -v /home/sunnivin/Documents/UiO/code/ESCMOP/ctsm-ozone-luna/docker/scripts:/scripts \
-ctsm-ozone-luna:latest \
+sunnivin/ctsm-ozone-luna:latest \
 /scripts/restructure-ctsm-ozone-luna.sh
 
 # Build my docker image
-$ docker build -t restructure-ctsm-ozone-luna-sunnivin .  
+$ docker build -t restructure-ctsm-ozone-luna-sunnivin .
 
-## To delete all containers 
+## To delete all containers
 $ docker rm -vf $(docker ps -a -q)
 
-## To delete all images 
+## To delete all images
 docker rmi -f $(docker images -a -q)
+
+
+Information where Stef saved her single site cases
+
+ziu1988/python_scripts/CLM/CLM_spinup/sens_spinup.py

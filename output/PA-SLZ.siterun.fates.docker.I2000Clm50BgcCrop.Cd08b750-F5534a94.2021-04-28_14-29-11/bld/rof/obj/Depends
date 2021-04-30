@@ -1,0 +1,33 @@
+# Declare all module files used to build each object.
+MOSART_physics_mod.o : MOSART_physics_mod.F90 runoffmod.mod rtmspmd.mod rtmvar.mod   
+RtmDateTime.o : RtmDateTime.F90 rtmspmd.mod   
+RtmFileUtils.o : RtmFileUtils.F90 rtmvar.mod rtmspmd.mod   
+RtmHistFile.o : RtmHistFile.F90 rtmdatetime.mod rtmtimemanager.mod rtmspmd.mod runoffmod.mod rtmfileutils.mod rtmvar.mod rtmio.mod   
+RtmHistFlds.o : RtmHistFlds.F90 runoffmod.mod rtmvar.mod rtmhistfile.mod   
+RtmIO.o : RtmIO.F90 runoffmod.mod rtmspmd.mod rtmvar.mod rtmfileutils.mod   
+RtmMod.o : RtmMod.F90 rtmtimemanager.mod runoffmod.mod rtmhistflds.mod rtmrestfile.mod rtmvar.mod rtmspmd.mod rtmhistfile.mod rtmfileutils.mod rtmio.mod mosart_physics_mod.mod   
+RtmRestFile.o : RtmRestFile.F90 rtmdatetime.mod runoffmod.mod rtmtimemanager.mod rtmvar.mod rtmspmd.mod rtmio.mod rtmhistfile.mod rtmfileutils.mod   
+RtmSpmd.o : RtmSpmd.F90    
+RtmTimeManager.o : RtmTimeManager.F90 rtmvar.mod rtmio.mod rtmspmd.mod   
+RtmVar.o : RtmVar.F90 rtmspmd.mod   
+RunoffMod.o : RunoffMod.F90 rtmvar.mod   
+mosart_cpl_indices.o : mosart_cpl_indices.F90    
+mosart_import_export.o : mosart_import_export.F90 mosart_cpl_indices.mod rtmvar.mod rtmtimemanager.mod runoffmod.mod rtmspmd.mod   
+rof_comp_mct.o : rof_comp_mct.F90 rtmvar.mod mosart_cpl_indices.mod runoffmod.mod rtmtimemanager.mod rtmmod.mod mosart_import_export.mod rtmspmd.mod   
+# The following section relates each module to the corresponding file.
+%.mod : 
+	@:
+mosart_cpl_indices.mod : mosart_cpl_indices.o
+mosart_import_export.mod : mosart_import_export.o
+mosart_physics_mod.mod : MOSART_physics_mod.o
+rtmdatetime.mod : RtmDateTime.o
+rtmfileutils.mod : RtmFileUtils.o
+rtmhistfile.mod : RtmHistFile.o
+rtmhistflds.mod : RtmHistFlds.o
+rtmio.mod : RtmIO.o
+rtmmod.mod : RtmMod.o
+rtmrestfile.mod : RtmRestFile.o
+rtmspmd.mod : RtmSpmd.o
+rtmtimemanager.mod : RtmTimeManager.o
+rtmvar.mod : RtmVar.o
+runoffmod.mod : RunoffMod.o

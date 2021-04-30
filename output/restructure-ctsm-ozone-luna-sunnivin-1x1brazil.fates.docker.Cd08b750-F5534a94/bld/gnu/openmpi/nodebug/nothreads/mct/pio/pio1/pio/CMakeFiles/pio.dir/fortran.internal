@@ -1,0 +1,26 @@
+# The fortran modules provided by this target.
+provides
+ alloc_mod
+ box_rearrange
+ calcdecomp
+ calcdisplace_mod
+ iompi_mod
+ ionf_mod
+ nf_mod
+ pio
+ pio_kinds
+ pio_mpi_utils
+ pio_msg_mod
+ pio_nf_utils
+ pio_spmd_utils
+ pio_support
+ pio_types
+ pio_utils
+ piodarray
+ piolib_mod
+ pionfatt_mod
+ pionfget_mod
+ pionfput_mod
+ pionfread_mod
+ pionfwrite_mod
+ rearrange

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<file id="env_batch.xml" version="2.0">
+  <header>
+      These variables may be changed anytime during a run, they
+      control arguments to the batch submit command.
+    </header>
+  <group id="config_batch">
+    <entry id="BATCH_SYSTEM" value="none">
+      <type>char</type>
+      <valid_values>nersc_slurm,lc_slurm,moab,pbs,lsf,slurm,cobalt,cobalt_theta,none</valid_values>
+      <desc>The batch system type to use for this machine.</desc>
+    </entry>
+  </group>
+  <group id="job_submission">
+    <entry id="PROJECT_REQUIRED" value="FALSE">
+      <type>logical</type>
+      <valid_values>TRUE,FALSE</valid_values>
+      <desc>whether the PROJECT value is required on this machine</desc>
+    </entry>
+  </group>
+  <batch_system type="none">
+    <batch_query args=""/>
+    <batch_submit/>
+    <batch_redirect/>
+    <batch_directive/>
+    <directives>
+      <directive/>
+    </directives>
+  </batch_system>
+</file>

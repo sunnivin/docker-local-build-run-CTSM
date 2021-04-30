@@ -23,6 +23,7 @@ echo "*** Downloading and extracting forcing data from OSF ***"
 
 ### get remote forcing data from OSF
 # osf fetch --help
+# Check if osf client is installed for pip3: pip3 list | grep -F osf
 osf -p kv93n fetch -U single_site_forcing/GSWP3_PA-SLZ_met_forcing_partial.tar.gz \
 ${cesm_data_dir}/GSWP3_PA-SLZ_met_forcing_partial.tar.gz
 

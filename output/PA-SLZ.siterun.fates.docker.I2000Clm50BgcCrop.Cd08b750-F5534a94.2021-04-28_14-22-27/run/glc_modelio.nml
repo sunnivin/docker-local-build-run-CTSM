@@ -1,0 +1,13 @@
+&modelio
+  diri = "/output/PA-SLZ.siterun.fates.docker.I2000Clm50BgcCrop.Cd08b750-F5534a94.2021-04-28_14-22-27/bld/glc"
+  diro = "/output/PA-SLZ.siterun.fates.docker.I2000Clm50BgcCrop.Cd08b750-F5534a94.2021-04-28_14-22-27/run"
+  logfile = "glc.log.210428-142740"
+/
+&pio_inparm
+  pio_netcdf_format = "64bit_offset"
+  pio_numiotasks = -99
+  pio_rearranger = 1
+  pio_root = 1
+  pio_stride = 1
+  pio_typename = "netcdf"
+/
