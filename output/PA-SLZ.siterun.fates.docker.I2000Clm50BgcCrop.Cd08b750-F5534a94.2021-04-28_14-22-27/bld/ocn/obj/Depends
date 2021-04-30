@@ -1,5 +1,0 @@
-# Declare all module files used to build each object.
-ocn_comp_mct.o : ocn_comp_mct.F90    
-# The following section relates each module to the corresponding file.
-%.mod : 
-	@:

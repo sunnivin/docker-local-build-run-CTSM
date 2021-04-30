@@ -1,9 +1,0 @@
-# Declare all module files used to build each object.
-atm_comp_mct.o : atm_comp_mct.F90 datm_shr_mod.mod datm_comp_mod.mod   
-datm_comp_mod.o : datm_comp_mod.F90 datm_shr_mod.mod   
-datm_shr_mod.o : datm_shr_mod.F90    
-# The following section relates each module to the corresponding file.
-%.mod : 
-	@:
-datm_comp_mod.mod : datm_comp_mod.o
-datm_shr_mod.mod : datm_shr_mod.o

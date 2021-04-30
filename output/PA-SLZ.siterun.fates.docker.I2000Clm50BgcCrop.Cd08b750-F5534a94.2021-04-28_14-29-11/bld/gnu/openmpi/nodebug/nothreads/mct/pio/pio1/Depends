@@ -1,4 +1,0 @@
-# Declare all module files used to build each object.
-# The following section relates each module to the corresponding file.
-%.mod : 
-	@:
